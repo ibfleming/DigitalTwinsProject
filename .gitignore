@@ -3,9 +3,9 @@
 !*/
 
 # Do not ignore our custom folders for development
-!Content/_IanF
-!Content/_LucienL
-!ExternalApps/**/**
+!Content/_IanF/**
+!Content/_LucienL/**
+!ExternalApps/**
 
 # Do not ignore git files in the root of the repo.
 !/.git*
