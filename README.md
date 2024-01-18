@@ -1,2 +1,2 @@
-# DigitalTwinsProject
-Digital twins group project for CS404.
+# Digital Twins Project
+*Digital twins group project for CS404.*
