@@ -1,6 +1,7 @@
 {
     "Version": "1.2",
     "Data": {
+<<<<<<< Updated upstream
         "Source": "c:\\users\\lee4219\\documents\\unrealprojects_2024\\plugins\\socketioclient\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\siojson\\module.siojson.cpp",
         "ProvidedModule": "",
         "PCH": "c:\\users\\lee4219\\documents\\unrealprojects_2024\\intermediate\\build\\win64\\x64\\digitaltwinsprojecteditor\\development\\engine\\sharedpch.engine.cpp20.h.pch",
@@ -15,6 +16,22 @@
             "c:\\users\\lee4219\\documents\\unrealprojects_2024\\plugins\\socketioclient\\source\\siojson\\public\\siojsonobject.h",
             "c:\\users\\lee4219\\documents\\unrealprojects_2024\\plugins\\socketioclient\\intermediate\\build\\win64\\unrealeditor\\inc\\siojson\\uht\\siojsonobject.generated.h",
             "c:\\users\\lee4219\\documents\\unrealprojects_2024\\plugins\\socketioclient\\source\\siojson\\public\\siojrequestjson.h",
+=======
+        "Source": "c:\\users\\flem8015\\documents\\unreal projects\\digitaltwinsproject\\plugins\\socketioclient\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\siojson\\module.siojson.cpp",
+        "ProvidedModule": "",
+        "PCH": "c:\\users\\flem8015\\documents\\unreal projects\\digitaltwinsproject\\intermediate\\build\\win64\\x64\\digitaltwinsprojecteditor\\development\\engine\\sharedpch.engine.cpp20.h.pch",
+        "Includes": [
+            "c:\\users\\flem8015\\documents\\unreal projects\\digitaltwinsproject\\plugins\\socketioclient\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\siojson\\definitions.siojson.h",
+            "c:\\users\\flem8015\\documents\\unreal projects\\digitaltwinsproject\\plugins\\socketioclient\\intermediate\\build\\win64\\unrealeditor\\inc\\siojson\\uht\\siojconvert.gen.cpp",
+            "c:\\users\\flem8015\\documents\\unreal projects\\digitaltwinsproject\\plugins\\socketioclient\\source\\siojson\\public\\siojconvert.h",
+            "c:\\users\\flem8015\\documents\\unreal projects\\digitaltwinsproject\\plugins\\socketioclient\\intermediate\\build\\win64\\unrealeditor\\inc\\siojson\\uht\\siojconvert.generated.h",
+            "c:\\users\\flem8015\\documents\\unreal projects\\digitaltwinsproject\\plugins\\socketioclient\\intermediate\\build\\win64\\unrealeditor\\inc\\siojson\\uht\\siojlibrary.gen.cpp",
+            "c:\\users\\flem8015\\documents\\unreal projects\\digitaltwinsproject\\plugins\\socketioclient\\source\\siojson\\public\\siojlibrary.h",
+            "c:\\users\\flem8015\\documents\\unreal projects\\digitaltwinsproject\\plugins\\socketioclient\\source\\siojson\\public\\siojtypes.h",
+            "c:\\users\\flem8015\\documents\\unreal projects\\digitaltwinsproject\\plugins\\socketioclient\\source\\siojson\\public\\siojsonobject.h",
+            "c:\\users\\flem8015\\documents\\unreal projects\\digitaltwinsproject\\plugins\\socketioclient\\intermediate\\build\\win64\\unrealeditor\\inc\\siojson\\uht\\siojsonobject.generated.h",
+            "c:\\users\\flem8015\\documents\\unreal projects\\digitaltwinsproject\\plugins\\socketioclient\\source\\siojson\\public\\siojrequestjson.h",
+>>>>>>> Stashed changes
             "c:\\program files\\epic games\\ue_5.3\\engine\\source\\runtime\\online\\http\\public\\http.h",
             "c:\\program files\\epic games\\ue_5.3\\engine\\source\\runtime\\online\\http\\public\\httpmodule.h",
             "c:\\program files\\epic games\\ue_5.3\\engine\\source\\runtime\\online\\http\\public\\interfaces\\ihttprequest.h",
@@ -23,6 +40,7 @@
             "c:\\program files\\epic games\\ue_5.3\\engine\\source\\runtime\\online\\http\\public\\platformhttp.h",
             "c:\\program files\\epic games\\ue_5.3\\engine\\source\\runtime\\online\\http\\public\\windows\\windowsplatformhttp.h",
             "c:\\program files\\epic games\\ue_5.3\\engine\\source\\runtime\\online\\http\\public\\genericplatform\\genericplatformhttp.h",
+<<<<<<< Updated upstream
             "c:\\users\\lee4219\\documents\\unrealprojects_2024\\plugins\\socketioclient\\source\\coreutility\\public\\culambdarunnable.h",
             "c:\\users\\lee4219\\documents\\unrealprojects_2024\\plugins\\socketioclient\\intermediate\\build\\win64\\unrealeditor\\inc\\siojson\\uht\\siojrequestjson.generated.h",
             "c:\\users\\lee4219\\documents\\unrealprojects_2024\\plugins\\socketioclient\\source\\siojson\\public\\siojsonvalue.h",
@@ -43,6 +61,28 @@
             "c:\\users\\lee4219\\documents\\unrealprojects_2024\\plugins\\socketioclient\\source\\siojson\\private\\siojson.cpp",
             "c:\\users\\lee4219\\documents\\unrealprojects_2024\\plugins\\socketioclient\\source\\siojson\\private\\siojsonobject.cpp",
             "c:\\users\\lee4219\\documents\\unrealprojects_2024\\plugins\\socketioclient\\source\\siojson\\private\\siojsonvalue.cpp"
+=======
+            "c:\\users\\flem8015\\documents\\unreal projects\\digitaltwinsproject\\plugins\\socketioclient\\source\\coreutility\\public\\culambdarunnable.h",
+            "c:\\users\\flem8015\\documents\\unreal projects\\digitaltwinsproject\\plugins\\socketioclient\\intermediate\\build\\win64\\unrealeditor\\inc\\siojson\\uht\\siojrequestjson.generated.h",
+            "c:\\users\\flem8015\\documents\\unreal projects\\digitaltwinsproject\\plugins\\socketioclient\\source\\siojson\\public\\siojsonvalue.h",
+            "c:\\users\\flem8015\\documents\\unreal projects\\digitaltwinsproject\\plugins\\socketioclient\\intermediate\\build\\win64\\unrealeditor\\inc\\siojson\\uht\\siojsonvalue.generated.h",
+            "c:\\users\\flem8015\\documents\\unreal projects\\digitaltwinsproject\\plugins\\socketioclient\\intermediate\\build\\win64\\unrealeditor\\inc\\siojson\\uht\\siojlibrary.generated.h",
+            "c:\\users\\flem8015\\documents\\unreal projects\\digitaltwinsproject\\plugins\\socketioclient\\intermediate\\build\\win64\\unrealeditor\\inc\\siojson\\uht\\siojrequestjson.gen.cpp",
+            "c:\\users\\flem8015\\documents\\unreal projects\\digitaltwinsproject\\plugins\\socketioclient\\intermediate\\build\\win64\\unrealeditor\\inc\\siojson\\uht\\siojson.init.gen.cpp",
+            "c:\\users\\flem8015\\documents\\unreal projects\\digitaltwinsproject\\plugins\\socketioclient\\intermediate\\build\\win64\\unrealeditor\\inc\\siojson\\uht\\siojsonobject.gen.cpp",
+            "c:\\users\\flem8015\\documents\\unreal projects\\digitaltwinsproject\\plugins\\socketioclient\\intermediate\\build\\win64\\unrealeditor\\inc\\siojson\\uht\\siojsonvalue.gen.cpp",
+            "c:\\users\\flem8015\\documents\\unreal projects\\digitaltwinsproject\\plugins\\socketioclient\\intermediate\\build\\win64\\unrealeditor\\inc\\siojson\\uht\\siojtypes.gen.cpp",
+            "c:\\users\\flem8015\\documents\\unreal projects\\digitaltwinsproject\\plugins\\socketioclient\\source\\siojson\\private\\siojconvert.cpp",
+            "c:\\program files\\epic games\\ue_5.3\\engine\\source\\runtime\\jsonutilities\\public\\jsonobjectconverter.h",
+            "c:\\program files\\epic games\\ue_5.3\\engine\\source\\runtime\\jsonutilities\\public\\jsonobjectwrapper.h",
+            "c:\\program files\\epic games\\ue_5.3\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\jsonutilities\\uht\\jsonobjectwrapper.generated.h",
+            "c:\\users\\flem8015\\documents\\unreal projects\\digitaltwinsproject\\plugins\\socketioclient\\source\\siojson\\private\\siojlibrary.cpp",
+            "c:\\users\\flem8015\\documents\\unreal projects\\digitaltwinsproject\\plugins\\socketioclient\\source\\siojson\\public\\isiojson.h",
+            "c:\\users\\flem8015\\documents\\unreal projects\\digitaltwinsproject\\plugins\\socketioclient\\source\\siojson\\private\\siojrequestjson.cpp",
+            "c:\\users\\flem8015\\documents\\unreal projects\\digitaltwinsproject\\plugins\\socketioclient\\source\\siojson\\private\\siojson.cpp",
+            "c:\\users\\flem8015\\documents\\unreal projects\\digitaltwinsproject\\plugins\\socketioclient\\source\\siojson\\private\\siojsonobject.cpp",
+            "c:\\users\\flem8015\\documents\\unreal projects\\digitaltwinsproject\\plugins\\socketioclient\\source\\siojson\\private\\siojsonvalue.cpp"
+>>>>>>> Stashed changes
         ],
         "ImportedModules": [],
         "ImportedHeaderUnits": []

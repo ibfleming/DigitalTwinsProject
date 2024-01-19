@@ -1729,11 +1729,16 @@ void EmptyLinkFunctionForGeneratedCodeSerialCom() {}
 		return USerialCom::StaticClass();
 	}
 	DEFINE_VTABLE_PTR_HELPER_CTOR(USerialCom);
+<<<<<<< Updated upstream
 	struct Z_CompiledInDeferFile_FID_Users_lee4219_Documents_UnrealProjects_2024_Plugins_SerialCOM_Source_SERIALCOM_Public_SerialCom_h_Statics
+=======
+	struct Z_CompiledInDeferFile_FID_Users_flem8015_Documents_Unreal_Projects_DigitalTwinsProject_Plugins_SerialCOM_Source_SERIALCOM_Public_SerialCom_h_Statics
+>>>>>>> Stashed changes
 	{
 		static const FEnumRegisterCompiledInInfo EnumInfo[];
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
+<<<<<<< Updated upstream
 	const FEnumRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_lee4219_Documents_UnrealProjects_2024_Plugins_SerialCOM_Source_SERIALCOM_Public_SerialCom_h_Statics::EnumInfo[] = {
 		{ ELineEnd_StaticEnum, TEXT("ELineEnd"), &Z_Registration_Info_UEnum_ELineEnd, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 892061411U) },
 	};
@@ -1744,4 +1749,16 @@ void EmptyLinkFunctionForGeneratedCodeSerialCom() {}
 		Z_CompiledInDeferFile_FID_Users_lee4219_Documents_UnrealProjects_2024_Plugins_SerialCOM_Source_SERIALCOM_Public_SerialCom_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_lee4219_Documents_UnrealProjects_2024_Plugins_SerialCOM_Source_SERIALCOM_Public_SerialCom_h_Statics::ClassInfo),
 		nullptr, 0,
 		Z_CompiledInDeferFile_FID_Users_lee4219_Documents_UnrealProjects_2024_Plugins_SerialCOM_Source_SERIALCOM_Public_SerialCom_h_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_lee4219_Documents_UnrealProjects_2024_Plugins_SerialCOM_Source_SERIALCOM_Public_SerialCom_h_Statics::EnumInfo));
+=======
+	const FEnumRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_flem8015_Documents_Unreal_Projects_DigitalTwinsProject_Plugins_SerialCOM_Source_SERIALCOM_Public_SerialCom_h_Statics::EnumInfo[] = {
+		{ ELineEnd_StaticEnum, TEXT("ELineEnd"), &Z_Registration_Info_UEnum_ELineEnd, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 892061411U) },
+	};
+	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_flem8015_Documents_Unreal_Projects_DigitalTwinsProject_Plugins_SerialCOM_Source_SERIALCOM_Public_SerialCom_h_Statics::ClassInfo[] = {
+		{ Z_Construct_UClass_USerialCom, USerialCom::StaticClass, TEXT("USerialCom"), &Z_Registration_Info_UClass_USerialCom, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(USerialCom), 3512232980U) },
+	};
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_flem8015_Documents_Unreal_Projects_DigitalTwinsProject_Plugins_SerialCOM_Source_SERIALCOM_Public_SerialCom_h_2384802438(TEXT("/Script/SERIALCOM"),
+		Z_CompiledInDeferFile_FID_Users_flem8015_Documents_Unreal_Projects_DigitalTwinsProject_Plugins_SerialCOM_Source_SERIALCOM_Public_SerialCom_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_flem8015_Documents_Unreal_Projects_DigitalTwinsProject_Plugins_SerialCOM_Source_SERIALCOM_Public_SerialCom_h_Statics::ClassInfo),
+		nullptr, 0,
+		Z_CompiledInDeferFile_FID_Users_flem8015_Documents_Unreal_Projects_DigitalTwinsProject_Plugins_SerialCOM_Source_SERIALCOM_Public_SerialCom_h_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_flem8015_Documents_Unreal_Projects_DigitalTwinsProject_Plugins_SerialCOM_Source_SERIALCOM_Public_SerialCom_h_Statics::EnumInfo));
+>>>>>>> Stashed changes
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

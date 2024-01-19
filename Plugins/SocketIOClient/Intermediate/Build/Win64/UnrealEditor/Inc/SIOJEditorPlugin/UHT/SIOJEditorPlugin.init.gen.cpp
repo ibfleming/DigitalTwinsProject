@@ -17,7 +17,11 @@ void EmptyLinkFunctionForGeneratedCodeSIOJEditorPlugin_init() {}
 				nullptr,
 				0,
 				PKG_CompiledIn | 0x00000040,
+<<<<<<< Updated upstream
 				0xC457E92C,
+=======
+				0x7450CF8D,
+>>>>>>> Stashed changes
 				0x50830133,
 				METADATA_PARAMS(0, nullptr)
 			};
@@ -25,5 +29,9 @@ void EmptyLinkFunctionForGeneratedCodeSIOJEditorPlugin_init() {}
 		}
 		return Z_Registration_Info_UPackage__Script_SIOJEditorPlugin.OuterSingleton;
 	}
+<<<<<<< Updated upstream
 	static FRegisterCompiledInInfo Z_CompiledInDeferPackage_UPackage__Script_SIOJEditorPlugin(Z_Construct_UPackage__Script_SIOJEditorPlugin, TEXT("/Script/SIOJEditorPlugin"), Z_Registration_Info_UPackage__Script_SIOJEditorPlugin, CONSTRUCT_RELOAD_VERSION_INFO(FPackageReloadVersionInfo, 0xC457E92C, 0x50830133));
+=======
+	static FRegisterCompiledInInfo Z_CompiledInDeferPackage_UPackage__Script_SIOJEditorPlugin(Z_Construct_UPackage__Script_SIOJEditorPlugin, TEXT("/Script/SIOJEditorPlugin"), Z_Registration_Info_UPackage__Script_SIOJEditorPlugin, CONSTRUCT_RELOAD_VERSION_INFO(FPackageReloadVersionInfo, 0x7450CF8D, 0x50830133));
+>>>>>>> Stashed changes
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

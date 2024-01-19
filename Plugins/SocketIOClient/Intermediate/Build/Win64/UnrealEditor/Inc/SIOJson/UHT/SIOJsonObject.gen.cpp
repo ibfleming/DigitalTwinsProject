@@ -2098,6 +2098,7 @@ void EmptyLinkFunctionForGeneratedCodeSIOJsonObject() {}
 	}
 	DEFINE_VTABLE_PTR_HELPER_CTOR(USIOJsonObject);
 	USIOJsonObject::~USIOJsonObject() {}
+<<<<<<< Updated upstream
 	struct Z_CompiledInDeferFile_FID_Users_lee4219_Documents_UnrealProjects_2024_Plugins_SocketIOClient_Source_SIOJson_Public_SIOJsonObject_h_Statics
 	{
 		static const FClassRegisterCompiledInInfo ClassInfo[];
@@ -2107,6 +2108,17 @@ void EmptyLinkFunctionForGeneratedCodeSIOJsonObject() {}
 	};
 	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_lee4219_Documents_UnrealProjects_2024_Plugins_SocketIOClient_Source_SIOJson_Public_SIOJsonObject_h_2000629857(TEXT("/Script/SIOJson"),
 		Z_CompiledInDeferFile_FID_Users_lee4219_Documents_UnrealProjects_2024_Plugins_SocketIOClient_Source_SIOJson_Public_SIOJsonObject_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_lee4219_Documents_UnrealProjects_2024_Plugins_SocketIOClient_Source_SIOJson_Public_SIOJsonObject_h_Statics::ClassInfo),
+=======
+	struct Z_CompiledInDeferFile_FID_Users_flem8015_Documents_Unreal_Projects_DigitalTwinsProject_Plugins_SocketIOClient_Source_SIOJson_Public_SIOJsonObject_h_Statics
+	{
+		static const FClassRegisterCompiledInInfo ClassInfo[];
+	};
+	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_flem8015_Documents_Unreal_Projects_DigitalTwinsProject_Plugins_SocketIOClient_Source_SIOJson_Public_SIOJsonObject_h_Statics::ClassInfo[] = {
+		{ Z_Construct_UClass_USIOJsonObject, USIOJsonObject::StaticClass, TEXT("USIOJsonObject"), &Z_Registration_Info_UClass_USIOJsonObject, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(USIOJsonObject), 55429551U) },
+	};
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_flem8015_Documents_Unreal_Projects_DigitalTwinsProject_Plugins_SocketIOClient_Source_SIOJson_Public_SIOJsonObject_h_2000629857(TEXT("/Script/SIOJson"),
+		Z_CompiledInDeferFile_FID_Users_flem8015_Documents_Unreal_Projects_DigitalTwinsProject_Plugins_SocketIOClient_Source_SIOJson_Public_SIOJsonObject_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_flem8015_Documents_Unreal_Projects_DigitalTwinsProject_Plugins_SocketIOClient_Source_SIOJson_Public_SIOJsonObject_h_Statics::ClassInfo),
+>>>>>>> Stashed changes
 		nullptr, 0,
 		nullptr, 0);
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

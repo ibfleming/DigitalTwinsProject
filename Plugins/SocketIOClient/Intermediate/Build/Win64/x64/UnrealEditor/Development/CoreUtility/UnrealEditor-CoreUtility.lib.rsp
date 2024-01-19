@@ -6,7 +6,14 @@
 /NAME:"UnrealEditor-CoreUtility.dll"
 /IGNORE:4221
 /NODEFAULTLIB
+<<<<<<< Updated upstream
 "C:\Users\lee4219\Documents\UnrealProjects_2024\Intermediate\Build\Win64\x64\DigitalTwinsProjectEditor\Development\Engine\SharedPCH.Engine.Cpp20.h.obj"
 "C:\Users\lee4219\Documents\UnrealProjects_2024\Plugins\SocketIOClient\Intermediate\Build\Win64\x64\UnrealEditor\Development\CoreUtility\Module.CoreUtility.cpp.obj"
 "C:\Users\lee4219\Documents\UnrealProjects_2024\Plugins\SocketIOClient\Intermediate\Build\Win64\x64\UnrealEditor\Development\CoreUtility\Default.rc2.res"
 /OUT:"C:\Users\lee4219\Documents\UnrealProjects_2024\Plugins\SocketIOClient\Intermediate\Build\Win64\x64\UnrealEditor\Development\CoreUtility\UnrealEditor-CoreUtility.lib"
+=======
+"C:\Users\flem8015\Documents\Unreal Projects\DigitalTwinsProject\Intermediate\Build\Win64\x64\DigitalTwinsProjectEditor\Development\Engine\SharedPCH.Engine.Cpp20.h.obj"
+"C:\Users\flem8015\Documents\Unreal Projects\DigitalTwinsProject\Plugins\SocketIOClient\Intermediate\Build\Win64\x64\UnrealEditor\Development\CoreUtility\Module.CoreUtility.cpp.obj"
+"C:\Users\flem8015\Documents\Unreal Projects\DigitalTwinsProject\Plugins\SocketIOClient\Intermediate\Build\Win64\x64\UnrealEditor\Development\CoreUtility\Default.rc2.res"
+/OUT:"C:\Users\flem8015\Documents\Unreal Projects\DigitalTwinsProject\Plugins\SocketIOClient\Intermediate\Build\Win64\x64\UnrealEditor\Development\CoreUtility\UnrealEditor-CoreUtility.lib"
+>>>>>>> Stashed changes

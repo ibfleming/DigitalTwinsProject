@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 "C:\Users\lee4219\Documents\UnrealProjects_2024\Plugins\SocketIOClient\Intermediate\Build\Win64\x64\UnrealEditor\Development\SocketIOLib\Module.SocketIOLib.cpp"
 /FI"C:\Users\lee4219\Documents\UnrealProjects_2024\Intermediate\Build\Win64\x64\DigitalTwinsProjectEditor\Development\Engine\SharedPCH.Engine.RTTI.Cpp20.h"
 /FI"C:\Users\lee4219\Documents\UnrealProjects_2024\Plugins\SocketIOClient\Intermediate\Build\Win64\x64\UnrealEditor\Development\SocketIOLib\Definitions.SocketIOLib.h"
@@ -6,6 +7,16 @@
 /Fo"C:\Users\lee4219\Documents\UnrealProjects_2024\Plugins\SocketIOClient\Intermediate\Build\Win64\x64\UnrealEditor\Development\SocketIOLib\Module.SocketIOLib.cpp.obj"
 /sourceDependencies "C:\Users\lee4219\Documents\UnrealProjects_2024\Plugins\SocketIOClient\Intermediate\Build\Win64\x64\UnrealEditor\Development\SocketIOLib\Module.SocketIOLib.cpp.dep.json"
 @"C:\Users\lee4219\Documents\UnrealProjects_2024\Plugins\SocketIOClient\Intermediate\Build\Win64\x64\UnrealEditor\Development\SocketIOLib\SocketIOLib.Shared.rsp"
+=======
+"C:\Users\flem8015\Documents\Unreal Projects\DigitalTwinsProject\Plugins\SocketIOClient\Intermediate\Build\Win64\x64\UnrealEditor\Development\SocketIOLib\Module.SocketIOLib.cpp"
+/FI"C:\Users\flem8015\Documents\Unreal Projects\DigitalTwinsProject\Intermediate\Build\Win64\x64\DigitalTwinsProjectEditor\Development\Engine\SharedPCH.Engine.RTTI.Cpp20.h"
+/FI"C:\Users\flem8015\Documents\Unreal Projects\DigitalTwinsProject\Plugins\SocketIOClient\Intermediate\Build\Win64\x64\UnrealEditor\Development\SocketIOLib\Definitions.SocketIOLib.h"
+/Yu"C:\Users\flem8015\Documents\Unreal Projects\DigitalTwinsProject\Intermediate\Build\Win64\x64\DigitalTwinsProjectEditor\Development\Engine\SharedPCH.Engine.RTTI.Cpp20.h"
+/Fp"C:\Users\flem8015\Documents\Unreal Projects\DigitalTwinsProject\Intermediate\Build\Win64\x64\DigitalTwinsProjectEditor\Development\Engine\SharedPCH.Engine.RTTI.Cpp20.h.pch"
+/Fo"C:\Users\flem8015\Documents\Unreal Projects\DigitalTwinsProject\Plugins\SocketIOClient\Intermediate\Build\Win64\x64\UnrealEditor\Development\SocketIOLib\Module.SocketIOLib.cpp.obj"
+/sourceDependencies "C:\Users\flem8015\Documents\Unreal Projects\DigitalTwinsProject\Plugins\SocketIOClient\Intermediate\Build\Win64\x64\UnrealEditor\Development\SocketIOLib\Module.SocketIOLib.cpp.dep.json"
+@"C:\Users\flem8015\Documents\Unreal Projects\DigitalTwinsProject\Plugins\SocketIOClient\Intermediate\Build\Win64\x64\UnrealEditor\Development\SocketIOLib\SocketIOLib.Shared.rsp"
+>>>>>>> Stashed changes
 /Zc:inline
 /nologo
 /Oi

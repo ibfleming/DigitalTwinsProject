@@ -34,16 +34,26 @@
 /NODEFAULTLIB:"LIBCD"
 /NODEFAULTLIB:"LIBCPD"
 /FUNCTIONPADMIN:6
+<<<<<<< Updated upstream
 "C:\Users\lee4219\Documents\UnrealProjects_2024\Intermediate\Build\Win64\x64\DigitalTwinsProjectEditor\Development\Engine\SharedPCH.Engine.Cpp20.h.obj"
 "C:\Users\lee4219\Documents\UnrealProjects_2024\Plugins\SocketIOClient\Intermediate\Build\Win64\x64\UnrealEditor\Development\SIOJson\Module.SIOJson.cpp.obj"
 "C:\Users\lee4219\Documents\UnrealProjects_2024\Plugins\SocketIOClient\Intermediate\Build\Win64\x64\UnrealEditor\Development\SIOJson\Default.rc2.res"
+=======
+"C:\Users\flem8015\Documents\Unreal Projects\DigitalTwinsProject\Intermediate\Build\Win64\x64\DigitalTwinsProjectEditor\Development\Engine\SharedPCH.Engine.Cpp20.h.obj"
+"C:\Users\flem8015\Documents\Unreal Projects\DigitalTwinsProject\Plugins\SocketIOClient\Intermediate\Build\Win64\x64\UnrealEditor\Development\SIOJson\Module.SIOJson.cpp.obj"
+"C:\Users\flem8015\Documents\Unreal Projects\DigitalTwinsProject\Plugins\SocketIOClient\Intermediate\Build\Win64\x64\UnrealEditor\Development\SIOJson\Default.rc2.res"
+>>>>>>> Stashed changes
 "..\Intermediate\Build\Win64\x64\UnrealEditor\Development\Core\UnrealEditor-Core.lib"
 "..\Intermediate\Build\Win64\x64\UnrealEditor\Development\CoreUObject\UnrealEditor-CoreUObject.lib"
 "..\Intermediate\Build\Win64\x64\UnrealEditor\Development\Engine\UnrealEditor-Engine.lib"
 "..\Intermediate\Build\Win64\x64\UnrealEditor\Development\HTTP\UnrealEditor-HTTP.lib"
 "..\Intermediate\Build\Win64\x64\UnrealEditor\Development\Json\UnrealEditor-Json.lib"
 "..\Intermediate\Build\Win64\x64\UnrealEditor\Development\JsonUtilities\UnrealEditor-JsonUtilities.lib"
+<<<<<<< Updated upstream
 "C:\Users\lee4219\Documents\UnrealProjects_2024\Plugins\SocketIOClient\Intermediate\Build\Win64\x64\UnrealEditor\Development\CoreUtility\UnrealEditor-CoreUtility.lib"
+=======
+"C:\Users\flem8015\Documents\Unreal Projects\DigitalTwinsProject\Plugins\SocketIOClient\Intermediate\Build\Win64\x64\UnrealEditor\Development\CoreUtility\UnrealEditor-CoreUtility.lib"
+>>>>>>> Stashed changes
 "delayimp.lib"
 "wininet.lib"
 "rpcrt4.lib"
@@ -69,7 +79,13 @@
 "synchronization.lib"
 "dwmapi.lib"
 "imm32.lib"
+<<<<<<< Updated upstream
 /OUT:"C:\Users\lee4219\Documents\UnrealProjects_2024\Plugins\SocketIOClient\Binaries\Win64\UnrealEditor-SIOJson.dll"
 /IMPLIB:"C:\Users\lee4219\Documents\UnrealProjects_2024\Plugins\SocketIOClient\Intermediate\Build\Win64\x64\UnrealEditor\Development\SIOJson\UnrealEditor-SIOJson.sup.lib"
 /PDB:"C:\Users\lee4219\Documents\UnrealProjects_2024\Plugins\SocketIOClient\Binaries\Win64\UnrealEditor-SIOJson.pdb"
+=======
+/OUT:"C:\Users\flem8015\Documents\Unreal Projects\DigitalTwinsProject\Plugins\SocketIOClient\Binaries\Win64\UnrealEditor-SIOJson.dll"
+/IMPLIB:"C:\Users\flem8015\Documents\Unreal Projects\DigitalTwinsProject\Plugins\SocketIOClient\Intermediate\Build\Win64\x64\UnrealEditor\Development\SIOJson\UnrealEditor-SIOJson.sup.lib"
+/PDB:"C:\Users\flem8015\Documents\Unreal Projects\DigitalTwinsProject\Plugins\SocketIOClient\Binaries\Win64\UnrealEditor-SIOJson.pdb"
+>>>>>>> Stashed changes
 /ignore:4078

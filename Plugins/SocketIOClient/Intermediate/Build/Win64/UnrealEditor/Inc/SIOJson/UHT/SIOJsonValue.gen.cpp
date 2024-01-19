@@ -1150,11 +1150,16 @@ void EmptyLinkFunctionForGeneratedCodeSIOJsonValue() {}
 	}
 	DEFINE_VTABLE_PTR_HELPER_CTOR(USIOJsonValue);
 	USIOJsonValue::~USIOJsonValue() {}
+<<<<<<< Updated upstream
 	struct Z_CompiledInDeferFile_FID_Users_lee4219_Documents_UnrealProjects_2024_Plugins_SocketIOClient_Source_SIOJson_Public_SIOJsonValue_h_Statics
+=======
+	struct Z_CompiledInDeferFile_FID_Users_flem8015_Documents_Unreal_Projects_DigitalTwinsProject_Plugins_SocketIOClient_Source_SIOJson_Public_SIOJsonValue_h_Statics
+>>>>>>> Stashed changes
 	{
 		static const FEnumRegisterCompiledInInfo EnumInfo[];
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
+<<<<<<< Updated upstream
 	const FEnumRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_lee4219_Documents_UnrealProjects_2024_Plugins_SocketIOClient_Source_SIOJson_Public_SIOJsonValue_h_Statics::EnumInfo[] = {
 		{ ESIOJson_StaticEnum, TEXT("ESIOJson"), &Z_Registration_Info_UEnum_ESIOJson, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 905834616U) },
 	};
@@ -1165,4 +1170,16 @@ void EmptyLinkFunctionForGeneratedCodeSIOJsonValue() {}
 		Z_CompiledInDeferFile_FID_Users_lee4219_Documents_UnrealProjects_2024_Plugins_SocketIOClient_Source_SIOJson_Public_SIOJsonValue_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_lee4219_Documents_UnrealProjects_2024_Plugins_SocketIOClient_Source_SIOJson_Public_SIOJsonValue_h_Statics::ClassInfo),
 		nullptr, 0,
 		Z_CompiledInDeferFile_FID_Users_lee4219_Documents_UnrealProjects_2024_Plugins_SocketIOClient_Source_SIOJson_Public_SIOJsonValue_h_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_lee4219_Documents_UnrealProjects_2024_Plugins_SocketIOClient_Source_SIOJson_Public_SIOJsonValue_h_Statics::EnumInfo));
+=======
+	const FEnumRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_flem8015_Documents_Unreal_Projects_DigitalTwinsProject_Plugins_SocketIOClient_Source_SIOJson_Public_SIOJsonValue_h_Statics::EnumInfo[] = {
+		{ ESIOJson_StaticEnum, TEXT("ESIOJson"), &Z_Registration_Info_UEnum_ESIOJson, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 905834616U) },
+	};
+	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_flem8015_Documents_Unreal_Projects_DigitalTwinsProject_Plugins_SocketIOClient_Source_SIOJson_Public_SIOJsonValue_h_Statics::ClassInfo[] = {
+		{ Z_Construct_UClass_USIOJsonValue, USIOJsonValue::StaticClass, TEXT("USIOJsonValue"), &Z_Registration_Info_UClass_USIOJsonValue, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(USIOJsonValue), 196193784U) },
+	};
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_flem8015_Documents_Unreal_Projects_DigitalTwinsProject_Plugins_SocketIOClient_Source_SIOJson_Public_SIOJsonValue_h_2474011272(TEXT("/Script/SIOJson"),
+		Z_CompiledInDeferFile_FID_Users_flem8015_Documents_Unreal_Projects_DigitalTwinsProject_Plugins_SocketIOClient_Source_SIOJson_Public_SIOJsonValue_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_flem8015_Documents_Unreal_Projects_DigitalTwinsProject_Plugins_SocketIOClient_Source_SIOJson_Public_SIOJsonValue_h_Statics::ClassInfo),
+		nullptr, 0,
+		Z_CompiledInDeferFile_FID_Users_flem8015_Documents_Unreal_Projects_DigitalTwinsProject_Plugins_SocketIOClient_Source_SIOJson_Public_SIOJsonValue_h_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_flem8015_Documents_Unreal_Projects_DigitalTwinsProject_Plugins_SocketIOClient_Source_SIOJson_Public_SIOJsonValue_h_Statics::EnumInfo));
+>>>>>>> Stashed changes
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

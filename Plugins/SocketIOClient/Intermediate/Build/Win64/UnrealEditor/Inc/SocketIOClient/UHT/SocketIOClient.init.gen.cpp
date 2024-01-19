@@ -33,7 +33,11 @@ void EmptyLinkFunctionForGeneratedCodeSocketIOClient_init() {}
 				SingletonFuncArray,
 				UE_ARRAY_COUNT(SingletonFuncArray),
 				PKG_CompiledIn | 0x00000000,
+<<<<<<< Updated upstream
 				0xCFC5EF44,
+=======
+				0xB53532E8,
+>>>>>>> Stashed changes
 				0x2637AFC2,
 				METADATA_PARAMS(0, nullptr)
 			};
@@ -41,5 +45,9 @@ void EmptyLinkFunctionForGeneratedCodeSocketIOClient_init() {}
 		}
 		return Z_Registration_Info_UPackage__Script_SocketIOClient.OuterSingleton;
 	}
+<<<<<<< Updated upstream
 	static FRegisterCompiledInInfo Z_CompiledInDeferPackage_UPackage__Script_SocketIOClient(Z_Construct_UPackage__Script_SocketIOClient, TEXT("/Script/SocketIOClient"), Z_Registration_Info_UPackage__Script_SocketIOClient, CONSTRUCT_RELOAD_VERSION_INFO(FPackageReloadVersionInfo, 0xCFC5EF44, 0x2637AFC2));
+=======
+	static FRegisterCompiledInInfo Z_CompiledInDeferPackage_UPackage__Script_SocketIOClient(Z_Construct_UPackage__Script_SocketIOClient, TEXT("/Script/SocketIOClient"), Z_Registration_Info_UPackage__Script_SocketIOClient, CONSTRUCT_RELOAD_VERSION_INFO(FPackageReloadVersionInfo, 0xB53532E8, 0x2637AFC2));
+>>>>>>> Stashed changes
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

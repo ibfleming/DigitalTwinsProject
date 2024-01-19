@@ -1,4 +1,11 @@
+<<<<<<< Updated upstream
 C:\Users\lee4219\Documents\UnrealProjects_2024\Plugins\SocketIOClient\Source\SocketIOClient\Public\SIOMessageConvert.h
 C:\Users\lee4219\Documents\UnrealProjects_2024\Plugins\SocketIOClient\Source\SocketIOClient\Public\SocketIOClientComponent.h
 C:\Users\lee4219\Documents\UnrealProjects_2024\Plugins\SocketIOClient\Source\SocketIOClient\Public\SocketIOFunctionLibrary.h
 C:\Users\lee4219\Documents\UnrealProjects_2024\Plugins\SocketIOClient\Source\SocketIOClient\Public\SocketIONative.h
+=======
+C:\Users\flem8015\Documents\Unreal Projects\DigitalTwinsProject\Plugins\SocketIOClient\Source\SocketIOClient\Public\SIOMessageConvert.h
+C:\Users\flem8015\Documents\Unreal Projects\DigitalTwinsProject\Plugins\SocketIOClient\Source\SocketIOClient\Public\SocketIOClientComponent.h
+C:\Users\flem8015\Documents\Unreal Projects\DigitalTwinsProject\Plugins\SocketIOClient\Source\SocketIOClient\Public\SocketIOFunctionLibrary.h
+C:\Users\flem8015\Documents\Unreal Projects\DigitalTwinsProject\Plugins\SocketIOClient\Source\SocketIOClient\Public\SocketIONative.h
+>>>>>>> Stashed changes

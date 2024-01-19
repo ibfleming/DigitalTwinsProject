@@ -22,21 +22,36 @@ struct FLatentActionInfo;
 #endif
 #define SIOJSON_SIOJLibrary_generated_h
 
+<<<<<<< Updated upstream
 #define FID_Users_lee4219_Documents_UnrealProjects_2024_Plugins_SocketIOClient_Source_SIOJson_Public_SIOJLibrary_h_17_DELEGATE \
 SIOJSON_API void FSIOJCallDelegate_DelegateWrapper(const FScriptDelegate& SIOJCallDelegate, USIOJRequestJSON* Request);
 
 
 #define FID_Users_lee4219_Documents_UnrealProjects_2024_Plugins_SocketIOClient_Source_SIOJson_Public_SIOJLibrary_h_22_GENERATED_BODY \
+=======
+#define FID_Users_flem8015_Documents_Unreal_Projects_DigitalTwinsProject_Plugins_SocketIOClient_Source_SIOJson_Public_SIOJLibrary_h_17_DELEGATE \
+SIOJSON_API void FSIOJCallDelegate_DelegateWrapper(const FScriptDelegate& SIOJCallDelegate, USIOJRequestJSON* Request);
+
+
+#define FID_Users_flem8015_Documents_Unreal_Projects_DigitalTwinsProject_Plugins_SocketIOClient_Source_SIOJson_Public_SIOJLibrary_h_22_GENERATED_BODY \
+>>>>>>> Stashed changes
 	friend struct Z_Construct_UScriptStruct_FSIOJCallResponse_Statics; \
 	SIOJSON_API static class UScriptStruct* StaticStruct();
 
 
 template<> SIOJSON_API UScriptStruct* StaticStruct<struct FSIOJCallResponse>();
 
+<<<<<<< Updated upstream
 #define FID_Users_lee4219_Documents_UnrealProjects_2024_Plugins_SocketIOClient_Source_SIOJson_Public_SIOJLibrary_h_50_SPARSE_DATA
 #define FID_Users_lee4219_Documents_UnrealProjects_2024_Plugins_SocketIOClient_Source_SIOJson_Public_SIOJLibrary_h_50_SPARSE_DATA_PROPERTY_ACCESSORS
 #define FID_Users_lee4219_Documents_UnrealProjects_2024_Plugins_SocketIOClient_Source_SIOJson_Public_SIOJLibrary_h_50_EDITOR_ONLY_SPARSE_DATA_PROPERTY_ACCESSORS
 #define FID_Users_lee4219_Documents_UnrealProjects_2024_Plugins_SocketIOClient_Source_SIOJson_Public_SIOJLibrary_h_50_RPC_WRAPPERS_NO_PURE_DECLS \
+=======
+#define FID_Users_flem8015_Documents_Unreal_Projects_DigitalTwinsProject_Plugins_SocketIOClient_Source_SIOJson_Public_SIOJLibrary_h_50_SPARSE_DATA
+#define FID_Users_flem8015_Documents_Unreal_Projects_DigitalTwinsProject_Plugins_SocketIOClient_Source_SIOJson_Public_SIOJLibrary_h_50_SPARSE_DATA_PROPERTY_ACCESSORS
+#define FID_Users_flem8015_Documents_Unreal_Projects_DigitalTwinsProject_Plugins_SocketIOClient_Source_SIOJson_Public_SIOJLibrary_h_50_EDITOR_ONLY_SPARSE_DATA_PROPERTY_ACCESSORS
+#define FID_Users_flem8015_Documents_Unreal_Projects_DigitalTwinsProject_Plugins_SocketIOClient_Source_SIOJson_Public_SIOJLibrary_h_50_RPC_WRAPPERS_NO_PURE_DECLS \
+>>>>>>> Stashed changes
  \
 	DECLARE_FUNCTION(execGetURLBinary); \
 	DECLARE_FUNCTION(execCallURL); \
@@ -62,8 +77,13 @@ template<> SIOJSON_API UScriptStruct* StaticStruct<struct FSIOJCallResponse>();
 	DECLARE_FUNCTION(execPercentEncode);
 
 
+<<<<<<< Updated upstream
 #define FID_Users_lee4219_Documents_UnrealProjects_2024_Plugins_SocketIOClient_Source_SIOJson_Public_SIOJLibrary_h_50_ACCESSORS
 #define FID_Users_lee4219_Documents_UnrealProjects_2024_Plugins_SocketIOClient_Source_SIOJson_Public_SIOJLibrary_h_50_INCLASS_NO_PURE_DECLS \
+=======
+#define FID_Users_flem8015_Documents_Unreal_Projects_DigitalTwinsProject_Plugins_SocketIOClient_Source_SIOJson_Public_SIOJLibrary_h_50_ACCESSORS
+#define FID_Users_flem8015_Documents_Unreal_Projects_DigitalTwinsProject_Plugins_SocketIOClient_Source_SIOJson_Public_SIOJLibrary_h_50_INCLASS_NO_PURE_DECLS \
+>>>>>>> Stashed changes
 private: \
 	static void StaticRegisterNativesUSIOJLibrary(); \
 	friend struct Z_Construct_UClass_USIOJLibrary_Statics; \
@@ -72,7 +92,11 @@ public: \
 	DECLARE_SERIALIZER(USIOJLibrary)
 
 
+<<<<<<< Updated upstream
 #define FID_Users_lee4219_Documents_UnrealProjects_2024_Plugins_SocketIOClient_Source_SIOJson_Public_SIOJLibrary_h_50_ENHANCED_CONSTRUCTORS \
+=======
+#define FID_Users_flem8015_Documents_Unreal_Projects_DigitalTwinsProject_Plugins_SocketIOClient_Source_SIOJson_Public_SIOJLibrary_h_50_ENHANCED_CONSTRUCTORS \
+>>>>>>> Stashed changes
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API USIOJLibrary(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
 private: \
@@ -86,6 +110,7 @@ public: \
 	NO_API virtual ~USIOJLibrary();
 
 
+<<<<<<< Updated upstream
 #define FID_Users_lee4219_Documents_UnrealProjects_2024_Plugins_SocketIOClient_Source_SIOJson_Public_SIOJLibrary_h_47_PROLOG
 #define FID_Users_lee4219_Documents_UnrealProjects_2024_Plugins_SocketIOClient_Source_SIOJson_Public_SIOJLibrary_h_50_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
@@ -97,6 +122,19 @@ public: \
 	FID_Users_lee4219_Documents_UnrealProjects_2024_Plugins_SocketIOClient_Source_SIOJson_Public_SIOJLibrary_h_50_ACCESSORS \
 	FID_Users_lee4219_Documents_UnrealProjects_2024_Plugins_SocketIOClient_Source_SIOJson_Public_SIOJLibrary_h_50_INCLASS_NO_PURE_DECLS \
 	FID_Users_lee4219_Documents_UnrealProjects_2024_Plugins_SocketIOClient_Source_SIOJson_Public_SIOJLibrary_h_50_ENHANCED_CONSTRUCTORS \
+=======
+#define FID_Users_flem8015_Documents_Unreal_Projects_DigitalTwinsProject_Plugins_SocketIOClient_Source_SIOJson_Public_SIOJLibrary_h_47_PROLOG
+#define FID_Users_flem8015_Documents_Unreal_Projects_DigitalTwinsProject_Plugins_SocketIOClient_Source_SIOJson_Public_SIOJLibrary_h_50_GENERATED_BODY \
+PRAGMA_DISABLE_DEPRECATION_WARNINGS \
+public: \
+	FID_Users_flem8015_Documents_Unreal_Projects_DigitalTwinsProject_Plugins_SocketIOClient_Source_SIOJson_Public_SIOJLibrary_h_50_SPARSE_DATA \
+	FID_Users_flem8015_Documents_Unreal_Projects_DigitalTwinsProject_Plugins_SocketIOClient_Source_SIOJson_Public_SIOJLibrary_h_50_SPARSE_DATA_PROPERTY_ACCESSORS \
+	FID_Users_flem8015_Documents_Unreal_Projects_DigitalTwinsProject_Plugins_SocketIOClient_Source_SIOJson_Public_SIOJLibrary_h_50_EDITOR_ONLY_SPARSE_DATA_PROPERTY_ACCESSORS \
+	FID_Users_flem8015_Documents_Unreal_Projects_DigitalTwinsProject_Plugins_SocketIOClient_Source_SIOJson_Public_SIOJLibrary_h_50_RPC_WRAPPERS_NO_PURE_DECLS \
+	FID_Users_flem8015_Documents_Unreal_Projects_DigitalTwinsProject_Plugins_SocketIOClient_Source_SIOJson_Public_SIOJLibrary_h_50_ACCESSORS \
+	FID_Users_flem8015_Documents_Unreal_Projects_DigitalTwinsProject_Plugins_SocketIOClient_Source_SIOJson_Public_SIOJLibrary_h_50_INCLASS_NO_PURE_DECLS \
+	FID_Users_flem8015_Documents_Unreal_Projects_DigitalTwinsProject_Plugins_SocketIOClient_Source_SIOJson_Public_SIOJLibrary_h_50_ENHANCED_CONSTRUCTORS \
+>>>>>>> Stashed changes
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
@@ -104,7 +142,11 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 template<> SIOJSON_API UClass* StaticClass<class USIOJLibrary>();
 
 #undef CURRENT_FILE_ID
+<<<<<<< Updated upstream
 #define CURRENT_FILE_ID FID_Users_lee4219_Documents_UnrealProjects_2024_Plugins_SocketIOClient_Source_SIOJson_Public_SIOJLibrary_h
+=======
+#define CURRENT_FILE_ID FID_Users_flem8015_Documents_Unreal_Projects_DigitalTwinsProject_Plugins_SocketIOClient_Source_SIOJson_Public_SIOJLibrary_h
+>>>>>>> Stashed changes
 
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

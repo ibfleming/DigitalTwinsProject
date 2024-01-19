@@ -1448,11 +1448,16 @@ void EmptyLinkFunctionForGeneratedCodeCUBlueprintLibrary() {}
 	UCUBlueprintLibrary::UCUBlueprintLibrary(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {}
 	DEFINE_VTABLE_PTR_HELPER_CTOR(UCUBlueprintLibrary);
 	UCUBlueprintLibrary::~UCUBlueprintLibrary() {}
+<<<<<<< Updated upstream
 	struct Z_CompiledInDeferFile_FID_Users_lee4219_Documents_UnrealProjects_2024_Plugins_SocketIOClient_Source_CoreUtility_Public_CUBlueprintLibrary_h_Statics
+=======
+	struct Z_CompiledInDeferFile_FID_Users_flem8015_Documents_Unreal_Projects_DigitalTwinsProject_Plugins_SocketIOClient_Source_CoreUtility_Public_CUBlueprintLibrary_h_Statics
+>>>>>>> Stashed changes
 	{
 		static const FEnumRegisterCompiledInInfo EnumInfo[];
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
+<<<<<<< Updated upstream
 	const FEnumRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_lee4219_Documents_UnrealProjects_2024_Plugins_SocketIOClient_Source_CoreUtility_Public_CUBlueprintLibrary_h_Statics::EnumInfo[] = {
 		{ EImageFormatBPType_StaticEnum, TEXT("EImageFormatBPType"), &Z_Registration_Info_UEnum_EImageFormatBPType, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 820994589U) },
 		{ ESIOCallbackType_StaticEnum, TEXT("ESIOCallbackType"), &Z_Registration_Info_UEnum_ESIOCallbackType, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 3666497678U) },
@@ -1464,4 +1469,17 @@ void EmptyLinkFunctionForGeneratedCodeCUBlueprintLibrary() {}
 		Z_CompiledInDeferFile_FID_Users_lee4219_Documents_UnrealProjects_2024_Plugins_SocketIOClient_Source_CoreUtility_Public_CUBlueprintLibrary_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_lee4219_Documents_UnrealProjects_2024_Plugins_SocketIOClient_Source_CoreUtility_Public_CUBlueprintLibrary_h_Statics::ClassInfo),
 		nullptr, 0,
 		Z_CompiledInDeferFile_FID_Users_lee4219_Documents_UnrealProjects_2024_Plugins_SocketIOClient_Source_CoreUtility_Public_CUBlueprintLibrary_h_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_lee4219_Documents_UnrealProjects_2024_Plugins_SocketIOClient_Source_CoreUtility_Public_CUBlueprintLibrary_h_Statics::EnumInfo));
+=======
+	const FEnumRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_flem8015_Documents_Unreal_Projects_DigitalTwinsProject_Plugins_SocketIOClient_Source_CoreUtility_Public_CUBlueprintLibrary_h_Statics::EnumInfo[] = {
+		{ EImageFormatBPType_StaticEnum, TEXT("EImageFormatBPType"), &Z_Registration_Info_UEnum_EImageFormatBPType, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 820994589U) },
+		{ ESIOCallbackType_StaticEnum, TEXT("ESIOCallbackType"), &Z_Registration_Info_UEnum_ESIOCallbackType, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 3666497678U) },
+	};
+	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_flem8015_Documents_Unreal_Projects_DigitalTwinsProject_Plugins_SocketIOClient_Source_CoreUtility_Public_CUBlueprintLibrary_h_Statics::ClassInfo[] = {
+		{ Z_Construct_UClass_UCUBlueprintLibrary, UCUBlueprintLibrary::StaticClass, TEXT("UCUBlueprintLibrary"), &Z_Registration_Info_UClass_UCUBlueprintLibrary, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UCUBlueprintLibrary), 581587683U) },
+	};
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_flem8015_Documents_Unreal_Projects_DigitalTwinsProject_Plugins_SocketIOClient_Source_CoreUtility_Public_CUBlueprintLibrary_h_3889880250(TEXT("/Script/CoreUtility"),
+		Z_CompiledInDeferFile_FID_Users_flem8015_Documents_Unreal_Projects_DigitalTwinsProject_Plugins_SocketIOClient_Source_CoreUtility_Public_CUBlueprintLibrary_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_flem8015_Documents_Unreal_Projects_DigitalTwinsProject_Plugins_SocketIOClient_Source_CoreUtility_Public_CUBlueprintLibrary_h_Statics::ClassInfo),
+		nullptr, 0,
+		Z_CompiledInDeferFile_FID_Users_flem8015_Documents_Unreal_Projects_DigitalTwinsProject_Plugins_SocketIOClient_Source_CoreUtility_Public_CUBlueprintLibrary_h_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_flem8015_Documents_Unreal_Projects_DigitalTwinsProject_Plugins_SocketIOClient_Source_CoreUtility_Public_CUBlueprintLibrary_h_Statics::EnumInfo));
+>>>>>>> Stashed changes
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

@@ -25,7 +25,11 @@ void EmptyLinkFunctionForGeneratedCodeSIOJson_init() {}
 				SingletonFuncArray,
 				UE_ARRAY_COUNT(SingletonFuncArray),
 				PKG_CompiledIn | 0x00000000,
+<<<<<<< Updated upstream
 				0x0A1A18BA,
+=======
+				0xD1BFBC49,
+>>>>>>> Stashed changes
 				0x9C575898,
 				METADATA_PARAMS(0, nullptr)
 			};
@@ -33,5 +37,9 @@ void EmptyLinkFunctionForGeneratedCodeSIOJson_init() {}
 		}
 		return Z_Registration_Info_UPackage__Script_SIOJson.OuterSingleton;
 	}
+<<<<<<< Updated upstream
 	static FRegisterCompiledInInfo Z_CompiledInDeferPackage_UPackage__Script_SIOJson(Z_Construct_UPackage__Script_SIOJson, TEXT("/Script/SIOJson"), Z_Registration_Info_UPackage__Script_SIOJson, CONSTRUCT_RELOAD_VERSION_INFO(FPackageReloadVersionInfo, 0x0A1A18BA, 0x9C575898));
+=======
+	static FRegisterCompiledInInfo Z_CompiledInDeferPackage_UPackage__Script_SIOJson(Z_Construct_UPackage__Script_SIOJson, TEXT("/Script/SIOJson"), Z_Registration_Info_UPackage__Script_SIOJson, CONSTRUCT_RELOAD_VERSION_INFO(FPackageReloadVersionInfo, 0xD1BFBC49, 0x9C575898));
+>>>>>>> Stashed changes
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
