@@ -26,4 +26,5 @@
 **Design:**
 ---
 ##### Our design will consist of the above mentioned tasks that will allow us to complete our Digital Twin to the best of our capabilities. A diagram of the flow of the design will be included below - 
-- Techniques?
+
+![Diagram of Digital Twin](https://github.com/ibfleming/DigitalTwinsProject/blob/main/ExternalApps/Documents/Draw_io/DigitalTwinsProjectProposalDiagram.png)
