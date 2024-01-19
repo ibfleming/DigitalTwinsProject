@@ -1,4 +1,4 @@
-## Design Proposal for Digital Twins Project
+## Design Proposal Outline for Digital Twins Project
 
 **Goals?**
 
