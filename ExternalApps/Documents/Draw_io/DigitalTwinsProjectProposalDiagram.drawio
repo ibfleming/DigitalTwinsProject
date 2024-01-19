@@ -1,0 +1,106 @@
+<mxfile host="app.diagrams.net" modified="2024-01-19T21:21:13.986Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:121.0) Gecko/20100101 Firefox/121.0" etag="Y58szFMWPMtu7R0WIWtm" version="22.1.21" type="device">
+  <diagram name="Page-1" id="yEXYRLi0tVi06w2Lj15Q">
+    <mxGraphModel dx="1434" dy="782" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="SZQEqar88ExapWcWPOMX-1" value="" style="whiteSpace=wrap;html=1;aspect=fixed;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="20" y="90" width="630" height="630" as="geometry" />
+        </mxCell>
+        <mxCell id="SZQEqar88ExapWcWPOMX-2" value="&lt;h1&gt;Sensors&lt;/h1&gt;&lt;p&gt;The sensors on this Digital Twin will be simulated in python. Some of the sensors that we will be using are listed below.&lt;br&gt;&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="30" y="100" width="370" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="SZQEqar88ExapWcWPOMX-4" value="&lt;div&gt;Ship Thermometer:&lt;/div&gt;&lt;div&gt;This will get the temperature on the inside of the ship.&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="60" y="200" width="190" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="SZQEqar88ExapWcWPOMX-5" value="&lt;div&gt;World Thermometer:&lt;/div&gt;&lt;div&gt;This will get the temperature of the world as you go from planet to planet.&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="60" y="310" width="190" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="SZQEqar88ExapWcWPOMX-6" value="&lt;div&gt;Oxygen Level:&lt;/div&gt;&lt;div&gt;This will display the oxygen level on the world telling if it is safe to enter the outside environment.&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="60" y="410" width="190" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="SZQEqar88ExapWcWPOMX-7" value="&lt;div&gt;Ship Fuel:&lt;/div&gt;&lt;div&gt;The amount of fuel that the ship currently has.&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="60" y="510" width="190" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="SZQEqar88ExapWcWPOMX-8" value="&lt;div&gt;Air Pressure:&lt;/div&gt;&lt;div&gt;Tells the ship what the air pressure of the outside world is.&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="60" y="610" width="190" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="SZQEqar88ExapWcWPOMX-9" value="&lt;div&gt;Ship Status:&lt;/div&gt;&lt;div&gt;Tells where the ship is - In orbit, landed, moon location name, etc.&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="380" y="205" width="190" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="SZQEqar88ExapWcWPOMX-10" value="&lt;div&gt;Humidity Level:&lt;/div&gt;&lt;div&gt;The world humidity level, telling how humid the world is.&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="380" y="310" width="190" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="SZQEqar88ExapWcWPOMX-11" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="680" y="90" width="400" height="630" as="geometry" />
+        </mxCell>
+        <mxCell id="SZQEqar88ExapWcWPOMX-12" value="&lt;h1&gt;Communications&lt;/h1&gt;&lt;p&gt;All of the communications will be sent via MQTT connection from the sensors (Python simulated numbers) to the visualization.&lt;br&gt;&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="700" y="100" width="370" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="SZQEqar88ExapWcWPOMX-13" value="&lt;div&gt;Subscriber:&lt;/div&gt;&lt;div&gt;This keeps track of the different publishers that one thing is subscribed to. It tells the broker what information it would like to see.&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="740" y="250" width="280" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="SZQEqar88ExapWcWPOMX-14" value="&lt;div&gt;Publisher:&lt;/div&gt;&lt;div&gt;This gets the data from the Sensors and &quot;publishes&quot; their data so that other components are able to access the data that is being published.&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="740" y="530" width="280" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="SZQEqar88ExapWcWPOMX-15" value="&lt;div&gt;Broker:&lt;/div&gt;&lt;div&gt;This relays the message as information is requested.&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="740" y="390" width="280" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="SZQEqar88ExapWcWPOMX-16" value="" style="shape=flexArrow;endArrow=classic;html=1;rounded=0;width=14;endSize=7.68;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fillColor=#f8cecc;strokeColor=#b85450;" edge="1" parent="1" target="SZQEqar88ExapWcWPOMX-14">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="490" y="590" as="sourcePoint" />
+            <mxPoint x="550" y="550" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="SZQEqar88ExapWcWPOMX-17" value="" style="shape=flexArrow;endArrow=classic;html=1;rounded=0;exitX=0.25;exitY=0;exitDx=0;exitDy=0;entryX=0.25;entryY=1;entryDx=0;entryDy=0;fillColor=#f8cecc;strokeColor=#b85450;" edge="1" parent="1" source="SZQEqar88ExapWcWPOMX-14" target="SZQEqar88ExapWcWPOMX-15">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="950" y="600" as="sourcePoint" />
+            <mxPoint x="1000" y="550" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="SZQEqar88ExapWcWPOMX-18" value="" style="shape=flexArrow;endArrow=classic;html=1;rounded=0;exitX=0.25;exitY=0;exitDx=0;exitDy=0;entryX=0.25;entryY=1;entryDx=0;entryDy=0;fillColor=#f8cecc;strokeColor=#b85450;" edge="1" parent="1" source="SZQEqar88ExapWcWPOMX-15" target="SZQEqar88ExapWcWPOMX-13">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="820" y="420" as="sourcePoint" />
+            <mxPoint x="870" y="370" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="SZQEqar88ExapWcWPOMX-19" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="1110" y="90" width="570" height="630" as="geometry" />
+        </mxCell>
+        <mxCell id="SZQEqar88ExapWcWPOMX-20" value="&lt;h1&gt;Visualization&lt;/h1&gt;&lt;p&gt;This will be where all of the data goes that is sent from the sensors and what is done with the data&lt;br&gt;&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="1130" y="110" width="540" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="SZQEqar88ExapWcWPOMX-21" value="" style="shape=flexArrow;endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;fillColor=#f8cecc;strokeColor=#b85450;" edge="1" parent="1" source="SZQEqar88ExapWcWPOMX-13">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="1140" y="310" as="sourcePoint" />
+            <mxPoint x="1190" y="270" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="SZQEqar88ExapWcWPOMX-22" value="&lt;div&gt;Ship: &lt;br&gt;&lt;/div&gt;&lt;div&gt;Various sensors and screens on the ship will read the variables that they are subscribed to and display the info on them.&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1197.5" y="230" width="405" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="SZQEqar88ExapWcWPOMX-23" value="&lt;div&gt;VFX: &lt;br&gt;&lt;/div&gt;&lt;div&gt;How the various components on the ship are changing. This will give a better idea of how the values are making the ship change.&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1197.5" y="340" width="405" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="SZQEqar88ExapWcWPOMX-24" value="&lt;div&gt;Sounds:&lt;br&gt;&lt;/div&gt;&lt;div&gt;The sounds will change based on ship values adding a better idea how the ship is working and/or the environment is working.&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1197.5" y="450" width="405" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="SZQEqar88ExapWcWPOMX-25" value="&lt;div&gt;Database:&lt;/div&gt;&lt;div&gt;Keep a running track of all the data that has been collected from the sensors as time goes on. This data can then be referenced as needed if a person wants to look at a backlog of the collected data.&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1197.5" y="560" width="405" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="SZQEqar88ExapWcWPOMX-26" value="" style="shape=flexArrow;endArrow=classic;html=1;rounded=0;exitX=0.75;exitY=1;exitDx=0;exitDy=0;entryX=0.75;entryY=0;entryDx=0;entryDy=0;fillColor=#f8cecc;strokeColor=#b85450;" edge="1" parent="1" source="SZQEqar88ExapWcWPOMX-13" target="SZQEqar88ExapWcWPOMX-15">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="1030" y="530" as="sourcePoint" />
+            <mxPoint x="1080" y="480" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="SZQEqar88ExapWcWPOMX-27" value="" style="shape=flexArrow;endArrow=classic;html=1;rounded=0;exitX=0.75;exitY=1;exitDx=0;exitDy=0;entryX=0.75;entryY=0;entryDx=0;entryDy=0;fillColor=#f8cecc;strokeColor=#b85450;" edge="1" parent="1" source="SZQEqar88ExapWcWPOMX-15" target="SZQEqar88ExapWcWPOMX-14">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="1040" y="540" as="sourcePoint" />
+            <mxPoint x="1090" y="490" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
