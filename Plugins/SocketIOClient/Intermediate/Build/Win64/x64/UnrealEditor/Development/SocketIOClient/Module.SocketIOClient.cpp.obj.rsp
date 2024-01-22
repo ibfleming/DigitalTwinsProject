@@ -1,22 +1,11 @@
-<<<<<<< Updated upstream
-"C:\Users\lee4219\Documents\UnrealProjects_2024\Plugins\SocketIOClient\Intermediate\Build\Win64\x64\UnrealEditor\Development\SocketIOClient\Module.SocketIOClient.cpp"
-/FI"C:\Users\lee4219\Documents\UnrealProjects_2024\Intermediate\Build\Win64\x64\DigitalTwinsProjectEditor\Development\Engine\SharedPCH.Engine.Cpp20.h"
-/FI"C:\Users\lee4219\Documents\UnrealProjects_2024\Plugins\SocketIOClient\Intermediate\Build\Win64\x64\UnrealEditor\Development\SocketIOClient\Definitions.SocketIOClient.h"
-/Yu"C:\Users\lee4219\Documents\UnrealProjects_2024\Intermediate\Build\Win64\x64\DigitalTwinsProjectEditor\Development\Engine\SharedPCH.Engine.Cpp20.h"
-/Fp"C:\Users\lee4219\Documents\UnrealProjects_2024\Intermediate\Build\Win64\x64\DigitalTwinsProjectEditor\Development\Engine\SharedPCH.Engine.Cpp20.h.pch"
-/Fo"C:\Users\lee4219\Documents\UnrealProjects_2024\Plugins\SocketIOClient\Intermediate\Build\Win64\x64\UnrealEditor\Development\SocketIOClient\Module.SocketIOClient.cpp.obj"
-/sourceDependencies "C:\Users\lee4219\Documents\UnrealProjects_2024\Plugins\SocketIOClient\Intermediate\Build\Win64\x64\UnrealEditor\Development\SocketIOClient\Module.SocketIOClient.cpp.dep.json"
-@"C:\Users\lee4219\Documents\UnrealProjects_2024\Plugins\SocketIOClient\Intermediate\Build\Win64\x64\UnrealEditor\Development\SocketIOClient\SocketIOClient.Shared.rsp"
-=======
-"C:\Users\flem8015\Documents\Unreal Projects\DigitalTwinsProject\Plugins\SocketIOClient\Intermediate\Build\Win64\x64\UnrealEditor\Development\SocketIOClient\Module.SocketIOClient.cpp"
-/FI"C:\Users\flem8015\Documents\Unreal Projects\DigitalTwinsProject\Intermediate\Build\Win64\x64\DigitalTwinsProjectEditor\Development\Engine\SharedPCH.Engine.Cpp20.h"
-/FI"C:\Users\flem8015\Documents\Unreal Projects\DigitalTwinsProject\Plugins\SocketIOClient\Intermediate\Build\Win64\x64\UnrealEditor\Development\SocketIOClient\Definitions.SocketIOClient.h"
-/Yu"C:\Users\flem8015\Documents\Unreal Projects\DigitalTwinsProject\Intermediate\Build\Win64\x64\DigitalTwinsProjectEditor\Development\Engine\SharedPCH.Engine.Cpp20.h"
-/Fp"C:\Users\flem8015\Documents\Unreal Projects\DigitalTwinsProject\Intermediate\Build\Win64\x64\DigitalTwinsProjectEditor\Development\Engine\SharedPCH.Engine.Cpp20.h.pch"
-/Fo"C:\Users\flem8015\Documents\Unreal Projects\DigitalTwinsProject\Plugins\SocketIOClient\Intermediate\Build\Win64\x64\UnrealEditor\Development\SocketIOClient\Module.SocketIOClient.cpp.obj"
-/sourceDependencies "C:\Users\flem8015\Documents\Unreal Projects\DigitalTwinsProject\Plugins\SocketIOClient\Intermediate\Build\Win64\x64\UnrealEditor\Development\SocketIOClient\Module.SocketIOClient.cpp.dep.json"
-@"C:\Users\flem8015\Documents\Unreal Projects\DigitalTwinsProject\Plugins\SocketIOClient\Intermediate\Build\Win64\x64\UnrealEditor\Development\SocketIOClient\SocketIOClient.Shared.rsp"
->>>>>>> Stashed changes
+"E:\Epic Games\Projects\DigitalTwinsProject\Plugins\SocketIOClient\Intermediate\Build\Win64\x64\UnrealEditor\Development\SocketIOClient\Module.SocketIOClient.cpp"
+/FI"E:\Epic Games\Projects\DigitalTwinsProject\Intermediate\Build\Win64\x64\DigitalTwinsProjectEditor\Development\Engine\SharedPCH.Engine.Cpp20.h"
+/FI"E:\Epic Games\Projects\DigitalTwinsProject\Plugins\SocketIOClient\Intermediate\Build\Win64\x64\UnrealEditor\Development\SocketIOClient\Definitions.SocketIOClient.h"
+/Yu"E:\Epic Games\Projects\DigitalTwinsProject\Intermediate\Build\Win64\x64\DigitalTwinsProjectEditor\Development\Engine\SharedPCH.Engine.Cpp20.h"
+/Fp"E:\Epic Games\Projects\DigitalTwinsProject\Intermediate\Build\Win64\x64\DigitalTwinsProjectEditor\Development\Engine\SharedPCH.Engine.Cpp20.h.pch"
+/Fo"E:\Epic Games\Projects\DigitalTwinsProject\Plugins\SocketIOClient\Intermediate\Build\Win64\x64\UnrealEditor\Development\SocketIOClient\Module.SocketIOClient.cpp.obj"
+/sourceDependencies "E:\Epic Games\Projects\DigitalTwinsProject\Plugins\SocketIOClient\Intermediate\Build\Win64\x64\UnrealEditor\Development\SocketIOClient\Module.SocketIOClient.cpp.dep.json"
+@"E:\Epic Games\Projects\DigitalTwinsProject\Plugins\SocketIOClient\Intermediate\Build\Win64\x64\UnrealEditor\Development\SocketIOClient\SocketIOClient.Shared.rsp"
 /Zc:inline
 /nologo
 /Oi

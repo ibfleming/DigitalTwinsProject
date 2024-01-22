@@ -16,11 +16,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #define SIOJSON_SIOJTypes_generated_h
 
 #undef CURRENT_FILE_ID
-<<<<<<< Updated upstream
-#define CURRENT_FILE_ID FID_Users_lee4219_Documents_UnrealProjects_2024_Plugins_SocketIOClient_Source_SIOJson_Public_SIOJTypes_h
-=======
-#define CURRENT_FILE_ID FID_Users_flem8015_Documents_Unreal_Projects_DigitalTwinsProject_Plugins_SocketIOClient_Source_SIOJson_Public_SIOJTypes_h
->>>>>>> Stashed changes
+#define CURRENT_FILE_ID FID_Projects_DigitalTwinsProject_Plugins_SocketIOClient_Source_SIOJson_Public_SIOJTypes_h
 
 
 #define FOREACH_ENUM_ESIOREQUESTVERB(op) \

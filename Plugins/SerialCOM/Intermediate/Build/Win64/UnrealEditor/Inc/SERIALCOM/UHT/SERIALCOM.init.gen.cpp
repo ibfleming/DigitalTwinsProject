@@ -17,11 +17,7 @@ void EmptyLinkFunctionForGeneratedCodeSERIALCOM_init() {}
 				nullptr,
 				0,
 				PKG_CompiledIn | 0x00000000,
-<<<<<<< Updated upstream
-				0x00E8A19F,
-=======
-				0xB238F324,
->>>>>>> Stashed changes
+				0x7B975165,
 				0x214AAF33,
 				METADATA_PARAMS(0, nullptr)
 			};
@@ -29,9 +25,5 @@ void EmptyLinkFunctionForGeneratedCodeSERIALCOM_init() {}
 		}
 		return Z_Registration_Info_UPackage__Script_SERIALCOM.OuterSingleton;
 	}
-<<<<<<< Updated upstream
-	static FRegisterCompiledInInfo Z_CompiledInDeferPackage_UPackage__Script_SERIALCOM(Z_Construct_UPackage__Script_SERIALCOM, TEXT("/Script/SERIALCOM"), Z_Registration_Info_UPackage__Script_SERIALCOM, CONSTRUCT_RELOAD_VERSION_INFO(FPackageReloadVersionInfo, 0x00E8A19F, 0x214AAF33));
-=======
-	static FRegisterCompiledInInfo Z_CompiledInDeferPackage_UPackage__Script_SERIALCOM(Z_Construct_UPackage__Script_SERIALCOM, TEXT("/Script/SERIALCOM"), Z_Registration_Info_UPackage__Script_SERIALCOM, CONSTRUCT_RELOAD_VERSION_INFO(FPackageReloadVersionInfo, 0xB238F324, 0x214AAF33));
->>>>>>> Stashed changes
+	static FRegisterCompiledInInfo Z_CompiledInDeferPackage_UPackage__Script_SERIALCOM(Z_Construct_UPackage__Script_SERIALCOM, TEXT("/Script/SERIALCOM"), Z_Registration_Info_UPackage__Script_SERIALCOM, CONSTRUCT_RELOAD_VERSION_INFO(FPackageReloadVersionInfo, 0x7B975165, 0x214AAF33));
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
