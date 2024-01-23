@@ -2,6 +2,7 @@
 *Digital twins group project for CS404.*
 
 **Uses Git LFS!**
+
 **Uses the FlatNodes Plugin from the Unreal Engine Marketplace!**
 
 - [Styling Guide](https://github.com/Allar/ue5-style-guide?tab=readme-ov-file)
