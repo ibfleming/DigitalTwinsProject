@@ -6,7 +6,7 @@
 /NAME:"UnrealEditor-SERIALCOM.dll"
 /IGNORE:4221
 /NODEFAULTLIB
-"E:\Epic Games\Projects\DigitalTwinsProject\Intermediate\Build\Win64\x64\DigitalTwinsProjectEditor\Development\Engine\SharedPCH.Engine.Cpp20.h.obj"
-"E:\Epic Games\Projects\DigitalTwinsProject\Plugins\SerialCOM\Intermediate\Build\Win64\x64\UnrealEditor\Development\SERIALCOM\Module.SERIALCOM.cpp.obj"
-"E:\Epic Games\Projects\DigitalTwinsProject\Plugins\SerialCOM\Intermediate\Build\Win64\x64\UnrealEditor\Development\SERIALCOM\Default.rc2.res"
-/OUT:"E:\Epic Games\Projects\DigitalTwinsProject\Plugins\SerialCOM\Intermediate\Build\Win64\x64\UnrealEditor\Development\SERIALCOM\UnrealEditor-SERIALCOM.lib"
+"E:\gitHub\DigitalTwinsProject\Intermediate\Build\Win64\x64\DigitalTwinsProjectEditor\Development\Engine\SharedPCH.Engine.Cpp20.h.obj"
+"E:\gitHub\DigitalTwinsProject\Plugins\SerialCOM\Intermediate\Build\Win64\x64\UnrealEditor\Development\SERIALCOM\Module.SERIALCOM.cpp.obj"
+"E:\gitHub\DigitalTwinsProject\Plugins\SerialCOM\Intermediate\Build\Win64\x64\UnrealEditor\Development\SERIALCOM\Default.rc2.res"
+/OUT:"E:\gitHub\DigitalTwinsProject\Plugins\SerialCOM\Intermediate\Build\Win64\x64\UnrealEditor\Development\SERIALCOM\UnrealEditor-SERIALCOM.lib"

@@ -3,6 +3,8 @@
 
 **Uses Git LFS!**
 
+**Uses the FlatNodes Plugin from the Unreal Engine Marketplace!**
+
 - [Styling Guide](https://github.com/Allar/ue5-style-guide?tab=readme-ov-file)
 
 #### Steps to add repo to local:
