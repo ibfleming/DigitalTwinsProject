@@ -1,11 +1,11 @@
-"E:\Epic Games\Projects\DigitalTwinsProject\Plugins\SocketIOClient\Intermediate\Build\Win64\x64\UnrealEditor\Development\SIOJEditorPlugin\Module.SIOJEditorPlugin.cpp"
-/FI"E:\Epic Games\Projects\DigitalTwinsProject\Intermediate\Build\Win64\x64\DigitalTwinsProjectEditor\Development\UnrealEd\SharedPCH.UnrealEd.Cpp20.h"
-/FI"E:\Epic Games\Projects\DigitalTwinsProject\Plugins\SocketIOClient\Intermediate\Build\Win64\x64\UnrealEditor\Development\SIOJEditorPlugin\Definitions.SIOJEditorPlugin.h"
-/Yu"E:\Epic Games\Projects\DigitalTwinsProject\Intermediate\Build\Win64\x64\DigitalTwinsProjectEditor\Development\UnrealEd\SharedPCH.UnrealEd.Cpp20.h"
-/Fp"E:\Epic Games\Projects\DigitalTwinsProject\Intermediate\Build\Win64\x64\DigitalTwinsProjectEditor\Development\UnrealEd\SharedPCH.UnrealEd.Cpp20.h.pch"
-/Fo"E:\Epic Games\Projects\DigitalTwinsProject\Plugins\SocketIOClient\Intermediate\Build\Win64\x64\UnrealEditor\Development\SIOJEditorPlugin\Module.SIOJEditorPlugin.cpp.obj"
-/sourceDependencies "E:\Epic Games\Projects\DigitalTwinsProject\Plugins\SocketIOClient\Intermediate\Build\Win64\x64\UnrealEditor\Development\SIOJEditorPlugin\Module.SIOJEditorPlugin.cpp.dep.json"
-@"E:\Epic Games\Projects\DigitalTwinsProject\Plugins\SocketIOClient\Intermediate\Build\Win64\x64\UnrealEditor\Development\SIOJEditorPlugin\SIOJEditorPlugin.Shared.rsp"
+"E:\gitHub\DigitalTwinsProject\Plugins\SocketIOClient\Intermediate\Build\Win64\x64\UnrealEditor\Development\SIOJEditorPlugin\Module.SIOJEditorPlugin.cpp"
+/FI"E:\gitHub\DigitalTwinsProject\Intermediate\Build\Win64\x64\DigitalTwinsProjectEditor\Development\UnrealEd\SharedPCH.UnrealEd.Cpp20.h"
+/FI"E:\gitHub\DigitalTwinsProject\Plugins\SocketIOClient\Intermediate\Build\Win64\x64\UnrealEditor\Development\SIOJEditorPlugin\Definitions.SIOJEditorPlugin.h"
+/Yu"E:\gitHub\DigitalTwinsProject\Intermediate\Build\Win64\x64\DigitalTwinsProjectEditor\Development\UnrealEd\SharedPCH.UnrealEd.Cpp20.h"
+/Fp"E:\gitHub\DigitalTwinsProject\Intermediate\Build\Win64\x64\DigitalTwinsProjectEditor\Development\UnrealEd\SharedPCH.UnrealEd.Cpp20.h.pch"
+/Fo"E:\gitHub\DigitalTwinsProject\Plugins\SocketIOClient\Intermediate\Build\Win64\x64\UnrealEditor\Development\SIOJEditorPlugin\Module.SIOJEditorPlugin.cpp.obj"
+/sourceDependencies "E:\gitHub\DigitalTwinsProject\Plugins\SocketIOClient\Intermediate\Build\Win64\x64\UnrealEditor\Development\SIOJEditorPlugin\Module.SIOJEditorPlugin.cpp.dep.json"
+@"E:\gitHub\DigitalTwinsProject\Plugins\SocketIOClient\Intermediate\Build\Win64\x64\UnrealEditor\Development\SIOJEditorPlugin\SIOJEditorPlugin.Shared.rsp"
 /Zc:inline
 /nologo
 /Oi

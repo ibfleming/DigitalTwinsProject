@@ -1,11 +1,11 @@
-"E:\gitHub\DigitalTwinsProject\Plugins\SerialCOM\Intermediate\Build\Win64\x64\UnrealEditor\Development\SERIALCOM\Module.SERIALCOM.cpp"
-/FI"E:\gitHub\DigitalTwinsProject\Intermediate\Build\Win64\x64\DigitalTwinsProjectEditor\Development\Engine\SharedPCH.Engine.Cpp20.h"
-/FI"E:\gitHub\DigitalTwinsProject\Plugins\SerialCOM\Intermediate\Build\Win64\x64\UnrealEditor\Development\SERIALCOM\Definitions.SERIALCOM.h"
-/Yu"E:\gitHub\DigitalTwinsProject\Intermediate\Build\Win64\x64\DigitalTwinsProjectEditor\Development\Engine\SharedPCH.Engine.Cpp20.h"
-/Fp"E:\gitHub\DigitalTwinsProject\Intermediate\Build\Win64\x64\DigitalTwinsProjectEditor\Development\Engine\SharedPCH.Engine.Cpp20.h.pch"
-/Fo"E:\gitHub\DigitalTwinsProject\Plugins\SerialCOM\Intermediate\Build\Win64\x64\UnrealEditor\Development\SERIALCOM\Module.SERIALCOM.cpp.obj"
-/sourceDependencies "E:\gitHub\DigitalTwinsProject\Plugins\SerialCOM\Intermediate\Build\Win64\x64\UnrealEditor\Development\SERIALCOM\Module.SERIALCOM.cpp.dep.json"
-@"E:\gitHub\DigitalTwinsProject\Plugins\SerialCOM\Intermediate\Build\Win64\x64\UnrealEditor\Development\SERIALCOM\SERIALCOM.Shared.rsp"
+"C:\Users\lee4219\Documents\UnrealProjects_2024\DigitalTwinsProject\Plugins\SerialCOM\Intermediate\Build\Win64\x64\UnrealEditor\Development\SERIALCOM\Module.SERIALCOM.cpp"
+/FI"C:\Users\lee4219\Documents\UnrealProjects_2024\DigitalTwinsProject\Intermediate\Build\Win64\x64\DigitalTwinsProjectEditor\Development\Engine\SharedPCH.Engine.Cpp20.h"
+/FI"C:\Users\lee4219\Documents\UnrealProjects_2024\DigitalTwinsProject\Plugins\SerialCOM\Intermediate\Build\Win64\x64\UnrealEditor\Development\SERIALCOM\Definitions.SERIALCOM.h"
+/Yu"C:\Users\lee4219\Documents\UnrealProjects_2024\DigitalTwinsProject\Intermediate\Build\Win64\x64\DigitalTwinsProjectEditor\Development\Engine\SharedPCH.Engine.Cpp20.h"
+/Fp"C:\Users\lee4219\Documents\UnrealProjects_2024\DigitalTwinsProject\Intermediate\Build\Win64\x64\DigitalTwinsProjectEditor\Development\Engine\SharedPCH.Engine.Cpp20.h.pch"
+/Fo"C:\Users\lee4219\Documents\UnrealProjects_2024\DigitalTwinsProject\Plugins\SerialCOM\Intermediate\Build\Win64\x64\UnrealEditor\Development\SERIALCOM\Module.SERIALCOM.cpp.obj"
+/sourceDependencies "C:\Users\lee4219\Documents\UnrealProjects_2024\DigitalTwinsProject\Plugins\SerialCOM\Intermediate\Build\Win64\x64\UnrealEditor\Development\SERIALCOM\Module.SERIALCOM.cpp.dep.json"
+@"C:\Users\lee4219\Documents\UnrealProjects_2024\DigitalTwinsProject\Plugins\SerialCOM\Intermediate\Build\Win64\x64\UnrealEditor\Development\SERIALCOM\SERIALCOM.Shared.rsp"
 /Zc:inline
 /nologo
 /Oi
