@@ -8,5 +8,7 @@
 /NODEFAULTLIB
 "C:\Users\lee4219\Documents\UnrealProjects_2024\DigitalTwinsProject\Intermediate\Build\Win64\x64\DigitalTwinsProjectEditor\Development\Engine\SharedPCH.Engine.Cpp20.h.obj"
 "C:\Users\lee4219\Documents\UnrealProjects_2024\DigitalTwinsProject\Plugins\SerialCOM\Intermediate\Build\Win64\x64\UnrealEditor\Development\SERIALCOM\Module.SERIALCOM.cpp.obj"
+"C:\Users\lee4219\Documents\UnrealProjects_2024\DigitalTwinsProject\Plugins\SerialCOM\Intermediate\Build\Win64\x64\UnrealEditor\Development\SERIALCOM\SerialCom.gen.cpp.obj"
+"C:\Users\lee4219\Documents\UnrealProjects_2024\DigitalTwinsProject\Plugins\SerialCOM\Intermediate\Build\Win64\x64\UnrealEditor\Development\SERIALCOM\SERIALCOM.init.gen.cpp.obj"
 "C:\Users\lee4219\Documents\UnrealProjects_2024\DigitalTwinsProject\Plugins\SerialCOM\Intermediate\Build\Win64\x64\UnrealEditor\Development\SERIALCOM\Default.rc2.res"
 /OUT:"C:\Users\lee4219\Documents\UnrealProjects_2024\DigitalTwinsProject\Plugins\SerialCOM\Intermediate\Build\Win64\x64\UnrealEditor\Development\SERIALCOM\UnrealEditor-SERIALCOM.lib"

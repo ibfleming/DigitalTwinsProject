@@ -6,12 +6,7 @@
 /NAME:"UnrealEditor-SocketIOClient.dll"
 /IGNORE:4221
 /NODEFAULTLIB
-"C:\Users\lee4219\Documents\UnrealProjects_2024\DigitalTwinsProject\Intermediate\Build\Win64\x64\DigitalTwinsProjectEditor\Development\Engine\SharedPCH.Engine.Cpp20.h.obj"
-"C:\Users\lee4219\Documents\UnrealProjects_2024\DigitalTwinsProject\Plugins\SocketIOClient\Intermediate\Build\Win64\x64\UnrealEditor\Development\SocketIOClient\Module.SocketIOClient.cpp.obj"
-"C:\Users\lee4219\Documents\UnrealProjects_2024\DigitalTwinsProject\Plugins\SocketIOClient\Intermediate\Build\Win64\x64\UnrealEditor\Development\SocketIOClient\SIOMessageConvert.gen.cpp.obj"
-"C:\Users\lee4219\Documents\UnrealProjects_2024\DigitalTwinsProject\Plugins\SocketIOClient\Intermediate\Build\Win64\x64\UnrealEditor\Development\SocketIOClient\SocketIOClient.init.gen.cpp.obj"
-"C:\Users\lee4219\Documents\UnrealProjects_2024\DigitalTwinsProject\Plugins\SocketIOClient\Intermediate\Build\Win64\x64\UnrealEditor\Development\SocketIOClient\SocketIOClientComponent.gen.cpp.obj"
-"C:\Users\lee4219\Documents\UnrealProjects_2024\DigitalTwinsProject\Plugins\SocketIOClient\Intermediate\Build\Win64\x64\UnrealEditor\Development\SocketIOClient\SocketIOFunctionLibrary.gen.cpp.obj"
-"C:\Users\lee4219\Documents\UnrealProjects_2024\DigitalTwinsProject\Plugins\SocketIOClient\Intermediate\Build\Win64\x64\UnrealEditor\Development\SocketIOClient\SocketIONative.gen.cpp.obj"
-"C:\Users\lee4219\Documents\UnrealProjects_2024\DigitalTwinsProject\Plugins\SocketIOClient\Intermediate\Build\Win64\x64\UnrealEditor\Development\SocketIOClient\Default.rc2.res"
-/OUT:"C:\Users\lee4219\Documents\UnrealProjects_2024\DigitalTwinsProject\Plugins\SocketIOClient\Intermediate\Build\Win64\x64\UnrealEditor\Development\SocketIOClient\UnrealEditor-SocketIOClient.lib"
+"E:\Epic Games\Projects\DigitalTwinsProject\Intermediate\Build\Win64\x64\DigitalTwinsProjectEditor\Development\Engine\SharedPCH.Engine.Cpp20.h.obj"
+"E:\Epic Games\Projects\DigitalTwinsProject\Plugins\SocketIOClient\Intermediate\Build\Win64\x64\UnrealEditor\Development\SocketIOClient\Module.SocketIOClient.cpp.obj"
+"E:\Epic Games\Projects\DigitalTwinsProject\Plugins\SocketIOClient\Intermediate\Build\Win64\x64\UnrealEditor\Development\SocketIOClient\Default.rc2.res"
+/OUT:"E:\Epic Games\Projects\DigitalTwinsProject\Plugins\SocketIOClient\Intermediate\Build\Win64\x64\UnrealEditor\Development\SocketIOClient\UnrealEditor-SocketIOClient.lib"
