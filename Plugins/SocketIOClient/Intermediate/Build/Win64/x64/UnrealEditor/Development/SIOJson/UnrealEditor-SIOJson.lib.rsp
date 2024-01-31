@@ -6,7 +6,14 @@
 /NAME:"UnrealEditor-SIOJson.dll"
 /IGNORE:4221
 /NODEFAULTLIB
-"E:\Epic Games\Projects\DigitalTwinsProject\Intermediate\Build\Win64\x64\DigitalTwinsProjectEditor\Development\Engine\SharedPCH.Engine.Cpp20.h.obj"
-"E:\Epic Games\Projects\DigitalTwinsProject\Plugins\SocketIOClient\Intermediate\Build\Win64\x64\UnrealEditor\Development\SIOJson\Module.SIOJson.cpp.obj"
-"E:\Epic Games\Projects\DigitalTwinsProject\Plugins\SocketIOClient\Intermediate\Build\Win64\x64\UnrealEditor\Development\SIOJson\Default.rc2.res"
-/OUT:"E:\Epic Games\Projects\DigitalTwinsProject\Plugins\SocketIOClient\Intermediate\Build\Win64\x64\UnrealEditor\Development\SIOJson\UnrealEditor-SIOJson.lib"
+"E:\gitHub\DigitalTwinsProject\Intermediate\Build\Win64\x64\DigitalTwinsProjectEditor\Development\Engine\SharedPCH.Engine.Cpp20.h.obj"
+"E:\gitHub\DigitalTwinsProject\Plugins\SocketIOClient\Intermediate\Build\Win64\x64\UnrealEditor\Development\SIOJson\Module.SIOJson.cpp.obj"
+"E:\gitHub\DigitalTwinsProject\Plugins\SocketIOClient\Intermediate\Build\Win64\x64\UnrealEditor\Development\SIOJson\SIOJConvert.gen.cpp.obj"
+"E:\gitHub\DigitalTwinsProject\Plugins\SocketIOClient\Intermediate\Build\Win64\x64\UnrealEditor\Development\SIOJson\SIOJLibrary.gen.cpp.obj"
+"E:\gitHub\DigitalTwinsProject\Plugins\SocketIOClient\Intermediate\Build\Win64\x64\UnrealEditor\Development\SIOJson\SIOJRequestJSON.gen.cpp.obj"
+"E:\gitHub\DigitalTwinsProject\Plugins\SocketIOClient\Intermediate\Build\Win64\x64\UnrealEditor\Development\SIOJson\SIOJson.init.gen.cpp.obj"
+"E:\gitHub\DigitalTwinsProject\Plugins\SocketIOClient\Intermediate\Build\Win64\x64\UnrealEditor\Development\SIOJson\SIOJsonObject.gen.cpp.obj"
+"E:\gitHub\DigitalTwinsProject\Plugins\SocketIOClient\Intermediate\Build\Win64\x64\UnrealEditor\Development\SIOJson\SIOJsonValue.gen.cpp.obj"
+"E:\gitHub\DigitalTwinsProject\Plugins\SocketIOClient\Intermediate\Build\Win64\x64\UnrealEditor\Development\SIOJson\SIOJTypes.gen.cpp.obj"
+"E:\gitHub\DigitalTwinsProject\Plugins\SocketIOClient\Intermediate\Build\Win64\x64\UnrealEditor\Development\SIOJson\Default.rc2.res"
+/OUT:"E:\gitHub\DigitalTwinsProject\Plugins\SocketIOClient\Intermediate\Build\Win64\x64\UnrealEditor\Development\SIOJson\UnrealEditor-SIOJson.lib"

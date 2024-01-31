@@ -6,9 +6,7 @@
 /NAME:"UnrealEditor-SIOJEditorPlugin.dll"
 /IGNORE:4221
 /NODEFAULTLIB
-"C:\Users\lee4219\Documents\UnrealProjects_2024\DigitalTwinsProject\Intermediate\Build\Win64\x64\DigitalTwinsProjectEditor\Development\UnrealEd\SharedPCH.UnrealEd.Cpp20.h.obj"
-"C:\Users\lee4219\Documents\UnrealProjects_2024\DigitalTwinsProject\Plugins\SocketIOClient\Intermediate\Build\Win64\x64\UnrealEditor\Development\SIOJEditorPlugin\Module.SIOJEditorPlugin.cpp.obj"
-"C:\Users\lee4219\Documents\UnrealProjects_2024\DigitalTwinsProject\Plugins\SocketIOClient\Intermediate\Build\Win64\x64\UnrealEditor\Development\SIOJEditorPlugin\SIOJEditorPlugin.init.gen.cpp.obj"
-"C:\Users\lee4219\Documents\UnrealProjects_2024\DigitalTwinsProject\Plugins\SocketIOClient\Intermediate\Build\Win64\x64\UnrealEditor\Development\SIOJEditorPlugin\SIOJ_BreakJson.gen.cpp.obj"
-"C:\Users\lee4219\Documents\UnrealProjects_2024\DigitalTwinsProject\Plugins\SocketIOClient\Intermediate\Build\Win64\x64\UnrealEditor\Development\SIOJEditorPlugin\Default.rc2.res"
-/OUT:"C:\Users\lee4219\Documents\UnrealProjects_2024\DigitalTwinsProject\Plugins\SocketIOClient\Intermediate\Build\Win64\x64\UnrealEditor\Development\SIOJEditorPlugin\UnrealEditor-SIOJEditorPlugin.lib"
+"E:\gitHub\DigitalTwinsProject\Intermediate\Build\Win64\x64\DigitalTwinsProjectEditor\Development\UnrealEd\SharedPCH.UnrealEd.Cpp20.h.obj"
+"E:\gitHub\DigitalTwinsProject\Plugins\SocketIOClient\Intermediate\Build\Win64\x64\UnrealEditor\Development\SIOJEditorPlugin\Module.SIOJEditorPlugin.cpp.obj"
+"E:\gitHub\DigitalTwinsProject\Plugins\SocketIOClient\Intermediate\Build\Win64\x64\UnrealEditor\Development\SIOJEditorPlugin\Default.rc2.res"
+/OUT:"E:\gitHub\DigitalTwinsProject\Plugins\SocketIOClient\Intermediate\Build\Win64\x64\UnrealEditor\Development\SIOJEditorPlugin\UnrealEditor-SIOJEditorPlugin.lib"
