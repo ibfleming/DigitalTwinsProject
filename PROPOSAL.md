@@ -28,3 +28,19 @@
 ##### Our design will consist of the above mentioned tasks that will allow us to complete our Digital Twin to the best of our capabilities. A diagram of the flow of the design will be included below - 
 
 ![Diagram of Digital Twin](https://github.com/ibfleming/DigitalTwinsProject/blob/main/ExternalApps/Documents/Draw_io/DigitalTwinsProjectProposalDiagram.png)
+
+---
+**New Design Document:**
+---
+
+##### Edit the previous, if there are changes then edit the doc to show changes, if no changes then leave the design doc the same. 
+
+##### If there are changes then title the doc:
+- Design V1
+- Design V2 (If no changes then add no changes to the bottom of this section) - if no edits then just skip this section all together - (No changes from V1) 
+
+##### Add in a new section called DATA EXCHANGE:
+- This will include the types and the frequency of the data that we will be getting
+- Status updates about all of the data that we are going to be recieving from the system, and what that is going to update.
+- Control actions: This is things that happen based on the "real world" part of the twin. An example of this is if I turn the lights on in the room that is being modeled, then the lights will also need to be turned on/off in the digital twin.
+- Also add a priority section to this document so that we can get the order of which thing we will impliment first, ie which is most important to recieve and which is not as important to add.
