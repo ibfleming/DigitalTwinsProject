@@ -6,11 +6,7 @@
 /NAME:"UnrealEditor-CoreUtility.dll"
 /IGNORE:4221
 /NODEFAULTLIB
-"E:\gitHub\DigitalTwinsProject\Intermediate\Build\Win64\x64\DigitalTwinsProjectEditor\Development\Engine\SharedPCH.Engine.Cpp20.h.obj"
-"E:\gitHub\DigitalTwinsProject\Plugins\SocketIOClient\Intermediate\Build\Win64\x64\UnrealEditor\Development\CoreUtility\Module.CoreUtility.cpp.obj"
-"E:\gitHub\DigitalTwinsProject\Plugins\SocketIOClient\Intermediate\Build\Win64\x64\UnrealEditor\Development\CoreUtility\CoreUtility.init.gen.cpp.obj"
-"E:\gitHub\DigitalTwinsProject\Plugins\SocketIOClient\Intermediate\Build\Win64\x64\UnrealEditor\Development\CoreUtility\CUBlueprintLibrary.gen.cpp.obj"
-"E:\gitHub\DigitalTwinsProject\Plugins\SocketIOClient\Intermediate\Build\Win64\x64\UnrealEditor\Development\CoreUtility\CUFileComponent.gen.cpp.obj"
-"E:\gitHub\DigitalTwinsProject\Plugins\SocketIOClient\Intermediate\Build\Win64\x64\UnrealEditor\Development\CoreUtility\CUFileSubsystem.gen.cpp.obj"
-"E:\gitHub\DigitalTwinsProject\Plugins\SocketIOClient\Intermediate\Build\Win64\x64\UnrealEditor\Development\CoreUtility\Default.rc2.res"
-/OUT:"E:\gitHub\DigitalTwinsProject\Plugins\SocketIOClient\Intermediate\Build\Win64\x64\UnrealEditor\Development\CoreUtility\UnrealEditor-CoreUtility.lib"
+"C:\Users\flem8015\Documents\Unreal Projects\DigitalTwinsProject\Intermediate\Build\Win64\x64\DigitalTwinsProjectEditor\Development\Engine\SharedPCH.Engine.Cpp20.h.obj"
+"C:\Users\flem8015\Documents\Unreal Projects\DigitalTwinsProject\Plugins\SocketIOClient\Intermediate\Build\Win64\x64\UnrealEditor\Development\CoreUtility\Module.CoreUtility.cpp.obj"
+"C:\Users\flem8015\Documents\Unreal Projects\DigitalTwinsProject\Plugins\SocketIOClient\Intermediate\Build\Win64\x64\UnrealEditor\Development\CoreUtility\Default.rc2.res"
+/OUT:"C:\Users\flem8015\Documents\Unreal Projects\DigitalTwinsProject\Plugins\SocketIOClient\Intermediate\Build\Win64\x64\UnrealEditor\Development\CoreUtility\UnrealEditor-CoreUtility.lib"

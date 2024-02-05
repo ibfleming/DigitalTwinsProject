@@ -6,7 +6,7 @@
 /NAME:"UnrealEditor-SocketIOLib.dll"
 /IGNORE:4221
 /NODEFAULTLIB
-"E:\gitHub\DigitalTwinsProject\Intermediate\Build\Win64\x64\DigitalTwinsProjectEditor\Development\Engine\SharedPCH.Engine.RTTI.Cpp20.h.obj"
-"E:\gitHub\DigitalTwinsProject\Plugins\SocketIOClient\Intermediate\Build\Win64\x64\UnrealEditor\Development\SocketIOLib\Module.SocketIOLib.cpp.obj"
-"E:\gitHub\DigitalTwinsProject\Plugins\SocketIOClient\Intermediate\Build\Win64\x64\UnrealEditor\Development\SocketIOLib\Default.rc2.res"
-/OUT:"E:\gitHub\DigitalTwinsProject\Plugins\SocketIOClient\Intermediate\Build\Win64\x64\UnrealEditor\Development\SocketIOLib\UnrealEditor-SocketIOLib.lib"
+"C:\Users\flem8015\Documents\Unreal Projects\DigitalTwinsProject\Intermediate\Build\Win64\x64\DigitalTwinsProjectEditor\Development\Engine\SharedPCH.Engine.RTTI.Cpp20.h.obj"
+"C:\Users\flem8015\Documents\Unreal Projects\DigitalTwinsProject\Plugins\SocketIOClient\Intermediate\Build\Win64\x64\UnrealEditor\Development\SocketIOLib\Module.SocketIOLib.cpp.obj"
+"C:\Users\flem8015\Documents\Unreal Projects\DigitalTwinsProject\Plugins\SocketIOClient\Intermediate\Build\Win64\x64\UnrealEditor\Development\SocketIOLib\Default.rc2.res"
+/OUT:"C:\Users\flem8015\Documents\Unreal Projects\DigitalTwinsProject\Plugins\SocketIOClient\Intermediate\Build\Win64\x64\UnrealEditor\Development\SocketIOLib\UnrealEditor-SocketIOLib.lib"
