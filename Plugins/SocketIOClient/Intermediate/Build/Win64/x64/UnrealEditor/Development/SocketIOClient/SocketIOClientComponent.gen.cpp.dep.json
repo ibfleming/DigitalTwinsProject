@@ -1,0 +1,33 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "c:\\users\\lee4219\\documents\\unrealprojects_2024\\digitaltwinsproject\\plugins\\socketioclient\\intermediate\\build\\win64\\unrealeditor\\inc\\socketioclient\\uht\\socketioclientcomponent.gen.cpp",
+        "ProvidedModule": "",
+        "PCH": "c:\\users\\lee4219\\documents\\unrealprojects_2024\\digitaltwinsproject\\intermediate\\build\\win64\\x64\\digitaltwinsprojecteditor\\development\\engine\\sharedpch.engine.cpp20.h.pch",
+        "Includes": [
+            "c:\\users\\lee4219\\documents\\unrealprojects_2024\\digitaltwinsproject\\plugins\\socketioclient\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\socketioclient\\definitions.socketioclient.h",
+            "c:\\users\\lee4219\\documents\\unrealprojects_2024\\digitaltwinsproject\\plugins\\socketioclient\\source\\socketioclient\\public\\socketioclientcomponent.h",
+            "c:\\users\\lee4219\\documents\\unrealprojects_2024\\digitaltwinsproject\\plugins\\socketioclient\\source\\socketioclient\\public\\socketionative.h",
+            "c:\\users\\lee4219\\documents\\unrealprojects_2024\\digitaltwinsproject\\plugins\\socketioclient\\source\\socketiolib\\public\\sio_client.h",
+            "c:\\program files\\microsoft visual studio\\2022\\community\\vc\\tools\\msvc\\14.36.32532\\include\\functional",
+            "c:\\program files\\microsoft visual studio\\2022\\community\\vc\\tools\\msvc\\14.36.32532\\include\\unordered_map",
+            "c:\\users\\lee4219\\documents\\unrealprojects_2024\\digitaltwinsproject\\plugins\\socketioclient\\source\\socketiolib\\public\\sio_message.h",
+            "c:\\program files\\microsoft visual studio\\2022\\community\\vc\\tools\\msvc\\14.36.32532\\include\\map",
+            "c:\\program files\\microsoft visual studio\\2022\\community\\vc\\tools\\msvc\\14.36.32532\\include\\xtree",
+            "c:\\program files\\microsoft visual studio\\2022\\community\\vc\\tools\\msvc\\14.36.32532\\include\\cassert",
+            "c:\\program files (x86)\\windows kits\\10\\include\\10.0.18362.0\\ucrt\\assert.h",
+            "c:\\users\\lee4219\\documents\\unrealprojects_2024\\digitaltwinsproject\\plugins\\socketioclient\\source\\socketiolib\\public\\sio_socket.h",
+            "c:\\users\\lee4219\\documents\\unrealprojects_2024\\digitaltwinsproject\\plugins\\socketioclient\\source\\siojson\\public\\siojsonobject.h",
+            "c:\\users\\lee4219\\documents\\unrealprojects_2024\\digitaltwinsproject\\plugins\\socketioclient\\intermediate\\build\\win64\\unrealeditor\\inc\\siojson\\uht\\siojsonobject.generated.h",
+            "c:\\users\\lee4219\\documents\\unrealprojects_2024\\digitaltwinsproject\\plugins\\socketioclient\\source\\siojson\\public\\siojsonvalue.h",
+            "c:\\users\\lee4219\\documents\\unrealprojects_2024\\digitaltwinsproject\\plugins\\socketioclient\\intermediate\\build\\win64\\unrealeditor\\inc\\siojson\\uht\\siojsonvalue.generated.h",
+            "c:\\users\\lee4219\\documents\\unrealprojects_2024\\digitaltwinsproject\\plugins\\socketioclient\\source\\siojson\\public\\siojconvert.h",
+            "c:\\users\\lee4219\\documents\\unrealprojects_2024\\digitaltwinsproject\\plugins\\socketioclient\\intermediate\\build\\win64\\unrealeditor\\inc\\siojson\\uht\\siojconvert.generated.h",
+            "c:\\users\\lee4219\\documents\\unrealprojects_2024\\digitaltwinsproject\\plugins\\socketioclient\\source\\socketioclient\\public\\siomessageconvert.h",
+            "c:\\users\\lee4219\\documents\\unrealprojects_2024\\digitaltwinsproject\\plugins\\socketioclient\\intermediate\\build\\win64\\unrealeditor\\inc\\socketioclient\\uht\\siomessageconvert.generated.h",
+            "c:\\users\\lee4219\\documents\\unrealprojects_2024\\digitaltwinsproject\\plugins\\socketioclient\\intermediate\\build\\win64\\unrealeditor\\inc\\socketioclient\\uht\\socketioclientcomponent.generated.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}
