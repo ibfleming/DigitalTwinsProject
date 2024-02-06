@@ -1,0 +1,15 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "e:\\github\\digitaltwinsproject\\plugins\\serialcom\\intermediate\\build\\win64\\unrealeditor\\inc\\serialcom\\uht\\serialcom.gen.cpp",
+        "ProvidedModule": "",
+        "PCH": "e:\\github\\digitaltwinsproject\\intermediate\\build\\win64\\x64\\digitaltwinsprojecteditor\\development\\engine\\sharedpch.engine.cpp20.h.pch",
+        "Includes": [
+            "e:\\github\\digitaltwinsproject\\plugins\\serialcom\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\serialcom\\definitions.serialcom.h",
+            "e:\\github\\digitaltwinsproject\\plugins\\serialcom\\source\\serialcom\\public\\serialcom.h",
+            "e:\\github\\digitaltwinsproject\\plugins\\serialcom\\intermediate\\build\\win64\\unrealeditor\\inc\\serialcom\\uht\\serialcom.generated.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

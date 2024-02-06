@@ -14,7 +14,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define MQTTUTILITIES_MqttMessage_generated_h
 
-#define FID_Users_flem8015_Documents_Unreal_Projects_DigitalTwinsProject_Plugins_MqttUtilities_Source_MqttUtilities_Public_Entities_MqttMessage_h_10_GENERATED_BODY \
+#define FID_gitHub_DigitalTwinsProject_Plugins_MqttUtilities_Source_MqttUtilities_Public_Entities_MqttMessage_h_10_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FMqttMessage_Statics; \
 	static class UScriptStruct* StaticStruct();
 
@@ -22,7 +22,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 template<> MQTTUTILITIES_API UScriptStruct* StaticStruct<struct FMqttMessage>();
 
 #undef CURRENT_FILE_ID
-#define CURRENT_FILE_ID FID_Users_flem8015_Documents_Unreal_Projects_DigitalTwinsProject_Plugins_MqttUtilities_Source_MqttUtilities_Public_Entities_MqttMessage_h
+#define CURRENT_FILE_ID FID_gitHub_DigitalTwinsProject_Plugins_MqttUtilities_Source_MqttUtilities_Public_Entities_MqttMessage_h
 
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

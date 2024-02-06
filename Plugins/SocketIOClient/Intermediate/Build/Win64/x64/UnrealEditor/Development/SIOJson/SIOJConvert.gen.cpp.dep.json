@@ -1,0 +1,15 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "e:\\github\\digitaltwinsproject\\plugins\\socketioclient\\intermediate\\build\\win64\\unrealeditor\\inc\\siojson\\uht\\siojconvert.gen.cpp",
+        "ProvidedModule": "",
+        "PCH": "e:\\github\\digitaltwinsproject\\intermediate\\build\\win64\\x64\\digitaltwinsprojecteditor\\development\\engine\\sharedpch.engine.cpp20.h.pch",
+        "Includes": [
+            "e:\\github\\digitaltwinsproject\\plugins\\socketioclient\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\siojson\\definitions.siojson.h",
+            "e:\\github\\digitaltwinsproject\\plugins\\socketioclient\\source\\siojson\\public\\siojconvert.h",
+            "e:\\github\\digitaltwinsproject\\plugins\\socketioclient\\intermediate\\build\\win64\\unrealeditor\\inc\\siojson\\uht\\siojconvert.generated.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}
