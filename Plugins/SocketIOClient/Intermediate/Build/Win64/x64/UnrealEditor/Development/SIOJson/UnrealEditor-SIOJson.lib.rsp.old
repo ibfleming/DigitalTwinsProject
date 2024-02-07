@@ -6,7 +6,7 @@
 /NAME:"UnrealEditor-SIOJson.dll"
 /IGNORE:4221
 /NODEFAULTLIB
-"C:\Users\flem8015\Documents\Unreal Projects\DigitalTwinsProject\Intermediate\Build\Win64\x64\DigitalTwinsProjectEditor\Development\Engine\SharedPCH.Engine.Cpp20.h.obj"
-"C:\Users\flem8015\Documents\Unreal Projects\DigitalTwinsProject\Plugins\SocketIOClient\Intermediate\Build\Win64\x64\UnrealEditor\Development\SIOJson\Module.SIOJson.cpp.obj"
-"C:\Users\flem8015\Documents\Unreal Projects\DigitalTwinsProject\Plugins\SocketIOClient\Intermediate\Build\Win64\x64\UnrealEditor\Development\SIOJson\Default.rc2.res"
-/OUT:"C:\Users\flem8015\Documents\Unreal Projects\DigitalTwinsProject\Plugins\SocketIOClient\Intermediate\Build\Win64\x64\UnrealEditor\Development\SIOJson\UnrealEditor-SIOJson.lib"
+"E:\gitHub\DigitalTwinsProject\Intermediate\Build\Win64\x64\DigitalTwinsProjectEditor\Development\Engine\SharedPCH.Engine.Cpp20.h.obj"
+"E:\gitHub\DigitalTwinsProject\Plugins\SocketIOClient\Intermediate\Build\Win64\x64\UnrealEditor\Development\SIOJson\Module.SIOJson.cpp.obj"
+"E:\gitHub\DigitalTwinsProject\Plugins\SocketIOClient\Intermediate\Build\Win64\x64\UnrealEditor\Development\SIOJson\Default.rc2.res"
+/OUT:"E:\gitHub\DigitalTwinsProject\Plugins\SocketIOClient\Intermediate\Build\Win64\x64\UnrealEditor\Development\SIOJson\UnrealEditor-SIOJson.lib"
