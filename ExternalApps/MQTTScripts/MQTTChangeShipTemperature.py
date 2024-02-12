@@ -19,7 +19,7 @@ import random
 # Constants:
 CONST_broker_name = "localhost"
 CONST_broker_port = 1883
-CONST_clientID = "CID"
+CONST_clientID = "CID" 
 CONST_topicStr = "ShipTemperatureTopic"
 
 CONST_max_messages = 1000
