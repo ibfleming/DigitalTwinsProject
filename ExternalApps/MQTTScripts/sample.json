@@ -1,5 +1,24 @@
 {
-    "moduleName": "TestModule",
-    "value": 10001,
-    "status": "Online"
+  "Modules": {
+    "Antenna": {
+      "Status": true,
+	  "Strength": 100,
+	  "Connections": 3
+    },
+    "ComputerSystem": {
+      "Status": false,
+	  "Direction": "S",
+	  "Speed": 80
+    },
+    "Engine": {
+      "Status": true,
+	  "Temperature": 68.0,
+	  "Pressure": 100,
+	  "RPM": 7200
+    },
+    "Thruster": {
+      "Status": false,
+	  "Power": 100,
+	  "Fuel": : 250
+  }
 }
