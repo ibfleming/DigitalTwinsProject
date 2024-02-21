@@ -52,6 +52,10 @@ json_data = {
          "Status": status,
          "Power": generate_random_int(0, 500),
          "Fuel": generate_random_int(0, 100)
+   },
+   "Temperature": {
+         "Status": status,
+         "Value": generate_random_float(0, 100)
    }
 }
 
@@ -84,6 +88,8 @@ def generate_new_values():
    # Thruster
    update_json("Thruster", "Power", generate_random_int(0, 500))
    update_json("Thruster", "Fuel", generate_random_int(0, 100))
+   #Temperature
+   update_json("Temperature", "Value", generate_random_float(0, 100))
 
 def publish():
    try:
