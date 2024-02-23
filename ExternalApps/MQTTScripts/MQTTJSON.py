@@ -24,37 +24,39 @@ def generate_random_float(min_value, max_value):
     return round(random.uniform(min_value, max_value), 1)
 
 # Function to choose a random direction
-def generate_random_direction(previous_direction=None):
+def generate_random_direction():
     directions = ["N", "NW", "S", "SW", "E", "W", "SE", "NE"]
-    if previous_direction:
-        directions.remove(previous_direction)
     return random.choice(directions)
+
+def generate_random_status():
+   statuses = [True, False]
+   return random.choice(statuses)
 
 # Dictionary/JSON to be published to Broker (MQTT)
 json_data = {
    "Antenna": {
-         "Status": status,
+         "Status": generate_random_status(),
          "Strength": generate_random_int(0, 100),
          "Connections": generate_random_int(1, 10)
    },
    "ComputerSystem": {
-         "Status": status,
+         "Status": generate_random_status(),
          "Direction": generate_random_direction(),
          "Speed": generate_random_float(25, 100)
    },
    "Engine": {
-         "Status": status,
+         "Status": generate_random_status(),
          "Temperature": generate_random_float(-10, 72),
          "Pressure": generate_random_int(0, 100),
          "RPM": generate_random_int(500, 7200)
    },
    "Thruster": {
-         "Status": status,
-         "Power": generate_random_int(0, 500),
+         "Status": generate_random_status(),
+         "Power": generate_random_int(100, 1000),
          "Fuel": generate_random_int(0, 100)
    },
    "Temperature": {
-         "Status": status,
+         "Status": generate_random_status(),
          "Value": generate_random_float(0, 100)
    }
 }
@@ -73,9 +75,8 @@ def update_json(module, key, value):
       print("Invalid module or key provided.")
 
 def generate_new_values():
-   # All Module Statuses
-   change_module_status()
    # Antenna   
+   update_json("Antenna", "Status", generate_random_status())
    update_json("Antenna", "Strength", generate_random_int(0, 100))
    update_json("Antenna", "Connections", generate_random_int(1, 10))
    # Computer System
