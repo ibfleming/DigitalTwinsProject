@@ -12,8 +12,64 @@ topic = "JsonTestTopic"
 
 # Constants
 max_messages = 1000
-time_delay = 5
+time_delay = 1
+total_status_online = 0
 status = False
+
+"""
+Temperature stuff:
+   - time stamp
+   - room size (how much are we going to need to heat)
+   - temperature outside
+   - temperature inside
+   - based on the temperature in the room and the temperature outside of the room, how much heat did I lose in that time stamp
+      - this is essentially a tick that will run, and it will calculate every time step
+
+   WILL NEED TO CALCULATE THE NEW STATE ON THE OLD STATE
+
+   Need to create: tick manager - function that will call every second and will update the other finctions every second
+
+   Need to put everything in kelvin and convert before mqtt
+   get an r factor that makes sense
+"""
+
+""" This is where the temperature will be calculated """
+# Constant temperature values that we need
+#values in meters
+ship_length = 14
+ship_width = 10
+ship_hieght = 3
+ship_R_factor = .067
+
+temperature_time_delay = 1       # How long between each of the temperature ticks
+outside_temperature = 0.0        # This is the current temperature of the outside (surrounding the spaceship - zero as we are in space)
+inside_temperature = 20.0        # This is the current temperature of the inside of the ship 
+ship_surface = (ship_length * ship_width * 2) + (ship_hieght * ship_length * 2) + (ship_width * ship_hieght * 2)       # the interior of the ship will be defined as 350 meters cubed
+
+# Returns the temperature of the ship interior
+def get_interior_temperature():
+   global inside_temperature
+   return inside_temperature
+
+#this will properly calculate the ship temperature
+def calculate_temperature_value():
+   #get the needed global values
+   global outside_temperature
+   global inside_temperature
+   global ship_surface
+   global ship_R_factor
+
+   #Need to find the right equation to meaure this
+   delta_t = (inside_temperature - outside_temperature) / ship_R_factor
+   new_temperature = inside_temperature - delta_t
+
+   print("RUNNING {}".format(new_temperature))
+
+   inside_temperature = new_temperature
+
+
+
+""" End of the temperature definitions """
 
 # Function to generate a random integer within a given range
 def generate_random_int(min_value, max_value):
@@ -29,15 +85,27 @@ def generate_random_direction():
     return random.choice(directions)
 
 def generate_random_status():
+   global total_status_online
    statuses = [True, False]
-   return random.choice(statuses)
+   updated_status = random.choice(statuses)
+   if(updated_status == True):
+      total_status_online += 1
+   else:
+      if(total_status_online > 0):
+         total_status_online -= 1
+   return updated_status
+
+# Function to get the status updates (if the module is online or offline) to the connections on the antenna
+def get_current_antenna_connections():
+   global total_status_online
+   return total_status_online
 
 # Dictionary/JSON to be published to Broker (MQTT)
 json_data = {
    "Antenna": {
          "Status": generate_random_status(),
          "Strength": generate_random_int(0, 100),
-         "Connections": generate_random_int(1, 10)
+         "Connections": get_current_antenna_connections()
    },
    "ComputerSystem": {
          "Status": generate_random_status(),
@@ -57,7 +125,7 @@ json_data = {
    },
    "Temperature": {
          "Status": generate_random_status(),
-         "Value": generate_random_float(0, 100)
+         "Value": get_interior_temperature()
    }
 }
 
@@ -76,7 +144,7 @@ def update_json(module, key, value):
 
 def generate_new_values():
    # Antenna   
-   update_json("Antenna", "Status", generate_random_status())
+   update_json("Antenna", "Status", True)
    update_json("Antenna", "Strength", generate_random_int(0, 100))
    update_json("Antenna", "Connections", generate_random_int(1, 10))
    # Computer System
@@ -90,7 +158,7 @@ def generate_new_values():
    update_json("Thruster", "Power", generate_random_int(0, 500))
    update_json("Thruster", "Fuel", generate_random_int(0, 100))
    #Temperature
-   update_json("Temperature", "Value", generate_random_float(0, 100))
+   update_json("Temperature", "Value", get_interior_temperature())
 
 def publish():
    try:
@@ -108,8 +176,10 @@ def on_publish(client, userdata, mid):
 # Main
 def main():
    for i in range(max_messages):
-      generate_new_values()
-      publish()
+      if(i % 5 == 0):
+         generate_new_values()
+         publish()
+      calculate_temperature_value()
       time.sleep(time_delay)
 
 if __name__ == '__main__':
