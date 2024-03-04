@@ -56,7 +56,7 @@ def calculate_temperature_value():
       heat_is_on = True
    
    if(heat_is_on == True):
-      inside_temperature += 2
+      inside_temperature += 1
       if(inside_temperature >= 80):
          heat_is_on = False
 
