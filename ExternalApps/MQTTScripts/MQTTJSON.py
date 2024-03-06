@@ -217,7 +217,7 @@ def generate_new_values():
    update_json("Engine", "RPM", generate_random_int(500, 7200))
    # Thruster
    update_json("Thruster", "Status", generate_online_status())
-   update_json("Thruster", "Power", generate_random_int(0, 500))
+   update_json("Thruster", "Power", generate_random_int(0, 100))
    update_json("Thruster", "Fuel", generate_random_int(0, 100))
    #Temperature
    update_json("Temperature", "Status", generate_online_status())
