@@ -21,14 +21,14 @@ status = False
 #values in meters
 ship_length = 14
 ship_width = 10
-ship_hieght = 3
+ship_height = 3
 ship_R_factor = 100              # We need a very big R factor so se don't loose too much heat every second
 heat_is_on = False               # Keep track of if the temperature is on or not
 
 temperature_time_delay = 1       # How long between each of the temperature ticks
 outside_temperature = 0.0        # This is the current temperature of the outside (surrounding the spaceship - zero as we are in space)
 inside_temperature = 75.0        # This is the current temperature of the inside of the ship 
-ship_surface = (ship_length * ship_width * 2) + (ship_hieght * ship_length * 2) + (ship_width * ship_hieght * 2)       # the interior of the ship will be defined as 350 meters cubed
+ship_surface = (ship_length * ship_width * 2) + (ship_height * ship_length * 2) + (ship_width * ship_height * 2)       # the interior of the ship will be defined as 350 meters cubed
 
 # Returns the temperature of the ship interior
 def get_interior_temperature():
