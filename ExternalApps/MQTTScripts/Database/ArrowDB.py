@@ -1,12 +1,10 @@
 # Arrow DB PythonScript
 
-import pandas as pd
 import pyarrow as pa # Apache Arrow
 import pyarrow.json as pjson # Apache Arrow JSON
+import pyarrow.parquet as parq
 import paho.mqtt.client as mqtt
-from datetime import datetime
 import time
-import json
 
 # Define the schema
 schema = pa.schema([
