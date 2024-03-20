@@ -239,11 +239,10 @@ def on_publish(client, userdata, mid):
 # Main
 def main():
    for i in range(max_messages):
-      if(i % 5 == 0):
-         generate_new_values()
-         publish()
-      calculate_temperature_value()
       time.sleep(time_delay)
-
+      generate_new_values()
+      publish()
+      calculate_temperature_value()
+   
 if __name__ == '__main__':
    main()
