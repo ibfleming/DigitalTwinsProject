@@ -57,7 +57,6 @@ client.subscribe(topic)
 try:
     while True:
         time.sleep(1)
-        print(db)
 except KeyboardInterrupt:
     print("Exiting...")
     client.disconnect()

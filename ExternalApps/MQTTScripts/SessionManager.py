@@ -13,7 +13,7 @@ inSession = False
 broker_name = "localhost"
 broker_port = 1883
 CID = "SessionManager"
-topic = "SessionManagerTopic"
+topic = "SessionTopic"
 
 # Script Paths
 database_script = "Database/ArrowDB.py"
@@ -57,7 +57,7 @@ def dispatch_script(script_path):
         if platform.system() == "Windows":
             subprocess.Popen(['start', 'cmd', '/c', 'python', script_path], shell=True)
         else:
-            subprocess.Popen(['python3', script_path], check=True)
+            subprocess.Popen(['python', script_path], check=True)
     except subprocess.CalledProcessError as e:
         print(f"Error executing script: {e}")
 
