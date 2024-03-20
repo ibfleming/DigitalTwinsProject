@@ -1,8 +1,7 @@
 # Arrow DB PythonScript
 
 import pyarrow as pa # Apache Arrow
-import pyarrow.json as pjson # Apache Arrow JSON
-import pyarrow.parquet as parq
+import pyarrow.parquet as parq # Parquet
 import paho.mqtt.client as mqtt
 import time
 
@@ -22,7 +21,7 @@ connected = False
 broker_name = "localhost"
 broker_port = 1883
 CID = "ArrowDB"
-topic = "JsonTestTopic"
+topic = "SimulationTopic"
 
 # Functions
 
@@ -50,7 +49,7 @@ client.on_message = on_message
 client.connect(broker_name, port=broker_port)
 client.loop_start()
 
-while connected != True:
+while connected is not True:
     time.sleep(0.1)
 
 client.subscribe(topic)

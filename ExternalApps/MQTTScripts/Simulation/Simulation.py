@@ -1,5 +1,4 @@
 import paho.mqtt.publish
-import paho.mqtt.client as mqtt
 import json
 import random
 import time
@@ -8,7 +7,7 @@ import time
 broker_name = "localhost"
 broker_port = 1883
 CID = "CID"
-topic = "JsonTestTopic"
+topic = "SimulationTopic"
 
 # Constants
 max_messages = 1000
@@ -52,10 +51,10 @@ def calculate_temperature_value():
    inside_temperature = round(new_temperature, 3)
 
    # Turn on the heat if the ship is too cold
-   if(inside_temperature <= 65.0 and heat_is_on == False):
+   if(inside_temperature <= 65.0 and heat_is_on is False):
       heat_is_on = True
    
-   if(heat_is_on == True):
+   if(heat_is_on is True):
       inside_temperature += 1
       if(inside_temperature >= 80):
          heat_is_on = False
@@ -110,7 +109,7 @@ def generate_random_direction():
          return random.choice(["SW", "NW"])
       case "NW": 
          return random.choice(["N", "W"])
-      case default:
+      case _:
          # Randomly choose is all else fails
          return random.choice(directions)   
 
@@ -121,7 +120,7 @@ def generate_random_direction():
 def generate_online_status():
    global total_status_online
    updated_status = True
-   if(updated_status == True):
+   if(updated_status is True):
       total_status_online += 1
    else:
       if(total_status_online > 0):
@@ -132,7 +131,7 @@ def generate_online_status():
 def generate_offline_status():
    global total_status_online
    updated_status = False
-   if(updated_status == True):
+   if(updated_status is True):
       total_status_online += 1
    else:
       if(total_status_online > 0):
@@ -144,7 +143,7 @@ def generate_random_status():
    global total_status_online
    statuses = [True, False]
    updated_status = random.choice(statuses)
-   if(updated_status == True):
+   if(updated_status is True):
       total_status_online += 1
    else:
       if(total_status_online > 0):
@@ -198,7 +197,7 @@ def change_module_status():
 def update_json(module, key, value):
    try:
       json_data[module][key] = value
-   except:
+   except KeyError:
       print("Invalid module or key provided.")
 
 def generate_new_values():
