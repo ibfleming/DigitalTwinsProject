@@ -9,11 +9,17 @@ import uuid
 connected = False
 inSession = False
 
+# Global UUID
+baseUUID = uuid.uuid4()
+
 # MQTT Parameters
 broker_name = "localhost"
 broker_port = 1883
 CID = "SessionManager"
 topic = "SessionTopic"
+
+# UUID Topic
+UUIDTopic = "UUIDTopic"
 
 # Script Paths
 database_script = "Database/ArrowDB.py"
@@ -30,20 +36,33 @@ def on_connect(client, userdata, flags, rc):
 
 def on_message(client, userdata, message):
     global inSession
+    global baseUUID
     if not inSession:
         if message.payload.decode('utf-8') == "Start":
             inSession = True
             print("Creating session...")
+            dispatch_script(database_script)
+            dispatch_script(simulation_script)
+
+            time.sleep(1)
+
             mqtt_publish.single(
                 topic,
-                f"[{datetime.now().strftime("%Y-%m-%d %H:%M:%S")}] Session Created Successfully (UUID: {uuid.uuid4()})",
+                f"[{datetime.now().strftime("%Y-%m-%d %H:%M:%S")}] Session Created Successfully (UUID: {baseUUID})",
                 qos=0,
                 retain=False,
                 hostname=broker_name,
                 port=broker_port
             )
-            dispatch_script(database_script)
-            dispatch_script(simulation_script)
+
+            mqtt_publish.single(
+                UUIDTopic,
+                str(baseUUID),
+                qos=0,
+                retain=False,
+                hostname=broker_name,
+                port=broker_port
+            )
     elif message.payload.decode('utf-8') == "End":
         inSession = False
         print("Ending session...")
@@ -73,6 +92,7 @@ while not connected:
     time.sleep(0.1)
 
 client.subscribe(topic)
+client.subscribe(UUIDTopic)
 
 try:
     while True:

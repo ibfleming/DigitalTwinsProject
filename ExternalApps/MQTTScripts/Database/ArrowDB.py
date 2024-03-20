@@ -7,6 +7,9 @@ import paho.mqtt.client as mqtt
 import numpy as np
 import time
 
+# Storage file name
+storage = "test_parquet_table.parquet"
+
 # Define the schema
 schema = pa.schema([
     ("Time", pa.timestamp('ms')),
@@ -25,6 +28,9 @@ broker_port = 1883
 CID = "ArrowDB"
 topic = "SimulationTopic"
 
+# MQTT Session Param
+UUIDTopic = "UUIDTopic"
+
 # Functions
 
 def write_parquet_data(table, storageName):
@@ -33,7 +39,7 @@ def write_parquet_data(table, storageName):
 def read_parquet_data(table):
     tempTable = parq.read_table(table)
     #print("\n-----------------------Look there is data-------------\n")
-    print(tempTable)
+    #print(tempTable)
 
 def on_connect(client, userdata, flags, rc):
     if( rc == 0 ):
@@ -46,12 +52,15 @@ def on_connect(client, userdata, flags, rc):
 def on_message(client, userdata, message):
     global db
     # Get the current timestamp
-    current_time_ms = int(time.time() * 1000)
-    # Append the new data to the database
-    data = pa.Table.from_pydict({"Time": [current_time_ms], "Data": [message.payload.decode('utf-8')]}, schema=schema)
-    # Concatenate the new table with the existing database
-    db = pa.concat_tables([db, data])
-    #print(db)
+    if(message.topic == topic):
+        current_time_ms = int(time.time() * 1000)
+        # Append the new data to the database
+        data = pa.Table.from_pydict({"Time": [current_time_ms], "Data": [message.payload.decode('utf-8')]}, schema=schema)
+        # Concatenate the new table with the existing database
+        db = pa.concat_tables([db, data])
+        #print(db)
+    elif(message.topic == UUIDTopic):
+        print(message.payload)
 
 # Client
 client = mqtt.Client(CID)
@@ -64,22 +73,19 @@ while connected is not True:
     time.sleep(0.1)
 
 client.subscribe(topic)
+client.subscribe(UUIDTopic)
 
 try:
     while True:
-        # Storage Table Name
-        storage = "test_parquet_table.parquet"
-
         time.sleep(1)
-<<<<<<< Updated upstream
-=======
-        write_parquet_data(db, storage)
         read_parquet_data(storage)
-        write_parquet_data_to_disk()
         #print(db)
->>>>>>> Stashed changes
 except KeyboardInterrupt:
     print("Exiting...")
+
+    # Write the data when finished
+    write_parquet_data(db, storage)
+
     client.disconnect()
     client.loop_stop()
 
