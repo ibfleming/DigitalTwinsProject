@@ -1,3 +1,9 @@
+"""
+Session Manager Script
+
+This script manages sessions and dispatches scripts based on MQTT messages.
+"""
+
 import datetime
 import platform
 import subprocess
@@ -5,7 +11,6 @@ import paho.mqtt.client as mqtt
 import time
 import uuid
 import psutil
-
 
 # Use Shell=True for Windows
 useShell = True

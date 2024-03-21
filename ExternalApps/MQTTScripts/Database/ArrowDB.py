@@ -1,3 +1,10 @@
+"""
+Database Script
+
+This script is responsible for managing the database and storing the data in a Parquet file.
+Uses PyArrow and Parquet.
+"""
+
 import os
 import paho.mqtt.publish
 import pyarrow as pa

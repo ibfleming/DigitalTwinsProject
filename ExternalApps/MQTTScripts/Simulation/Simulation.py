@@ -1,3 +1,9 @@
+"""
+Simulation Script
+
+This script is responsible for simulating the spaceship's modules and sending the data to the broker.
+"""
+
 import paho.mqtt.publish
 import json
 import random
