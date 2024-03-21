@@ -1,10 +1,8 @@
-# Arrow DB PythonScript
-
-import pyarrow as pa # Apache Arrow
-import pyarrow.csv
-import pyarrow.parquet as parq # Parquet
+import os
+import paho.mqtt.publish
+import pyarrow as pa
+import pyarrow.parquet as parq
 import paho.mqtt.client as mqtt
-import numpy as np
 import time
 
 # Storage file name
@@ -26,10 +24,11 @@ connected = False
 broker_name = "localhost"
 broker_port = 1883
 CID = "ArrowDB"
-topic = "SimulationTopic"
 
 # MQTT Session Param
-UUIDTopic = "UUIDTopic"
+simulation_topic = "SimulationTopic"
+uuid_topic       = "UUIDTopic"
+pid_topic        = "PIDTopic"
 
 # Functions
 
@@ -37,13 +36,11 @@ def write_parquet_data(table, storageName):
     parq.write_table(table, storageName, compression=None)
 
 def read_parquet_data(table):
-    tempTable = parq.read_table(table)
-    #print("\n-----------------------Look there is data-------------\n")
-    #print(tempTable)
+    pass
 
 def on_connect(client, userdata, flags, rc):
-    if( rc == 0 ):
-        print("Connected to broker.")
+    if rc == 0:
+        print("Connected to broker!\n")
         global connected
         connected = True
     else:
@@ -52,43 +49,63 @@ def on_connect(client, userdata, flags, rc):
 def on_message(client, userdata, message):
     global db
     # Get the current timestamp
-    if(message.topic == topic):
+    if message.topic == simulation_topic:
         current_time_ms = int(time.time() * 1000)
         # Append the new data to the database
         data = pa.Table.from_pydict({"Time": [current_time_ms], "Data": [message.payload.decode('utf-8')]}, schema=schema)
         # Concatenate the new table with the existing database
         db = pa.concat_tables([db, data])
-        #print(db)
-    elif(message.topic == UUIDTopic):
+        # print(db)
+    elif message.topic == uuid_topic:
         print(message.payload)
 
-# Client
-client = mqtt.Client(CID)
-client.on_connect = on_connect
-client.on_message = on_message
-client.connect(broker_name, port=broker_port)
-client.loop_start()
+# Functions
+        
+def publish_pid(pid):
+   try:
+      paho.mqtt.publish.single(pid_topic, payload="pid" + str(pid), qos=0, retain=False, hostname=broker_name,
+                               port=broker_port, client_id=CID, keepalive=60, will=None, auth=None,
+                                 tls=None, protocol=paho.mqtt.client.MQTTv5, transport="tcp")
+   except Exception as e:
+        print("Error:", e)        
 
-while connected is not True:
-    time.sleep(0.1)
+# Main
 
-client.subscribe(topic)
-client.subscribe(UUIDTopic)
+def main():
 
-try:
-    while True:
-        time.sleep(1)
-        read_parquet_data(storage)
-        #print(db)
-except KeyboardInterrupt:
-    print("Exiting...")
+    pid = os.getpid()
+    publish_pid(pid)
+    
+    print("====================================")
+    print(f"\tDatabase (PID: {pid})\t")
+    print("====================================\n")
 
-    # Write the data when finished
-    write_parquet_data(db, storage)
+    # Client
+    client = mqtt.Client(CID)
+    client.on_connect = on_connect
+    client.on_message = on_message
+    client.connect(broker_name, port=broker_port)
+    client.loop_start()
 
-    client.disconnect()
-    client.loop_stop()
+    while not connected:
+        time.sleep(0.1)
 
+    client.subscribe(simulation_topic)
+    client.subscribe(uuid_topic)
+    client.subscribe(pid_topic)
 
+    try:
+        while True:
+            time.sleep(1)
+            read_parquet_data(storage)
+    except KeyboardInterrupt:
+        print("Exiting...")
 
+        # Write the data when finished
+        write_parquet_data(db, storage)
 
+        client.disconnect()
+        client.loop_stop()
+
+if __name__ == "__main__":
+    main()

@@ -2,12 +2,16 @@ import paho.mqtt.publish
 import json
 import random
 import time
+import os
 
 # MQTT
 broker_name = "localhost"
 broker_port = 1883
 CID = "CID"
-topic = "SimulationTopic"
+
+# Topics
+simulation_topic = "SimulationTopic"
+pid_topic        = "PIDTopic"
 
 # Constants
 max_messages = 1000
@@ -205,19 +209,23 @@ def generate_new_values():
    update_json("Antenna", "Status", generate_online_status())
    update_json("Antenna", "Strength", generate_random_int(0, 100))
    update_json("Antenna", "Connections", generate_random_int(1, 10))
+
    # Computer System
    update_json("ComputerSystem", "Status", generate_online_status())
    update_json("ComputerSystem", "Direction", get_current_ship_direction())
    update_json("ComputerSystem", "Speed", generate_random_float(25, 100))
+
    # Engine
    update_json("Engine", "Status", generate_online_status())
    update_json("Engine", "Temperature", generate_random_float(-10, 72))
    update_json("Engine", "Pressure", generate_random_int(0, 100))
    update_json("Engine", "RPM", generate_random_int(500, 7200))
+
    # Thruster
    update_json("Thruster", "Status", generate_online_status())
    update_json("Thruster", "Power", generate_random_int(0, 100))
    update_json("Thruster", "Fuel", generate_random_int(0, 100))
+
    #Temperature
    update_json("Temperature", "Status", generate_online_status())
    update_json("Temperature", "Value", get_interior_temperature())
@@ -225,10 +233,19 @@ def generate_new_values():
 
 def publish():
    try:
-      paho.mqtt.publish.single(topic, payload=json.dumps(json_data), qos=0, retain=False, hostname=broker_name,
+      paho.mqtt.publish.single(simulation_topic, payload=json.dumps(json_data), qos=0, retain=False, hostname=broker_name,
                                port=broker_port, client_id=CID, keepalive=60, will=None, auth=None,
                                  tls=None, protocol=paho.mqtt.client.MQTTv5, transport="tcp")
-      print(f"-- Publishing: {json.dumps(json_data)}, to Topic: {topic}, to Broker: {broker_name}.")
+      #print(f"-- Publishing: {json.dumps(json_data)}, to Topic: {topic}, to Broker: {broker_name}.")
+      print(f"{json.dumps(json_data)}")
+   except Exception as e:
+        print("Error:", e)
+
+def publish_pid(pid):
+   try:
+      paho.mqtt.publish.single(pid_topic, payload="pid" + str(pid), qos=0, retain=False, hostname=broker_name,
+                               port=broker_port, client_id=CID, keepalive=60, will=None, auth=None,
+                                 tls=None, protocol=paho.mqtt.client.MQTTv5, transport="tcp")
    except Exception as e:
         print("Error:", e)
 
@@ -238,6 +255,14 @@ def on_publish(client, userdata, mid):
 
 # Main
 def main():
+
+   pid = os.getpid()
+   publish_pid(pid)
+
+   print("======================================")
+   print(f"\tSimulation (PID: {pid})\t")
+   print("======================================\n")
+
    for i in range(max_messages):
       time.sleep(time_delay)
       generate_new_values()
