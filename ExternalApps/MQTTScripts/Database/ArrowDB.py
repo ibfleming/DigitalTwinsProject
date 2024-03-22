@@ -13,7 +13,9 @@ import paho.mqtt.client as mqtt
 import time
 
 # Storage file name
-storage = "test_parquet_table.parquet"
+storageHead = os.getcwd()
+storageMiddle = "\\Database\\PastSessionStorage\\"
+storageTail = ".parquet"
 
 # Define the schema
 schema = pa.schema([
@@ -43,7 +45,8 @@ def write_parquet_data(table, storageName):
     parq.write_table(table, storageName, compression=None)
 
 def read_parquet_data(table):
-    pass
+    tempTable = parq.read_table(table)
+    print(tempTable)
 
 def on_connect(client, userdata, flags, rc):
     if rc == 0:
@@ -55,6 +58,9 @@ def on_connect(client, userdata, flags, rc):
 
 def on_message(client, userdata, message):
     global db
+    global storageHead
+    global storageMiddle
+    global storageTail
     # Get the current timestamp
     if message.topic == simulation_topic:
         current_time_ms = int(time.time() * 1000)
@@ -66,6 +72,8 @@ def on_message(client, userdata, message):
     elif message.topic == uuid_topic:
         uuid = message.payload.decode('utf-8')
         print(f"UUID of Session: {uuid}")
+        storageHead = storageHead + storageMiddle + uuid + storageTail
+        #print(storageHead)
 
 # Functions
         
@@ -105,12 +113,14 @@ def main():
     try:
         while True:
             time.sleep(1)
-            read_parquet_data(storage)
+            write_parquet_data(db, storageHead)
+            read_parquet_data(storageHead)
+
     except KeyboardInterrupt:
         print("Exiting...")
 
         # Write the data when finished
-        write_parquet_data(db, storage)
+        write_parquet_data(db, storageHead)
 
         client.disconnect()
         client.loop_stop()
