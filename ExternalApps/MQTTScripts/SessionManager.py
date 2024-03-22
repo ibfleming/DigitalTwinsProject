@@ -13,7 +13,7 @@ import uuid
 import psutil
 
 # Use Shell=True for Windows
-useShell = True
+useShell = False
 
 # UUID
 session_id = uuid.uuid4()
@@ -69,8 +69,8 @@ def on_message(client, userdata, message):
                     print("Dispatching scripts...")
 
                     # Dispatch the scripts
-                    dispatch_script(database_script, client)
-                    dispatch_script(simulation_script, client)
+                    dispatch_script(database_script)
+                    dispatch_script(simulation_script)
                     print("Scripts dispatched.\n")
 
                     # Send the UUID to the database
@@ -88,7 +88,7 @@ def on_message(client, userdata, message):
 
 # Functions
 
-def dispatch_script(script_path, client):
+def dispatch_script(script_path):
     if not useShell:
         try:
             process = subprocess.Popen(['python', script_path], shell=False)
