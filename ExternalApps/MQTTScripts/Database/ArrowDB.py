@@ -47,7 +47,7 @@ def read_parquet_data(table):
 
 def on_connect(client, userdata, flags, rc):
     if rc == 0:
-        print("Connected to broker!\n")
+        print("Connected to broker!")
         global connected
         connected = True
     else:
@@ -64,7 +64,8 @@ def on_message(client, userdata, message):
         db = pa.concat_tables([db, data])
         # print(db)
     elif message.topic == uuid_topic:
-        print(message.payload)
+        uuid = message.payload.decode('utf-8')
+        print(f"UUID of Session: {uuid}")
 
 # Functions
         
@@ -82,8 +83,8 @@ def main():
 
     pid = os.getpid()
     publish_pid(pid)
-    
-    print("====================================")
+
+    print("\n====================================")
     print(f"\tDatabase (PID: {pid})\t")
     print("====================================\n")
 

@@ -15,12 +15,12 @@ import psutil
 # Use Shell=True for Windows
 useShell = True
 
+# UUID
+session_id = uuid.uuid4()
+
 # Statuses
 connected = False
 inSession = False
-
-# UUID
-uuid = uuid.uuid4()
 
 # MQTT Parameters
 broker_name = "localhost"
@@ -55,34 +55,40 @@ def on_message(client, userdata, message):
         shell_pids.append(int(pid))
     else:
         global inSession
+        global session_id
 
         payload = message.payload.decode('utf-8')
 
         if not inSession:
             if payload == "Start":
                     inSession = True
+                    session_id = uuid.uuid4()
                     print("Received session start request...")
                     print(f"Created new session at {datetime.datetime.now().strftime("%m/%d/%Y %I:%M:%S %p")}.")
-                    print(f"\tUUID: {uuid}\n")
+                    print(f"\tUUID: {session_id}\n")
                     print("Dispatching scripts...")
 
                     # Dispatch the scripts
-                    dispatch_script(database_script)
-                    dispatch_script(simulation_script)
-
+                    dispatch_script(database_script, client)
+                    dispatch_script(simulation_script, client)
                     print("Scripts dispatched.\n")
+
+                    # Send the UUID to the database
+                    time.sleep(1)
+                    print("Sending UUID to database...\n")
+                    client.publish(uuid_topic, str(session_id))
         elif inSession:
             if payload == "End":
                 inSession = False
                 print("\nReceived session stop request...")
                 print(f"Ended the session at {datetime.datetime.now().strftime("%m/%d/%Y %I:%M:%S %p")}.")
-                print(f"\tUUID: {uuid}\n")
+                print(f"\tUUID: {session_id}\n")
                 print("Terminating scripts...")
                 terminate_scripts()
 
 # Functions
 
-def dispatch_script(script_path):
+def dispatch_script(script_path, client):
     if not useShell:
         try:
             process = subprocess.Popen(['python', script_path], shell=False)
@@ -151,7 +157,7 @@ def get_cmd_pid_of_python_subprocess(script_path):
 
 def main():
 
-    print("===============================")
+    print("\n===============================")
     print("\tSession Manager\t")
     print("===============================\n")
 
