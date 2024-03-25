@@ -2,8 +2,10 @@
     Replay Manager Script
 """
 
+import os
 import paho.mqtt.client as mqtt
 import time
+import json
 
 # Status
 connected = False
@@ -16,6 +18,9 @@ CID = "ReplayManager"
 
 #Topics
 replay_topic = "ReplayTopic"
+
+# Database
+db_path = "PastSessionStorage"
 
 """
     Callback Functions
@@ -46,6 +51,20 @@ def on_message(client, userdata, message):
     Utility Functions
 """
 
+def read_sessions():
+    try:
+        script_dir = os.path.dirname(os.path.abspath(__file__))
+        folder_path = os.path.join(script_dir, db_path)
+        
+        files = os.listdir(folder_path)
+        # Filter out only files (excluding directories)
+        files = [file for file in files if os.path.isfile(os.path.join(db_path, file))]
+
+        return json.dumps(files)
+    except OSError as e:
+        print(f"Error: {e}")
+        return None
+
 def publish_db_value(client, data):
     client.publish(replay_topic, str(data))
 
@@ -70,6 +89,8 @@ def main():
         time.sleep(0.1)
 
     client.subscribe(replay_topic)
+
+    print(read_sessions())
 
     try:
         while True:

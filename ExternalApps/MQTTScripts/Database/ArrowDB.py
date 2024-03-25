@@ -5,6 +5,7 @@ This script is responsible for managing the database and storing the data in a P
 Uses PyArrow and Parquet.
 """
 
+from datetime import datetime
 import os
 import paho.mqtt.publish
 import pyarrow as pa
@@ -24,7 +25,6 @@ CID = "ArrowDB"
 simulation_topic = "SimulationTopic"
 uuid_topic       = "UUIDTopic"
 pid_topic        = "PIDTopic"
-replay_topic     = "ReplayTopic"
 
 """
     Database Variables
@@ -70,9 +70,11 @@ def on_message(client, userdata, message):
         db = pa.concat_tables([db, data])
         # print(db)
     elif message.topic == uuid_topic:
+        dt = datetime.fromtimestamp(int(time.time()))
+        formatted_time = dt.strftime("%m-%d-%Y-%H-%M-%S-%f")[:-3] # "MM/DD/YYYY H:M:S:MS"
         uuid = message.payload.decode('utf-8')
         print(f"UUID of Session: {uuid}")
-        storageHead = storageHead + storageMiddle + uuid + storageTail
+        storageHead = storageHead + storageMiddle + formatted_time + "--" + uuid + storageTail
         #print(storageHead)
 
 """
@@ -120,7 +122,6 @@ def main():
     client.subscribe(simulation_topic)
     client.subscribe(uuid_topic)
     client.subscribe(pid_topic)
-    client.subscribe(replay_topic)
 
     try:
         while True:
