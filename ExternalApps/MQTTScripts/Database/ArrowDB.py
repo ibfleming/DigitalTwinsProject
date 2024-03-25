@@ -12,7 +12,25 @@ import pyarrow.parquet as parq
 import paho.mqtt.client as mqtt
 import time
 
-# Storage file name
+# Connected status
+connected = False
+
+# MQTT Parameters
+broker_name = "localhost"
+broker_port = 1883
+CID = "ArrowDB"
+
+# MQTT Session Param
+simulation_topic = "SimulationTopic"
+uuid_topic       = "UUIDTopic"
+pid_topic        = "PIDTopic"
+replay_topic     = "ReplayTopic"
+
+"""
+    Database Variables
+"""
+
+# Storage File Naming Conventions
 storageHead = os.getcwd()
 storageMiddle = "\\Database\\PastSessionStorage\\"
 storageTail = ".parquet"
@@ -26,27 +44,9 @@ schema = pa.schema([
 # PyArrow Database
 db = pa.Table.from_batches([], schema=schema)
 
-# Connected status
-connected = False
-
-# MQTT Parameters
-broker_name = "localhost"
-broker_port = 1883
-CID = "ArrowDB"
-
-# MQTT Session Param
-simulation_topic = "SimulationTopic"
-uuid_topic       = "UUIDTopic"
-pid_topic        = "PIDTopic"
-
-# Functions
-
-def write_parquet_data(table, storageName):
-    parq.write_table(table, storageName, compression=None)
-
-def read_parquet_data(table):
-    tempTable = parq.read_table(table)
-    print(tempTable)
+"""
+    Callback Functions
+"""
 
 def on_connect(client, userdata, flags, rc):
     if rc == 0:
@@ -75,7 +75,9 @@ def on_message(client, userdata, message):
         storageHead = storageHead + storageMiddle + uuid + storageTail
         #print(storageHead)
 
-# Functions
+"""
+    Utility Functions
+"""
         
 def publish_pid(pid):
    try:
@@ -85,7 +87,16 @@ def publish_pid(pid):
    except Exception as e:
         print("Error:", e)        
 
-# Main
+def write_parquet_data(table, storageName):
+    parq.write_table(table, storageName, compression=None)
+
+def read_parquet_data(table):
+    tempTable = parq.read_table(table)
+    print(tempTable)
+
+"""
+    Main Function
+"""
 
 def main():
 
@@ -109,6 +120,7 @@ def main():
     client.subscribe(simulation_topic)
     client.subscribe(uuid_topic)
     client.subscribe(pid_topic)
+    client.subscribe(replay_topic)
 
     try:
         while True:

@@ -13,7 +13,7 @@ import uuid
 import psutil
 
 # Use Shell=True for Windows
-useShell = False
+useShell = True
 
 # UUID
 session_id = uuid.uuid4()
@@ -46,7 +46,7 @@ def on_connect(client, userdata, flags, rc):
         global connected
         connected = True
     else:
-        print("Cannot connect to broker.")
+        print("Cannot connect to broker.\n")
 
 def on_message(client, userdata, message):
     if message.topic == pid_topic:
