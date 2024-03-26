@@ -70,8 +70,9 @@ def on_message(client, userdata, message):
         db = pa.concat_tables([db, data])
         # print(db)
     elif message.topic == uuid_topic:
-        dt = datetime.fromtimestamp(int(time.time()))
-        formatted_time = dt.strftime("%m-%d-%Y-%H-%M-%S-%f")[:-3] # "MM/DD/YYYY H:M:S:MS"
+        current_time = time.time()
+        dt = datetime.fromtimestamp(current_time)
+        formatted_time = dt.strftime("%m-%d-%Y-%I-%M-%S-%p")
         uuid = message.payload.decode('utf-8')
         print(f"UUID of Session: {uuid}")
         storageHead = storageHead + storageMiddle + formatted_time + "--" + uuid + storageTail

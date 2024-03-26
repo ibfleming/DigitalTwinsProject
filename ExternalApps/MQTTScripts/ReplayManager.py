@@ -19,8 +19,8 @@ CID = "ReplayManager"
 #Topics
 replay_topic = "ReplayTopic"
 
-# Database
-db_path = "PastSessionStorage"
+# Database Absolute Path
+db_path = os.path.join(os.getcwd(), "Database/PastSessionStorage")
 
 """
     Callback Functions
@@ -41,11 +41,14 @@ def on_message(client, userdata, message):
             if message.payload.decode('utf-8') == "Start":
                 replay = True
                 print("Starting Replay Session...\n")
+                publish_session_list(client)
     elif replay:
         if message.topic == replay_topic:
             if message.payload.decode('utf-8') == "End":
                 replay = False
                 print("Ending Replay Session...\n")
+            else:
+                print(message.payload.decode('utf-8') + "\n")
 
 """
     Utility Functions
@@ -53,17 +56,17 @@ def on_message(client, userdata, message):
 
 def read_sessions():
     try:
-        script_dir = os.path.dirname(os.path.abspath(__file__))
-        folder_path = os.path.join(script_dir, db_path)
-        
-        files = os.listdir(folder_path)
-        # Filter out only files (excluding directories)
-        files = [file for file in files if os.path.isfile(os.path.join(db_path, file))]
-
-        return json.dumps(files)
+        files = [file for file in os.listdir(db_path) if os.path.isfile(os.path.join(db_path, file))]
+        return files
     except OSError as e:
         print(f"Error: {e}")
         return None
+
+def publish_session_list(client):
+    sessions = read_sessions()
+    if sessions is not None:
+        json_object = {"Sessions": sessions} # Convert to proper JSON format
+        client.publish(replay_topic, json.dumps(json_object))
 
 def publish_db_value(client, data):
     client.publish(replay_topic, str(data))
@@ -89,8 +92,6 @@ def main():
         time.sleep(0.1)
 
     client.subscribe(replay_topic)
-
-    print(read_sessions())
 
     try:
         while True:
