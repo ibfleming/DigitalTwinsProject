@@ -41,6 +41,7 @@ def on_message(client, userdata, message):
             if message.payload.decode('utf-8') == "Start":
                 replay = True
                 print("Starting Replay Session...\n")
+            if message.payload.decode('utf-8') == "List":
                 publish_session_list(client)
     elif replay:
         if message.topic == replay_topic:
