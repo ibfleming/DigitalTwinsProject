@@ -43,6 +43,8 @@ def on_message(client, userdata, message):
                 print("Starting Replay Session...\n")
             if message.payload.decode('utf-8') == "List":
                 publish_session_list(client)
+            else:
+                pass
     elif replay:
         if message.topic == replay_topic:
             if message.payload.decode('utf-8') == "End":
@@ -66,7 +68,7 @@ def read_sessions():
 def publish_session_list(client):
     sessions = read_sessions()
     if sessions is not None:
-        json_object = {"Sessions": sessions} # Convert to proper JSON format
+        json_object = {"SessionList": sessions} # Convert to proper JSON format
         client.publish(replay_topic, json.dumps(json_object))
 
 def publish_db_value(client, data):
