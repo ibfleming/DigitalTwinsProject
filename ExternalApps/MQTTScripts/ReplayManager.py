@@ -48,14 +48,15 @@ def on_message(client, userdata, message):
             else:
                 pass
         if message.topic == replay_uuid_topic:
-            if message.payload.decode('utf-8') != "Empty":
+            if message.payload.decode('utf-8') != "Empty" and message.payload.decode('utf-8') != "FileFound":
                 uuid = message.payload.decode('utf-8')
                 files = read_sessions()
                 if files:
                     for file in files:
                         if uuid in file:
                             print("Selected File for Replay: " + file, end="\n\n")
-                            open_file(file)
+                            # open_file(file)
+                            client.publish(replay_uuid_topic, "FileFound")
                             break
                 else:
                     print("No sessions available.\n")
