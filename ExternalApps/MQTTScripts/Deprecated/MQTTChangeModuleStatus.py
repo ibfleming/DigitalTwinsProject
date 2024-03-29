@@ -54,4 +54,4 @@ def main():
     post_status_change()
 
 if __name__ == '__main__':
-    main();
+    main()

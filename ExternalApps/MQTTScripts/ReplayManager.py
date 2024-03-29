@@ -5,6 +5,7 @@
 import os
 import paho.mqtt.client as mqtt
 import pyarrow.parquet as parq
+import pandas as pd
 import time
 import json
 
@@ -23,6 +24,7 @@ replay_uuid_topic = "ReplayUUIDTopic"
 
 # Database Absolute Path
 db_path = os.path.join(os.getcwd(), "Database\\PastSessionStorage")
+replay_db = None
 
 """
     Callback Functions
@@ -40,13 +42,26 @@ def on_message(client, userdata, message):
     global replay
     if not replay:
         if message.topic == replay_topic:
-            if message.payload.decode('utf-8') == "Start":
-                replay = True
-                print("Starting Replay Session...\n")
-            if message.payload.decode('utf-8') == "List":
-                publish_session_list(client)
-            else:
-                pass
+            match message.payload.decode('utf-8'):
+                case "Start":
+                    replay = True
+                    print("Starting Replay Session...\n")
+                    return
+                case "List":
+                    publish_session_list(client)
+                    return
+                case "Antenna":
+                    return
+                case "ComputerSystem":
+                    return
+                case "Engine":
+                    return
+                case "Thruster":
+                    return
+                case "Temperature":
+                    return
+                case _:
+                    return
         if message.topic == replay_uuid_topic:
             if message.payload.decode('utf-8') != "Empty" and message.payload.decode('utf-8') != "FileFound":
                 uuid = message.payload.decode('utf-8')
@@ -55,12 +70,12 @@ def on_message(client, userdata, message):
                     for file in files:
                         if uuid in file:
                             print("Selected File for Replay: " + file, end="\n\n")
-                            # open_file(file)
+                            open_file(file)
                             client.publish(replay_uuid_topic, "FileFound")
+                            access_data_element(replay_db, "Antenna")
                             break
                 else:
-                    print("No sessions available.\n")
-                
+                    print("No sessions available.\n")    
     elif replay:
         if message.topic == replay_topic:
             if message.payload.decode('utf-8') == "End":
@@ -91,9 +106,13 @@ def publish_db_value(client, data):
     client.publish(replay_topic, str(data))
 
 def open_file(file):
+    global replay_db
     file_path = db_path + "\\" + file
-    table = parq.read_table(file_path)
-    print(table)
+    replay_db = parq.read_table(file_path).to_pandas()
+
+def access_data_element(db=replay_db, key=None):
+    print(type(replay_db))
+    print(replay_db)
 
 """
     Main Function
