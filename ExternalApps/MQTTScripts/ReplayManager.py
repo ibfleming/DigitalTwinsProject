@@ -4,6 +4,7 @@
 
 import os
 import paho.mqtt.client as mqtt
+import pyarrow.parquet as parq
 import time
 import json
 
@@ -18,9 +19,10 @@ CID = "ReplayManager"
 
 #Topics
 replay_topic = "ReplayTopic"
+replay_uuid_topic = "ReplayUUIDTopic"
 
 # Database Absolute Path
-db_path = os.path.join(os.getcwd(), "Database/PastSessionStorage")
+db_path = os.path.join(os.getcwd(), "Database\\PastSessionStorage")
 
 """
     Callback Functions
@@ -45,6 +47,19 @@ def on_message(client, userdata, message):
                 publish_session_list(client)
             else:
                 pass
+        if message.topic == replay_uuid_topic:
+            if message.payload.decode('utf-8') != "Empty":
+                uuid = message.payload.decode('utf-8')
+                files = read_sessions()
+                if files:
+                    for file in files:
+                        if uuid in file:
+                            print("Selected File for Replay: " + file, end="\n\n")
+                            open_file(file)
+                            break
+                else:
+                    print("No sessions available.\n")
+                
     elif replay:
         if message.topic == replay_topic:
             if message.payload.decode('utf-8') == "End":
@@ -74,6 +89,11 @@ def publish_session_list(client):
 def publish_db_value(client, data):
     client.publish(replay_topic, str(data))
 
+def open_file(file):
+    file_path = db_path + "\\" + file
+    table = parq.read_table(file_path)
+    print(table)
+
 """
     Main Function
 """
@@ -95,6 +115,7 @@ def main():
         time.sleep(0.1)
 
     client.subscribe(replay_topic)
+    client.subscribe(replay_uuid_topic)
 
     try:
         while True:
