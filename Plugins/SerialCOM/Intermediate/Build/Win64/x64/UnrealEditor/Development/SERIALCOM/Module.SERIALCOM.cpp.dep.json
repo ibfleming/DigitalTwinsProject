@@ -1,16 +1,16 @@
 {
     "Version": "1.2",
     "Data": {
-        "Source": "c:\\users\\lee4219\\documents\\unrealprojects_2024\\digitaltwinsproject\\plugins\\serialcom\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\serialcom\\module.serialcom.cpp",
+        "Source": "c:\\temp\\digitaltwinsproject\\plugins\\serialcom\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\serialcom\\module.serialcom.cpp",
         "ProvidedModule": "",
-        "PCH": "c:\\users\\lee4219\\documents\\unrealprojects_2024\\digitaltwinsproject\\intermediate\\build\\win64\\x64\\digitaltwinsprojecteditor\\development\\engine\\sharedpch.engine.cpp20.h.pch",
+        "PCH": "c:\\temp\\digitaltwinsproject\\intermediate\\build\\win64\\x64\\digitaltwinsprojecteditor\\development\\engine\\sharedpch.engine.cpp20.h.pch",
         "Includes": [
-            "c:\\users\\lee4219\\documents\\unrealprojects_2024\\digitaltwinsproject\\plugins\\serialcom\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\serialcom\\definitions.serialcom.h",
-            "c:\\users\\lee4219\\documents\\unrealprojects_2024\\digitaltwinsproject\\plugins\\serialcom\\intermediate\\build\\win64\\unrealeditor\\inc\\serialcom\\uht\\serialcom.gen.cpp",
-            "c:\\users\\lee4219\\documents\\unrealprojects_2024\\digitaltwinsproject\\plugins\\serialcom\\source\\serialcom\\public\\serialcom.h",
-            "c:\\users\\lee4219\\documents\\unrealprojects_2024\\digitaltwinsproject\\plugins\\serialcom\\intermediate\\build\\win64\\unrealeditor\\inc\\serialcom\\uht\\serialcom.generated.h",
-            "c:\\users\\lee4219\\documents\\unrealprojects_2024\\digitaltwinsproject\\plugins\\serialcom\\intermediate\\build\\win64\\unrealeditor\\inc\\serialcom\\uht\\serialcom.init.gen.cpp",
-            "c:\\users\\lee4219\\documents\\unrealprojects_2024\\digitaltwinsproject\\plugins\\serialcom\\source\\serialcom\\private\\serialcom.cpp",
+            "c:\\temp\\digitaltwinsproject\\plugins\\serialcom\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\serialcom\\definitions.serialcom.h",
+            "c:\\temp\\digitaltwinsproject\\plugins\\serialcom\\intermediate\\build\\win64\\unrealeditor\\inc\\serialcom\\uht\\serialcom.gen.cpp",
+            "c:\\temp\\digitaltwinsproject\\plugins\\serialcom\\source\\serialcom\\public\\serialcom.h",
+            "c:\\temp\\digitaltwinsproject\\plugins\\serialcom\\intermediate\\build\\win64\\unrealeditor\\inc\\serialcom\\uht\\serialcom.generated.h",
+            "c:\\temp\\digitaltwinsproject\\plugins\\serialcom\\intermediate\\build\\win64\\unrealeditor\\inc\\serialcom\\uht\\serialcom.init.gen.cpp",
+            "c:\\temp\\digitaltwinsproject\\plugins\\serialcom\\source\\serialcom\\private\\serialcom.cpp",
             "c:\\program files\\epic games\\ue_5.3\\engine\\source\\runtime\\core\\public\\windows\\allowwindowsplatformtypes.h",
             "c:\\program files\\epic games\\ue_5.3\\engine\\source\\runtime\\core\\public\\windows\\windowshwrapper.h",
             "c:\\program files\\epic games\\ue_5.3\\engine\\source\\runtime\\core\\public\\windows\\prewindowsapi.h",
@@ -113,8 +113,8 @@
             "c:\\program files (x86)\\windows kits\\10\\include\\10.0.18362.0\\um\\ime_cmodes.h",
             "c:\\program files\\epic games\\ue_5.3\\engine\\source\\runtime\\core\\public\\windows\\postwindowsapi.h",
             "c:\\program files\\epic games\\ue_5.3\\engine\\source\\runtime\\core\\public\\windows\\hidewindowsplatformtypes.h",
-            "c:\\users\\lee4219\\documents\\unrealprojects_2024\\digitaltwinsproject\\plugins\\serialcom\\source\\serialcom\\private\\serialcommodule.cpp",
-            "c:\\users\\lee4219\\documents\\unrealprojects_2024\\digitaltwinsproject\\plugins\\serialcom\\source\\serialcom\\public\\serialcommodule.h"
+            "c:\\temp\\digitaltwinsproject\\plugins\\serialcom\\source\\serialcom\\private\\serialcommodule.cpp",
+            "c:\\temp\\digitaltwinsproject\\plugins\\serialcom\\source\\serialcom\\public\\serialcommodule.h"
         ],
         "ImportedModules": [],
         "ImportedHeaderUnits": []

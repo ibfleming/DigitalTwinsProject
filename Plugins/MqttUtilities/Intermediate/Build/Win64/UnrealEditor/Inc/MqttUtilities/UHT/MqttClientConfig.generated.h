@@ -14,7 +14,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define MQTTUTILITIES_MqttClientConfig_generated_h
 
-#define FID_Projects_DigitalTwinsProject_Plugins_MqttUtilities_Source_MqttUtilities_Public_Entities_MqttClientConfig_h_10_GENERATED_BODY \
+#define FID_temp_DigitalTwinsProject_Plugins_MqttUtilities_Source_MqttUtilities_Public_Entities_MqttClientConfig_h_10_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FMqttClientConfig_Statics; \
 	static class UScriptStruct* StaticStruct();
 
@@ -22,7 +22,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 template<> MQTTUTILITIES_API UScriptStruct* StaticStruct<struct FMqttClientConfig>();
 
 #undef CURRENT_FILE_ID
-#define CURRENT_FILE_ID FID_Projects_DigitalTwinsProject_Plugins_MqttUtilities_Source_MqttUtilities_Public_Entities_MqttClientConfig_h
+#define CURRENT_FILE_ID FID_temp_DigitalTwinsProject_Plugins_MqttUtilities_Source_MqttUtilities_Public_Entities_MqttClientConfig_h
 
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
