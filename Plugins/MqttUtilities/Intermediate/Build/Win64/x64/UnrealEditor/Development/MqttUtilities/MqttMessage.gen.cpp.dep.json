@@ -1,0 +1,15 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "e:\\epic games\\projects\\digitaltwinsproject\\plugins\\mqttutilities\\intermediate\\build\\win64\\unrealeditor\\inc\\mqttutilities\\uht\\mqttmessage.gen.cpp",
+        "ProvidedModule": "",
+        "PCH": "e:\\epic games\\projects\\digitaltwinsproject\\intermediate\\build\\win64\\x64\\digitaltwinsprojecteditor\\development\\engine\\sharedpch.engine.cpp20.h.pch",
+        "Includes": [
+            "e:\\epic games\\projects\\digitaltwinsproject\\plugins\\mqttutilities\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\mqttutilities\\definitions.mqttutilities.h",
+            "e:\\epic games\\projects\\digitaltwinsproject\\plugins\\mqttutilities\\source\\mqttutilities\\public\\entities\\mqttmessage.h",
+            "e:\\epic games\\projects\\digitaltwinsproject\\plugins\\mqttutilities\\intermediate\\build\\win64\\unrealeditor\\inc\\mqttutilities\\uht\\mqttmessage.generated.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

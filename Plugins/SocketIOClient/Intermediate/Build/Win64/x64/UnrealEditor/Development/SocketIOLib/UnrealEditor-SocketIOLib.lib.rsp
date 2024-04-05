@@ -6,7 +6,7 @@
 /NAME:"UnrealEditor-SocketIOLib.dll"
 /IGNORE:4221
 /NODEFAULTLIB
-"C:\temp\DigitalTwinsProject\Intermediate\Build\Win64\x64\DigitalTwinsProjectEditor\Development\Engine\SharedPCH.Engine.RTTI.Cpp20.h.obj"
-"C:\temp\DigitalTwinsProject\Plugins\SocketIOClient\Intermediate\Build\Win64\x64\UnrealEditor\Development\SocketIOLib\Module.SocketIOLib.cpp.obj"
-"C:\temp\DigitalTwinsProject\Plugins\SocketIOClient\Intermediate\Build\Win64\x64\UnrealEditor\Development\SocketIOLib\Default.rc2.res"
-/OUT:"C:\temp\DigitalTwinsProject\Plugins\SocketIOClient\Intermediate\Build\Win64\x64\UnrealEditor\Development\SocketIOLib\UnrealEditor-SocketIOLib.lib"
+"E:\Epic Games\Projects\DigitalTwinsProject\Intermediate\Build\Win64\x64\DigitalTwinsProjectEditor\Development\Engine\SharedPCH.Engine.RTTI.Cpp20.h.obj"
+"E:\Epic Games\Projects\DigitalTwinsProject\Plugins\SocketIOClient\Intermediate\Build\Win64\x64\UnrealEditor\Development\SocketIOLib\Module.SocketIOLib.cpp.obj"
+"E:\Epic Games\Projects\DigitalTwinsProject\Plugins\SocketIOClient\Intermediate\Build\Win64\x64\UnrealEditor\Development\SocketIOLib\Default.rc2.res"
+/OUT:"E:\Epic Games\Projects\DigitalTwinsProject\Plugins\SocketIOClient\Intermediate\Build\Win64\x64\UnrealEditor\Development\SocketIOLib\UnrealEditor-SocketIOLib.lib"

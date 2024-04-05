@@ -1,11 +1,11 @@
 {
     "Version": "1.2",
     "Data": {
-        "Source": "e:\\github\\digitaltwinsproject\\plugins\\serialcom\\intermediate\\build\\win64\\unrealeditor\\inc\\serialcom\\uht\\serialcom.init.gen.cpp",
+        "Source": "e:\\epic games\\projects\\digitaltwinsproject\\plugins\\serialcom\\intermediate\\build\\win64\\unrealeditor\\inc\\serialcom\\uht\\serialcom.init.gen.cpp",
         "ProvidedModule": "",
-        "PCH": "e:\\github\\digitaltwinsproject\\intermediate\\build\\win64\\x64\\digitaltwinsprojecteditor\\development\\engine\\sharedpch.engine.cpp20.h.pch",
+        "PCH": "e:\\epic games\\projects\\digitaltwinsproject\\intermediate\\build\\win64\\x64\\digitaltwinsprojecteditor\\development\\engine\\sharedpch.engine.cpp20.h.pch",
         "Includes": [
-            "e:\\github\\digitaltwinsproject\\plugins\\serialcom\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\serialcom\\definitions.serialcom.h"
+            "e:\\epic games\\projects\\digitaltwinsproject\\plugins\\serialcom\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\serialcom\\definitions.serialcom.h"
         ],
         "ImportedModules": [],
         "ImportedHeaderUnits": []

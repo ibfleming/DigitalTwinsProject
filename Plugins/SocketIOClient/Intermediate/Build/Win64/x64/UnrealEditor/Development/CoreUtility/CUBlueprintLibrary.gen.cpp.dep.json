@@ -1,15 +1,15 @@
 {
     "Version": "1.2",
     "Data": {
-        "Source": "e:\\github\\digitaltwinsproject\\plugins\\socketioclient\\intermediate\\build\\win64\\unrealeditor\\inc\\coreutility\\uht\\cublueprintlibrary.gen.cpp",
+        "Source": "e:\\epic games\\projects\\digitaltwinsproject\\plugins\\socketioclient\\intermediate\\build\\win64\\unrealeditor\\inc\\coreutility\\uht\\cublueprintlibrary.gen.cpp",
         "ProvidedModule": "",
-        "PCH": "e:\\github\\digitaltwinsproject\\intermediate\\build\\win64\\x64\\digitaltwinsprojecteditor\\development\\engine\\sharedpch.engine.cpp20.h.pch",
+        "PCH": "e:\\epic games\\projects\\digitaltwinsproject\\intermediate\\build\\win64\\x64\\digitaltwinsprojecteditor\\development\\engine\\sharedpch.engine.cpp20.h.pch",
         "Includes": [
-            "e:\\github\\digitaltwinsproject\\plugins\\socketioclient\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\coreutility\\definitions.coreutility.h",
-            "e:\\github\\digitaltwinsproject\\plugins\\socketioclient\\source\\coreutility\\public\\cublueprintlibrary.h",
-            "e:\\ue_5.3\\engine\\source\\runtime\\engine\\classes\\sound\\soundwaveprocedural.h",
-            "e:\\ue_5.3\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\soundwaveprocedural.generated.h",
-            "e:\\github\\digitaltwinsproject\\plugins\\socketioclient\\intermediate\\build\\win64\\unrealeditor\\inc\\coreutility\\uht\\cublueprintlibrary.generated.h"
+            "e:\\epic games\\projects\\digitaltwinsproject\\plugins\\socketioclient\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\coreutility\\definitions.coreutility.h",
+            "e:\\epic games\\projects\\digitaltwinsproject\\plugins\\socketioclient\\source\\coreutility\\public\\cublueprintlibrary.h",
+            "e:\\epic games\\engines\\ue_5.3\\engine\\source\\runtime\\engine\\classes\\sound\\soundwaveprocedural.h",
+            "e:\\epic games\\engines\\ue_5.3\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\soundwaveprocedural.generated.h",
+            "e:\\epic games\\projects\\digitaltwinsproject\\plugins\\socketioclient\\intermediate\\build\\win64\\unrealeditor\\inc\\coreutility\\uht\\cublueprintlibrary.generated.h"
         ],
         "ImportedModules": [],
         "ImportedHeaderUnits": []

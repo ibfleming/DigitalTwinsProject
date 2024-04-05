@@ -1,0 +1,23 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "e:\\epic games\\projects\\digitaltwinsproject\\plugins\\mqttutilities\\intermediate\\build\\win64\\unrealeditor\\inc\\mqttutilities\\uht\\mqttclientbase.gen.cpp",
+        "ProvidedModule": "",
+        "PCH": "e:\\epic games\\projects\\digitaltwinsproject\\intermediate\\build\\win64\\x64\\digitaltwinsprojecteditor\\development\\engine\\sharedpch.engine.cpp20.h.pch",
+        "Includes": [
+            "e:\\epic games\\projects\\digitaltwinsproject\\plugins\\mqttutilities\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\mqttutilities\\definitions.mqttutilities.h",
+            "e:\\epic games\\projects\\digitaltwinsproject\\plugins\\mqttutilities\\source\\mqttutilities\\private\\mqttclientbase.h",
+            "e:\\epic games\\projects\\digitaltwinsproject\\plugins\\mqttutilities\\source\\mqttutilities\\public\\interface\\mqttclientinterface.h",
+            "e:\\epic games\\projects\\digitaltwinsproject\\plugins\\mqttutilities\\source\\mqttutilities\\public\\entities\\mqttmessage.h",
+            "e:\\epic games\\projects\\digitaltwinsproject\\plugins\\mqttutilities\\intermediate\\build\\win64\\unrealeditor\\inc\\mqttutilities\\uht\\mqttmessage.generated.h",
+            "e:\\epic games\\projects\\digitaltwinsproject\\plugins\\mqttutilities\\source\\mqttutilities\\public\\entities\\mqttconnectiondata.h",
+            "e:\\epic games\\projects\\digitaltwinsproject\\plugins\\mqttutilities\\intermediate\\build\\win64\\unrealeditor\\inc\\mqttutilities\\uht\\mqttconnectiondata.generated.h",
+            "e:\\epic games\\projects\\digitaltwinsproject\\plugins\\mqttutilities\\source\\mqttutilities\\public\\entities\\mqttclientconfig.h",
+            "e:\\epic games\\projects\\digitaltwinsproject\\plugins\\mqttutilities\\intermediate\\build\\win64\\unrealeditor\\inc\\mqttutilities\\uht\\mqttclientconfig.generated.h",
+            "e:\\epic games\\projects\\digitaltwinsproject\\plugins\\mqttutilities\\intermediate\\build\\win64\\unrealeditor\\inc\\mqttutilities\\uht\\mqttclientinterface.generated.h",
+            "e:\\epic games\\projects\\digitaltwinsproject\\plugins\\mqttutilities\\intermediate\\build\\win64\\unrealeditor\\inc\\mqttutilities\\uht\\mqttclientbase.generated.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

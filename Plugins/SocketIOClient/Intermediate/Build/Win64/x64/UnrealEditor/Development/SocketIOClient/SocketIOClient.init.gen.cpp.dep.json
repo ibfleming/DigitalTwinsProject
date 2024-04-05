@@ -1,11 +1,11 @@
 {
     "Version": "1.2",
     "Data": {
-        "Source": "e:\\github\\digitaltwinsproject\\plugins\\socketioclient\\intermediate\\build\\win64\\unrealeditor\\inc\\socketioclient\\uht\\socketioclient.init.gen.cpp",
+        "Source": "e:\\epic games\\projects\\digitaltwinsproject\\plugins\\socketioclient\\intermediate\\build\\win64\\unrealeditor\\inc\\socketioclient\\uht\\socketioclient.init.gen.cpp",
         "ProvidedModule": "",
-        "PCH": "e:\\github\\digitaltwinsproject\\intermediate\\build\\win64\\x64\\digitaltwinsprojecteditor\\development\\engine\\sharedpch.engine.cpp20.h.pch",
+        "PCH": "e:\\epic games\\projects\\digitaltwinsproject\\intermediate\\build\\win64\\x64\\digitaltwinsprojecteditor\\development\\engine\\sharedpch.engine.cpp20.h.pch",
         "Includes": [
-            "e:\\github\\digitaltwinsproject\\plugins\\socketioclient\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\socketioclient\\definitions.socketioclient.h"
+            "e:\\epic games\\projects\\digitaltwinsproject\\plugins\\socketioclient\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\socketioclient\\definitions.socketioclient.h"
         ],
         "ImportedModules": [],
         "ImportedHeaderUnits": []

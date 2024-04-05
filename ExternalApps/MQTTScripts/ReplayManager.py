@@ -111,8 +111,9 @@ def open_file(file):
     replay_db = parq.read_table(file_path).to_pandas()
 
 def access_data_element(db=replay_db, key=None):
-    print(type(replay_db))
+    #print(type(replay_db))
     print(replay_db)
+    return
 
 """
     Main Function
