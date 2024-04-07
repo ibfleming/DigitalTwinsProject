@@ -52,7 +52,8 @@ def on_message(client, userdata, message):
                     return
                 case "Antenna":
                     print("User selected 'Antenna' module for replay.\n")
-                    print(access_data_element(replay_db, message.payload.decode('utf-8')))
+                    data = access_data_element(replay_db, message.payload.decode('utf-8'))
+                    publish_module_data_list(client, data)
                     return
                 case "ComputerSystem":
                     print("User selected 'Computer System' module for replay.\n")
@@ -110,6 +111,11 @@ def publish_session_list(client):
     if sessions is not None:
         json_object = {"SessionList": sessions} # Convert to proper JSON format
         client.publish(replay_topic, json.dumps(json_object))
+
+def publish_module_data_list(client, data):
+    json_object = {"ModuleDataType": data[0]}
+    client.publish(replay_topic, json.dumps(json_object))
+    print("Sending data type for client to select...\n")
 
 def publish_db_value(client, data):
     client.publish(replay_topic, str(data))
