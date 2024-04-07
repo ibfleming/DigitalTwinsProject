@@ -51,14 +51,24 @@ def on_message(client, userdata, message):
                     publish_session_list(client)
                     return
                 case "Antenna":
+                    print("User selected 'Antenna' module for replay.\n")
+                    print(access_data_element(replay_db, message.payload.decode('utf-8')))
                     return
                 case "ComputerSystem":
+                    print("User selected 'Computer System' module for replay.\n")
+                    print(access_data_element(replay_db, message.payload.decode('utf-8')))
                     return
                 case "Engine":
+                    print("User selected 'Engine' module for replay.\n")
+                    print(access_data_element(replay_db, message.payload.decode('utf-8')))
                     return
                 case "Thruster":
+                    print("User selected 'Thruster' module for replay.\n")
+                    print(access_data_element(replay_db, message.payload.decode('utf-8')))
                     return
                 case "Temperature":
+                    print("User selected 'Temperature' module for replay.\n")
+                    print(access_data_element(replay_db, message.payload.decode('utf-8')))
                     return
                 case _:
                     return
@@ -72,7 +82,6 @@ def on_message(client, userdata, message):
                             print("Selected File for Replay: " + file, end="\n\n")
                             open_file(file)
                             client.publish(replay_uuid_topic, "FileFound")
-                            access_data_element(replay_db, "Antenna")
                             break
                 else:
                     print("No sessions available.\n")    
@@ -111,9 +120,18 @@ def open_file(file):
     replay_db = parq.read_table(file_path).to_pandas()
 
 def access_data_element(db=replay_db, key=None):
-    #print(type(replay_db))
-    print(replay_db)
-    return
+    result_data = []
+    if key is not None:
+        for idx, data in db['Data'].items():
+            json_data = json.loads(data)
+            if key in json_data:
+                result_data.append(json_data[key])
+            else:
+                print(f"Key '{key}' not found in row {idx}\n")
+        result_data = pd.Series(result_data, name=key)
+        return result_data        
+    else:
+        return None
 
 """
     Main Function
