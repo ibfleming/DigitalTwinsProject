@@ -57,19 +57,23 @@ def on_message(client, userdata, message):
                     return
                 case "ComputerSystem":
                     print("User selected 'Computer System' module for replay.\n")
-                    print(access_data_element(replay_db, message.payload.decode('utf-8')))
+                    data = access_data_element(replay_db, message.payload.decode('utf-8'))
+                    publish_module_data_list(client, data)
                     return
                 case "Engine":
                     print("User selected 'Engine' module for replay.\n")
-                    print(access_data_element(replay_db, message.payload.decode('utf-8')))
+                    data = access_data_element(replay_db, message.payload.decode('utf-8'))
+                    publish_module_data_list(client, data)
                     return
                 case "Thruster":
                     print("User selected 'Thruster' module for replay.\n")
-                    print(access_data_element(replay_db, message.payload.decode('utf-8')))
+                    data = access_data_element(replay_db, message.payload.decode('utf-8'))
+                    publish_module_data_list(client, data)
                     return
                 case "Temperature":
                     print("User selected 'Temperature' module for replay.\n")
-                    print(access_data_element(replay_db, message.payload.decode('utf-8')))
+                    data = access_data_element(replay_db, message.payload.decode('utf-8'))
+                    publish_module_data_list(client, data)
                     return
                 case _:
                     return
