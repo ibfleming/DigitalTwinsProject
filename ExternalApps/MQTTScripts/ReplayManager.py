@@ -76,6 +76,8 @@ def on_message(client, userdata, message):
                     publish_module_data_list(client, data)
                     return
                 case _:
+                    if "T:" in message.payload.decode('utf-8'):
+                        print(message.payload.decode('utf-8'))
                     return
         if message.topic == replay_uuid_topic:
             if message.payload.decode('utf-8') != "Empty" and message.payload.decode('utf-8') != "FileFound":
