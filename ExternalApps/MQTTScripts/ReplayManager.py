@@ -16,23 +16,83 @@ replay    = False
 # MQTT Parameters
 broker_name = "localhost"
 broker_port = 1883
-CID = "ReplayManager"
+CID         = "ReplayManager"
 
 #Topics
-replay_topic = "ReplayTopic"
+replay_topic      = "ReplayTopic"
 replay_uuid_topic = "ReplayUUIDTopic"
+replay_data_topic = "ReplayDataTopic"
 
 # Database Absolute Path
-db_path = os.path.join(os.getcwd(), "Database\\PastSessionStorage")
-replay_db = None
+db_path          = os.path.join(os.getcwd(), "Database\\PastSessionStorage")
+session_data     = None
+module_data      = None
+module_name      = None
+module_data_type = None
 
 """
     Callback Functions
 """
 
+def on_message_variant(client, userdata, message):
+
+    global session_data
+    global module_data
+    global module_name
+    global module_data_type
+
+    global replay_topic
+    global replay_uuid_topic
+    global replay_data_topic
+
+    msg = message.payload.decode('utf-8')
+    topic = message.topic
+
+    match topic:
+
+        # Replay Topic
+        case str(replay_topic):
+            match msg:
+
+                case "Start":
+                    # Start Sending Module Data to UE
+                    print(f"msg = {msg}")
+                    return
+
+                case "End":
+                    # End Sending Module Data to UE (End Game, End Replay, Terminal Off)
+                    print(f"msg = {msg}")
+                    return
+
+                case "List":
+                    # Send Session List to UE
+                    print("Received invocation to send session list...")
+                    publish_session_list(client)
+                    return
+                
+                case _:
+                    # Backflow of miscellaneous messages in brokers
+                    print(f"Unknown message. msg = {msg}")
+                    return
+
+        # Replay UUID Topic                        
+        case str(replay_uuid_topic):
+            
+            return
+
+        # Replay Data Topic (May not be used)
+        case str(replay_data_topic):
+            print(msg)
+            return
+        
+        case _:
+            print(f"Unknown topic. msg = {msg}")
+            return
+
+
 def on_connect(client, userdata, flags, rc):
     if rc == 0:
-        print("Connected to broker!\n")
+        print("CONNECTED TO BROKER.\n")
         global connected
         connected = True
     else:
@@ -112,11 +172,13 @@ def read_sessions():
         print(f"Error: {e}")
         return None
 
+# Publish Session List
 def publish_session_list(client):
     sessions = read_sessions()
     if sessions is not None:
-        json_object = {"SessionList": sessions} # Convert to proper JSON format
+        json_object = {"SessionList": sessions}
         client.publish(replay_topic, json.dumps(json_object))
+    return
 
 def publish_module_data_list(client, data):
     json_object = {"ModuleDataType": data[0]}
@@ -131,7 +193,7 @@ def open_file(file):
     file_path = db_path + "\\" + file
     replay_db = parq.read_table(file_path).to_pandas()
 
-def access_data_element(db=replay_db, key=None):
+def access_data_element(db=session_data, key=None):
     result_data = []
     if key is not None:
         for idx, data in db['Data'].items():
@@ -153,12 +215,13 @@ def main():
 
     print("\n==============================")
     print("\tReplay Manager\t")
-    print("==============================\n")
+    print("==============================")
 
     # Client
     client = mqtt.Client(CID)
     client.on_connect = on_connect
-    client.on_message = on_message
+    client.on_message = on_message_variant
+    #client.on_message = on_message
     client.connect(broker_name, port=broker_port)
     client.loop_start()
 
