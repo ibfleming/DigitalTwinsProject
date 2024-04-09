@@ -24,7 +24,7 @@ replay_uuid_topic = "ReplayUUIDTopic"
 replay_data_topic = "ReplayDataTopic"
 
 # Database Absolute Path
-db_path          = os.path.join(os.getcwd(), "Database\\PastSessionStorage")
+sessions_path    = os.path.join(os.getcwd(), "Database\\PastSessionStorage")
 session_data     = None
 module_data      = None
 module_name      = None
@@ -34,7 +34,15 @@ module_data_type = None
     Callback Functions
 """
 
-def on_message_variant(client, userdata, message):
+def on_connect(client, userdata, flags, rc):
+    if rc == 0:
+        print("CONNECTED TO BROKER.\n")
+        global connected
+        connected = True
+    else:
+        print("CONNECTING TO BROKER FAILED.\n")
+
+def on_message(client, userdata, message):
 
     global session_data
     global module_data
@@ -48,125 +56,101 @@ def on_message_variant(client, userdata, message):
     msg = message.payload.decode('utf-8')
     topic = message.topic
 
-    match topic:
+    # Replay Topic
+    if topic == replay_topic:
+        match msg:
 
-        # Replay Topic
-        case str(replay_topic):
-            match msg:
+            # Commands
+            case "Start":
+                # Start Sending Module Data to UE
+                print("Start Received...\n")
+                return
 
-                case "Start":
-                    # Start Sending Module Data to UE
-                    print(f"msg = {msg}")
-                    return
+            case "End":
+                # End Sending Module Data to UE [End Game, End Replay, Terminal Off]
+                print("End Received...\n")
+                reset()
+                return
 
-                case "End":
-                    # End Sending Module Data to UE (End Game, End Replay, Terminal Off)
-                    print(f"msg = {msg}")
-                    return
-
-                case "List":
-                    # Send Session List to UE
-                    print("Received invocation to send session list...")
-                    publish_session_list(client)
-                    return
-                
-                case _:
-                    # Backflow of miscellaneous messages in brokers
-                    print(f"Unknown message. msg = {msg}")
-                    return
-
-        # Replay UUID Topic                        
-        case str(replay_uuid_topic):
+            case "List":
+                # Send Session List to UE
+                publish_session_list(client)
+                print("Sending Session List...\n")
+                return
             
-            return
-
-        # Replay Data Topic (May not be used)
-        case str(replay_data_topic):
-            print(msg)
-            return
-        
-        case _:
-            print(f"Unknown topic. msg = {msg}")
-            return
-
-
-def on_connect(client, userdata, flags, rc):
-    if rc == 0:
-        print("CONNECTED TO BROKER.\n")
-        global connected
-        connected = True
-    else:
-        print("Cannot connect to broker.\n")
-
-def on_message(client, userdata, message):
-    global replay
-    if not replay:
-        if message.topic == replay_topic:
-            match message.payload.decode('utf-8'):
-                case "Start":
-                    replay = True
-                    print("Starting Replay Session...\n")
-                    return
-                case "List":
-                    publish_session_list(client)
-                    return
-                case "Antenna":
-                    print("User selected 'Antenna' module for replay.\n")
-                    data = access_data_element(replay_db, message.payload.decode('utf-8'))
-                    publish_module_data_list(client, data)
-                    return
-                case "ComputerSystem":
-                    print("User selected 'Computer System' module for replay.\n")
-                    data = access_data_element(replay_db, message.payload.decode('utf-8'))
-                    publish_module_data_list(client, data)
-                    return
-                case "Engine":
-                    print("User selected 'Engine' module for replay.\n")
-                    data = access_data_element(replay_db, message.payload.decode('utf-8'))
-                    publish_module_data_list(client, data)
-                    return
-                case "Thruster":
-                    print("User selected 'Thruster' module for replay.\n")
-                    data = access_data_element(replay_db, message.payload.decode('utf-8'))
-                    publish_module_data_list(client, data)
-                    return
-                case "Temperature":
-                    print("User selected 'Temperature' module for replay.\n")
-                    data = access_data_element(replay_db, message.payload.decode('utf-8'))
-                    publish_module_data_list(client, data)
-                    return
-                case _:
-                    if "T:" in message.payload.decode('utf-8'):
-                        print(message.payload.decode('utf-8'))
-                    return
-        if message.topic == replay_uuid_topic:
-            if message.payload.decode('utf-8') != "Empty" and message.payload.decode('utf-8') != "FileFound":
-                uuid = message.payload.decode('utf-8')
-                files = read_sessions()
-                if files:
-                    for file in files:
-                        if uuid in file:
-                            print("Selected File for Replay: " + file, end="\n\n")
-                            open_file(file)
-                            client.publish(replay_uuid_topic, "FileFound")
-                            break
+            # Module Selection
+            case "Antenna":
+                print("User selected 'Antenna' module.\n")
+                module_name = msg
+                populate_module_data(client, msg)
+                return
+            
+            case "ComputerSystem":
+                print("User selected 'Computer System' module.\n")
+                module_name = msg
+                populate_module_data(client, msg)
+                return
+            
+            case "Engine":
+                print("User selected 'Engine' module.\n")
+                module_name = msg
+                populate_module_data(client, msg)
+                return
+            
+            case "Thruster":
+                print("User selected 'Thruster' module.\n")
+                module_name = msg
+                populate_module_data(client, msg)
+                return
+            
+            case "Temperature":
+                print("User selected 'Temperature' module.\n")
+                module_name = msg
+                populate_module_data(client, msg)
+                return
+            
+            # Default
+            case _:
+                # Selected Module Data Type Message
+                if msg.startswith("T:"):
+                    module_data_type = msg.split(":")[1]
+                    print(f"User selected '{module_data_type}' data type.\n")
+                    publish_module_data(client)
                 else:
-                    print("No sessions available.\n")    
-    elif replay:
-        if message.topic == replay_topic:
-            if message.payload.decode('utf-8') == "End":
-                replay = False
-                print("Ending Replay Session...\n")
+                    # Backflow of miscellaneous messages in brokers
+                    print(f"msg = {msg}\n")
+                return
+            
+    # Replay UUID Topic
+    if topic == replay_uuid_topic:
+        if msg is not ["Empty", "FileFound", "FileNotFound"]:
+            files = read_sessions()
+            if files:
+                for file in files:
+                    if msg in file:
+                        print(f"Selected File: {file}\n")
+                        open_file(file)
+                        client.publish(replay_uuid_topic, "FileFound")
+                        break
             else:
-                print(message.payload.decode('utf-8') + "\n")
+                print("No sessions available.\n")
+        return
+    
+    # Replay Data Topic
+    if topic == replay_data_topic:
+        # Nothing...
+        return
+
+    print(f"Unknown topic. msg = {msg}")
+    return
 
 """
     Utility Functions
 """
-
+# Read Sessions
 def read_sessions():
     try:
-        files = [file for file in os.listdir(db_path) if os.path.isfile(os.path.join(db_path, file))]
+        files = [file for file in os.listdir(sessions_path) if os.path.isfile(os.path.join(sessions_path, file))]
         return files
     except OSError as e:
         print(f"Error: {e}")
@@ -180,32 +164,65 @@ def publish_session_list(client):
         client.publish(replay_topic, json.dumps(json_object))
     return
 
-def publish_module_data_list(client, data):
-    json_object = {"ModuleDataType": data[0]}
-    client.publish(replay_topic, json.dumps(json_object))
-    print("Sending data type for client to select...\n")
+# Publish: Iterate Module Database
+# client = use this as the publishing client
+# global module_data = use this as the data source
+# global module_data_type = use this as the data type to select the specified data from the module data
+def publish_module_data(client):
+   
+    global module_data
+    global module_data_type
 
-def publish_db_value(client, data):
-    client.publish(replay_topic, str(data))
+    if module_data is None and module_data_type is None:
+        print("Error: Module data or data type is 'None'!\n")
+        return
+    
+    for data in module_data:
+        for key, value in data.items():
+            if key == module_data_type:
+                print(f"{key}: {value}")
+                client.publish(replay_data_topic, json.dumps({key: value}))
+                time.sleep(1)
+    return
 
+
+# Open File for Reading
 def open_file(file):
-    global replay_db
-    file_path = db_path + "\\" + file
-    replay_db = parq.read_table(file_path).to_pandas()
+    global session_data
+    file_path = os.path.join(sessions_path, file)
+    session_data = parq.read_table(file_path).to_pandas()
 
-def access_data_element(db=session_data, key=None):
-    result_data = []
-    if key is not None:
-        for idx, data in db['Data'].items():
-            json_data = json.loads(data)
-            if key in json_data:
-                result_data.append(json_data[key])
+# Populate Module Data
+def populate_module_data(client, key=None):
+    global session_data
+    global module_data
+    temp = []
+    if key and session_data is not None:
+        for idx, data in session_data['Data'].items():
+            if key in json.loads(data):
+                temp.append(json.loads(data)[key])
+                if idx == 0 and temp is not None:
+                    client.publish(replay_topic, json.dumps({"ModuleDataType": temp[idx]}))
             else:
-                print(f"Key '{key}' not found in row {idx}\n")
-        result_data = pd.Series(result_data, name=key)
-        return result_data        
+                print(f"Key '{key}' not found in session data.\n")
+        module_data = pd.Series(temp, name=key)
+        return True
     else:
-        return None
+        print("Key not found or session data is empty.\n")
+        module_data = None
+        return False
+
+# Reset
+def reset():
+    global session_data
+    global module_data
+    global module_name
+    global module_data_type
+
+    session_data     = None
+    module_data      = None
+    module_name      = None
+    module_data_type = None
 
 """
     Main Function
@@ -220,8 +237,7 @@ def main():
     # Client
     client = mqtt.Client(CID)
     client.on_connect = on_connect
-    client.on_message = on_message_variant
-    #client.on_message = on_message
+    client.on_message = on_message
     client.connect(broker_name, port=broker_port)
     client.loop_start()
 
@@ -230,12 +246,13 @@ def main():
 
     client.subscribe(replay_topic)
     client.subscribe(replay_uuid_topic)
+    client.subscribe(replay_data_topic)
 
     try:
         while True:
             time.sleep(1)
     except KeyboardInterrupt:
-        print("Exiting...")
+        print("Exiting...\n")
         client.disconnect()
         client.loop_stop()
 
