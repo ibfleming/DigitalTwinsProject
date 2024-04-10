@@ -32,8 +32,10 @@ pid_topic        = "PIDTopic"
 
 # Storage File Naming Conventions
 storageHead = os.getcwd()
-storageMiddle = "\\Database\\PastSessionStorage\\"
+storageMiddle = "\\Sessions\\"
 storageTail = ".parquet"
+
+#sessions_path = os.path.join(os.getcwd(), "Database", "Sessions")
 
 # Define the schema
 schema = pa.schema([

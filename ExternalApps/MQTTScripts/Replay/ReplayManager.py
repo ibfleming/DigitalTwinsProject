@@ -12,12 +12,13 @@ import paho.mqtt.client as mqtt
 """ Global Variables """
 
 # Path
-sessions_path = os.path.join(os.getcwd(), "Database\\PastSessionStorage")
+sessions_path = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "Database", "Sessions")
 
-#Topics
+# Topics
 replay_topic      = "ReplayTopic"
 replay_uuid_topic = "ReplayUUIDTopic"
 replay_data_topic = "ReplayDataTopic"
+pid_topic         = "PIDTopic"
 
 # Data
 session_data = None
@@ -33,6 +34,8 @@ def connect_callback(client, userdata, flags, reason_code, properties):
         # Subscribe to Topics
         client.subscribe(replay_topic)
         client.subscribe(replay_uuid_topic)
+        print("Publishing PID.", end=" ")
+        client.publish(pid_topic, payload="pid" + str(os.getpid()))
     else:
         print("Failed to connect to broker.")
 
