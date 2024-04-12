@@ -21,7 +21,7 @@ in_session = False
 session_id = None
 
 # Paths
-database_script   = "Database/Database.py"
+database_script   = "Database/DatabaseManager.py"
 simulation_script = "Simulation/Simulation.py"
 replay_script     = "Replay/ReplayManager.py"
 
@@ -66,13 +66,13 @@ def message_callback(client, userdata, msg):
                 print(f"   UUID: {session_id}")
                 print("-" *  50)
                 print()
-                
-                print("Publishing session UUID.")
-                client.publish(uuid_topic, session_id)
 
                 dispatch_script(replay_script)
                 dispatch_script(database_script)
                 dispatch_script(simulation_script)
+
+                print("Publishing session UUID.")
+                client.publish(uuid_topic, session_id)
             return
         if message == "End":
             print("\nCurrent session ended.")
