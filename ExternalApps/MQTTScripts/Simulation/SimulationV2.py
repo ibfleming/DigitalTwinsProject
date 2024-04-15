@@ -6,11 +6,16 @@
 import os
 import time
 import json
+import random
 import paho.mqtt.client as mqtt
 
 # Topics
 simulation_topic = "SimulationTopic"
 pid_topic        = "PIDTopic"
+
+# Globals
+room_temp = 75.0
+heater    = False
 
 # Simulation data in JSON
 sim_data = {
@@ -25,7 +30,7 @@ sim_data = {
          "Speed": 0.0
    },
    "Engine": {
-         "Status": False,
+         "Status": False,    # Engine on by DEFAULT
          "Temperature": 0.0,
          "Pressure": 0,
          "RPM": 0
@@ -71,28 +76,65 @@ def generate_new(data=sim_data):
     for key in data.keys():
         match key:
             case 'Antenna':
-                data[key]["Status"] = True
-                data[key]["Strength"] = 0
-                data[key]["Connections"] = 0
+                data[key]["Status"]      = gen_status()
+                data[key]["Strength"]    = gen_int(0, 100)
+                data[key]["Connections"] = gen_int(1, 4)
             case 'ComputerSystem':
-                data[key]["Status"] = True
+                data[key]["Status"]    = gen_status()
                 data[key]["Direction"] = ""
-                data[key]["Speed"] = 0
+                data[key]["Speed"]     = 0
             case 'Engine':
-                data[key]["Status"] = True
+                data[key]["Status"]      = gen_status()
                 data[key]["Temperature"] = 0.0
-                data[key]["Pressure"] = 0
-                data[key]["RPM"] = 0
+                data[key]["Pressure"]    = gen_int(0, 300)
+                data[key]["RPM"]         = gen_int(750, 7200)
             case 'Thruster':
-                data[key]["Status"] = True
-                data[key]["Power"] = 0
-                data[key]["Fuel"] = 0
+                data[key]["Status"] = gen_status()
+                data[key]["Power"]  = gen_int(0, 250)
+                data[key]["Fuel"]   = gen_int(0, 100)
             case 'Temperature':
-                data[key]["Status"] = True
-                data[key]["Value"] = 0.0
-                data[key]["Heater"] = True
+                data[key]["Status"] = gen_status()
+                data[key]["Value"]  = room_temp
+                data[key]["Heater"] = heater
             case _:
                 print("No!")
+
+# Generate Random Status
+def gen_status():
+    return random.choice([True, False])
+
+# Generate Random Integers
+def gen_int(min, max):
+    return random.randint(min, max)
+
+# Generate Temperature Value
+def gen_temp():
+
+    global room_temp
+    global heater
+
+    # Ship Parameters (in meters)
+    #length   = 14
+    #width    = 10
+    #height   = 3
+    r_factor = 100
+    #area     = (length * width * 2) + (height * length * 2) + (width * height * 2) 
+
+    # Temperature Paramters
+    outside_temp = 0.0
+
+    delta  = (room_temp - outside_temp) / r_factor
+    f_temp = room_temp - delta
+
+    room_temp = round(f_temp, 1)
+
+    if( room_temp <= 65.0 and heater is False ):
+        heater = True
+    
+    if( heater ):
+        room_temp += 1
+        if( room_temp >= 72.0 ):
+            heater = False
 
 def main():
 
@@ -123,10 +165,10 @@ def main():
     try:
         print("Simulation initiated.\nPublishing simulation data...\n")
         for i in range(max_messages):
+            gen_temp()
             generate_new()
             client.publish(simulation_topic, payload=json.dumps(sim_data))
             print(sim_data)
-            #calculate_temperature_value
             time.sleep(time_delay)
     except KeyboardInterrupt or Exception:
         client.disconnect()
