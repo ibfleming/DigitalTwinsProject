@@ -1,279 +1,209 @@
 """
-Simulation Script
-
-This script is responsible for simulating the spaceship's modules and sending the data to the broker.
+    Simulation Manager
+    Artificially produces "real-world" data and sends it over MQTT.
 """
 
-import paho.mqtt.publish
+import os
+import time
 import json
 import random
-import time
-import os
-
-# MQTT
-broker_name = "localhost"
-broker_port = 1883
-CID = "CID"
+import paho.mqtt.client as mqtt
 
 # Topics
 simulation_topic = "SimulationTopic"
 pid_topic        = "PIDTopic"
 
-# Constants
-max_messages = 1000
-time_delay = 1
-total_status_online = 0
-status = False
+# Globals
+room_temp = 75.0
+heater    = False
 
-""" This is where the temperature will be calculated """
-# Constant temperature values that we need
-#values in meters
-ship_length = 14
-ship_width = 10
-ship_height = 3
-ship_R_factor = 100              # We need a very big R factor so se don't loose too much heat every second
-heat_is_on = False               # Keep track of if the temperature is on or not
-
-temperature_time_delay = 1       # How long between each of the temperature ticks
-outside_temperature = 0.0        # This is the current temperature of the outside (surrounding the spaceship - zero as we are in space)
-inside_temperature = 75.0        # This is the current temperature of the inside of the ship 
-ship_surface = (ship_length * ship_width * 2) + (ship_height * ship_length * 2) + (ship_width * ship_height * 2)       # the interior of the ship will be defined as 350 meters cubed
-
-# Returns the temperature of the ship interior
-def get_interior_temperature():
-   global inside_temperature
-   return inside_temperature
-
-#this will properly calculate the ship temperature
-def calculate_temperature_value():
-   #get the needed global values
-   global outside_temperature
-   global inside_temperature
-   global ship_surface
-   global ship_R_factor
-   global heat_is_on
-
-   delta_t = (inside_temperature - outside_temperature) / ship_R_factor
-   new_temperature = inside_temperature - delta_t
-
-   #print("RUNNING {}".format(new_temperature))
-
-   inside_temperature = round(new_temperature, 3)
-
-   # Turn on the heat if the ship is too cold
-   if(inside_temperature <= 65.0 and heat_is_on is False):
-      heat_is_on = True
-   
-   if(heat_is_on is True):
-      inside_temperature += 1
-      if(inside_temperature >= 80):
-         heat_is_on = False
-
-# This returns if the heater is currently enabled or not, for the enabling of the VFX
-def get_heater_on():
-   global heat_is_on
-   return heat_is_on
-
-""" ---------------------------- End of the temperature definitions  ---------------------------------------------- """
-
-# Function to generate a random integer within a given range
-def generate_random_int(min_value, max_value):
-    return random.randint(min_value, max_value)
-
-# Function to generate a random float within a given range
-def generate_random_float(min_value, max_value):
-    return round(random.uniform(min_value, max_value), 1)
-
-""" -- Ship direction functions to get the proper direction the ship is going in -- """
-
-current_ship_direction = "N"
-
-def get_current_ship_direction():
-   global current_ship_direction
-   current_ship_direction = generate_random_direction()
-
-   #print("CURRENT SHIP DIRECTION: {}".format(current_ship_direction))
-
-   return current_ship_direction
-
-# Function to choose a random direction (based on the current direction that the ship is oriented in)
-def generate_random_direction():
-   global current_ship_direction
-   # These are the possible directions that the ship is able to head out in
-   directions = ["N", "NW", "S", "SW", "E", "W", "SE", "NE"]
-
-   match current_ship_direction:
-      case "N":
-         return random.choice(["NE", "NW"])
-      case "NE":
-         return random.choice(["N", "E"])
-      case "E":
-         return random.choice(["NE", "SE"])
-      case "SE":
-         return random.choice(["E", "S"])
-      case "S":
-         return random.choice(["SE", "SW"])
-      case "SW":
-         return random.choice(["S", "W"])
-      case "W":
-         return random.choice(["SW", "NW"])
-      case "NW": 
-         return random.choice(["N", "W"])
-      case _:
-         # Randomly choose is all else fails
-         return random.choice(directions)   
-
-""" ---------------------- End of the ship direction functions --------------------------- """
-
-""" Status Module Functions - These will be enabled and online unless they are forably disabled by something breaking """
-# This will turn the module on by default
-def generate_online_status():
-   global total_status_online
-   updated_status = True
-   if(updated_status is True):
-      total_status_online += 1
-   else:
-      if(total_status_online > 0):
-         total_status_online -= 1
-   return updated_status
-
-# This will turn the module off, can be called to disable the working status under certain conditions
-def generate_offline_status():
-   global total_status_online
-   updated_status = False
-   if(updated_status is True):
-      total_status_online += 1
-   else:
-      if(total_status_online > 0):
-         total_status_online -= 1
-   return updated_status
-
-# This generates the end of the random value of the modules going online or offline, will be used when there is a seeable system failure
-def generate_random_status():
-   global total_status_online
-   statuses = [True, False]
-   updated_status = random.choice(statuses)
-   if(updated_status is True):
-      total_status_online += 1
-   else:
-      if(total_status_online > 0):
-         total_status_online -= 1
-   return updated_status
-
-""" ------------------------------ End of Status functions ------------------------------------------- """
-
-# Function to get the status updates (if the module is online or offline) to the connections on the antenna
-def get_current_antenna_connections():
-   global total_status_online
-   return total_status_online
-
-# Dictionary/JSON to be published to Broker (MQTT)
-json_data = {
+# Simulation data in JSON
+sim_data = {
    "Antenna": {
-         "Status": generate_random_status(),
-         "Strength": generate_random_int(0, 100),
-         "Connections": get_current_antenna_connections()
+         "Status": False,
+         "Strength": 0,
+         "Connections": 0
    },
    "ComputerSystem": {
-         "Status": generate_random_status(),
-         "Direction": get_current_ship_direction(),
-         "Speed": generate_random_float(25, 100)
+         "Status": False,
+         "Direction": "",
+         "Speed": 0.0
    },
    "Engine": {
-         "Status": generate_random_status(),
-         "Temperature": generate_random_float(-10, 72),
-         "Pressure": generate_random_int(0, 100),
-         "RPM": generate_random_int(500, 7200)
+         "Status": False,
+         "Temperature": 0.0,
+         "Pressure": 0,
+         "RPM": 0
    },
    "Thruster": {
-         "Status": generate_random_status(),
-         "Power": generate_random_int(100, 1000),
-         "Fuel": generate_random_int(0, 100)
+         "Status": False,
+         "Power": 0,
+         "Fuel": 0
    },
    "Temperature": {
-         "Status": generate_random_status(),
-         "Value": get_interior_temperature(),
-         "Heater": get_heater_on()
+         "Status": False,
+         "Value": 0.0,
+         "Heater": False
    }
 }
 
-# Function to change the statuses of all modules
-def change_module_status():
-    global status
-    status = not status  # Toggle the status between True and False
-    for module, module_data in json_data.items():
-        module_data["Status"] = status
+""" Callback Functions """
 
-def update_json(module, key, value):
-   try:
-      json_data[module][key] = value
-   except KeyError:
-      print("Invalid module or key provided.")
+def connect_callback(client, userdata, flags, reason_code, properties):
+    if reason_code == 0:
+        print("Connected to broker.")
+        # Publish PID
+        print("Publishing PID.")
+        client.publish(pid_topic, payload="pid" + str(os.getpid()))
+        
+    else:
+        print("Failed to connect to broker.")
 
-def generate_new_values():
-   # Antenna   
-   update_json("Antenna", "Status", generate_online_status())
-   update_json("Antenna", "Strength", generate_random_int(0, 100))
-   update_json("Antenna", "Connections", generate_random_int(1, 10))
+"""
+def message_callback(client, userdata, msg):
+    pass
 
-   # Computer System
-   update_json("ComputerSystem", "Status", generate_online_status())
-   update_json("ComputerSystem", "Direction", get_current_ship_direction())
-   update_json("ComputerSystem", "Speed", generate_random_float(25, 100))
+def disconnect_callback(client, userdata, reason_code, properties):
+    pass
 
-   # Engine
-   update_json("Engine", "Status", generate_online_status())
-   update_json("Engine", "Temperature", generate_random_float(-10, 72))
-   update_json("Engine", "Pressure", generate_random_int(0, 100))
-   update_json("Engine", "RPM", generate_random_int(500, 7200))
+def publish_callback(client, userdata, mid):
+    pass
 
-   # Thruster
-   update_json("Thruster", "Status", generate_online_status())
-   update_json("Thruster", "Power", generate_random_int(0, 100))
-   update_json("Thruster", "Fuel", generate_random_int(0, 100))
+def subscribe_callback(client, userdata, mid, reason_code_list, properties):
+    pass
+"""
 
-   #Temperature
-   update_json("Temperature", "Status", generate_online_status())
-   update_json("Temperature", "Value", get_interior_temperature())
-   update_json("Temperature", "Heater", get_heater_on())
+""" Functions """
 
-def publish():
-   try:
-      paho.mqtt.publish.single(simulation_topic, payload=json.dumps(json_data), qos=0, retain=False, hostname=broker_name,
-                               port=broker_port, client_id=CID, keepalive=60, will=None, auth=None,
-                                 tls=None, protocol=paho.mqtt.client.MQTTv5, transport="tcp")
-      #print(f"-- Publishing: {json.dumps(json_data)}, to Topic: {topic}, to Broker: {broker_name}.")
-      print(f"{json.dumps(json_data)}")
-   except Exception as e:
-        print("Error:", e)
+def generate_new(data=sim_data):
+    for key in data.keys():
+        match key:
+            case 'Antenna':
+                data[key]["Status"]      = gen_status()
+                data[key]["Strength"]    = gen_int(0, 100)
+                data[key]["Connections"] = gen_int(1, 4)
+            case 'ComputerSystem':
+                data[key]["Status"]      = gen_status()
+                data[key]["Direction"]   = gen_direction(data[key]["Direction"])
+                data[key]["Speed"]       = gen_float(25, 100)
+            case 'Engine':
+                data[key]["Status"]      = gen_status()
+                data[key]["Temperature"] = gen_float(0, 100)
+                data[key]["Pressure"]    = gen_int(0, 300)
+                data[key]["RPM"]         = gen_int(750, 7200)
+            case 'Thruster':
+                data[key]["Status"]      = gen_status()
+                data[key]["Power"]       = gen_int(0, 250)
+                data[key]["Fuel"]        = gen_int(0, 100)
+            case 'Temperature':
+                data[key]["Status"]      = gen_status()
+                data[key]["Value"]       = room_temp
+                data[key]["Heater"]      = heater
 
-def publish_pid(pid):
-   try:
-      paho.mqtt.publish.single(pid_topic, payload="pid" + str(pid), qos=0, retain=False, hostname=broker_name,
-                               port=broker_port, client_id=CID, keepalive=60, will=None, auth=None,
-                                 tls=None, protocol=paho.mqtt.client.MQTTv5, transport="tcp")
-   except Exception as e:
-        print("Error:", e)
+# Generate Random Status
+def gen_status():
+    return random.choice([True, False])
 
-# Callbacks
-def on_publish(client, userdata, mid):
-    print(f"-- Callback: Published message with mid: {str(mid)}.")
+# Generate Random Integers
+def gen_int(min, max):
+    return random.randint(min, max)
 
-# Main
+# Generate Random Floats
+def gen_float(min, max):
+    return round(random.uniform(min, max), 1)
+
+# Generate Random Direction
+def gen_direction(curr_dir):
+    match curr_dir:
+        case "N":
+            return random.choice(["N", "NE", "NW"])
+        case "NE":
+            return random.choice(["N", "NE", "E"])
+        case "E":
+            return random.choice(["NE", "E", "SE"])
+        case "SE":
+            return random.choice(["E", "SE", "S"])
+        case "S":
+            return random.choice(["SE", "S", "SW"])
+        case "SW":
+            return random.choice(["S", "SW", "W"])
+        case "W":
+            return random.choice(["SW", "W", "NW"])
+        case "NW":
+            return random.choice(["W", "NW", "N"])
+        case _:
+            return random.choice(["N", "NE", "E", "SE", "S", "SW", "W", "NW"])
+
+# Generate Temperature Value
+def gen_temp():
+
+    global room_temp
+    global heater
+
+    # Ship Parameters (in meters)
+    #length   = 14
+    #width    = 10
+    #height   = 3
+    r_factor = 100
+    #area     = (length * width * 2) + (height * length * 2) + (width * height * 2) 
+
+    # Temperature Paramters
+    outside_temp = 0.0
+
+    delta  = (room_temp - outside_temp) / r_factor
+    f_temp = room_temp - delta
+
+    room_temp = round(f_temp, 1)
+
+    if( room_temp <= 65.0 and heater is False ):
+        heater = True
+    
+    if( heater ):
+        room_temp += 1
+        if( room_temp >= 72.0 ):
+            heater = False
+
 def main():
 
-   pid = os.getpid()
-   publish_pid(pid)
+    # Client paramters
+    cid  = "SimulationManager"
+    host = "localhost"
+    port = 1883
 
-   print("\n======================================")
-   print(f"\tSimulation (PID: {pid})\t")
-   print("======================================\n")
+    # Simulation parameters
+    max_messages = 1000
+    time_delay   = 1
 
-   for i in range(max_messages):
-      time.sleep(time_delay)
-      generate_new_values()
-      publish()
-      calculate_temperature_value()
-   
+    # Create a client instance
+    client = mqtt.Client(client_id=cid, protocol=mqtt.MQTTv5, transport="tcp")
+    client.max_queued_messages_set   = 0
+    client.max_inflight_messages_set = 0
+
+    # Assign callbacks
+    client.on_connect = connect_callback
+    #client.on_disconnect = disconnect_callback
+    #client.on_message = message_callback
+    #client.on_publish = publish_callback
+    #client.on_subscribe = subscribe_callback
+
+    # Connect to the broker
+    client.connect(host=host, port=port, keepalive=60, clean_start=True)
+
+    try:
+        client.loop_start()
+        time.sleep(time_delay)
+
+        print("Simulation initiated.\nPublishing simulation data...\n")
+        for i in range(max_messages):
+            gen_temp()
+            generate_new()
+            print(sim_data, end="\n\n")
+            client.publish(simulation_topic, payload=json.dumps(sim_data))
+            time.sleep(time_delay)
+            
+    except KeyboardInterrupt or Exception:
+        client.loop_stop()
+        client.disconnect()
+
 if __name__ == '__main__':
-   main()
+    main()
