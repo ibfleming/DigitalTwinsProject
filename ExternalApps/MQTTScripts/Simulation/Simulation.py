@@ -16,6 +16,7 @@ pid_topic        = "PIDTopic"
 # Globals
 room_temp = 75.0
 heater    = False
+running   = False
 
 # Simulation data in JSON
 sim_data = {
@@ -52,17 +53,33 @@ sim_data = {
 def connect_callback(client, userdata, flags, reason_code, properties):
     if reason_code == 0:
         print("Connected to broker.")
+        # Subscribe
+        client.subscribe(simulation_topic)
         # Publish PID
         print("Publishing PID.")
         client.publish(pid_topic, payload="pid" + str(os.getpid()))
-        
     else:
         print("Failed to connect to broker.")
 
-"""
 def message_callback(client, userdata, msg):
-    pass
+    message = msg.payload.decode('utf-8')
+    topic = msg.topic
+    global running
 
+    if topic == simulation_topic:
+        match message:
+            case "StartSimulation":
+                print("Publishing simulation data.", end="\n\n")
+                running = True
+                return
+            case "EndSimulation":
+                print("Stopping simulation.", end="\n\n")
+                running = False
+                return
+            case _:
+                return
+
+"""
 def disconnect_callback(client, userdata, reason_code, properties):
     pass
 
@@ -163,17 +180,19 @@ def gen_temp():
         if( room_temp >= 72.0 ):
             heater = False
 
+def publish_data(client):
+    gen_temp()
+    generate_new()
+    print(sim_data, end="\n\n")
+    client.publish(simulation_topic, payload=json.dumps(sim_data))
+    time.sleep(1)
+
 def main():
 
     # Client paramters
     cid  = "SimulationManager"
     host = "localhost"
     port = 1883
-
-    # Simulation parameters
-    max_messages = 1000
-    time_delay   = 1
-
     # Create a client instance
     client = mqtt.Client(client_id=cid, protocol=mqtt.MQTTv5, transport="tcp")
     client.max_queued_messages_set   = 0
@@ -182,25 +201,22 @@ def main():
     # Assign callbacks
     client.on_connect = connect_callback
     #client.on_disconnect = disconnect_callback
-    #client.on_message = message_callback
+    client.on_message = message_callback
     #client.on_publish = publish_callback
     #client.on_subscribe = subscribe_callback
 
     # Connect to the broker
     client.connect(host=host, port=port, keepalive=60, clean_start=True)
 
+    global running
     try:
-        client.loop_start()
-        time.sleep(time_delay)
+        print("Simulation is running.")
 
-        print("Simulation initiated.\nPublishing simulation data...\n")
-        for i in range(max_messages):
-            gen_temp()
-            generate_new()
-            print(sim_data, end="\n\n")
-            client.publish(simulation_topic, payload=json.dumps(sim_data))
-            time.sleep(time_delay)
-            
+        client.loop_start()
+        while(True):
+            while(running):
+                publish_data(client=client)
+        
     except KeyboardInterrupt or Exception:
         client.loop_stop()
         client.disconnect()

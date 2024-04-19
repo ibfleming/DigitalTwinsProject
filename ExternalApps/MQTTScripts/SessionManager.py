@@ -26,9 +26,10 @@ simulation_script = "Simulation/Simulation.py"
 replay_script     = "Replay/ReplayManager.py"
 
 # Topics
-session_topic = "SessionTopic"
-uuid_topic    = "UUIDTopic"
-pid_topic     = "PIDTopic"
+session_topic    = "SessionTopic"
+uuid_topic       = "UUIDTopic"
+pid_topic        = "PIDTopic"
+simulation_topic = "SimulationTopic"
 
 # Arrays
 running_processes = [] # Stores subprocess objects
@@ -54,8 +55,15 @@ def message_callback(client, userdata, msg):
         global in_session
         global sesssion_id
 
-        if not in_session:
-            if message == "Start":
+        if message == "OnGameStart":
+            dispatch_script(replay_script)
+            dispatch_script(database_script)
+            dispatch_script(simulation_script)
+        if message == "OnGameEnd":
+            print("Unreal game exited. Terminating scripts.")
+            in_session = False
+            terminate_scripts()
+        if message == "StartSession":
                 in_session = True
                 session_id = str(uuid.uuid4())
 
@@ -67,19 +75,17 @@ def message_callback(client, userdata, msg):
                 print("-" *  50)
                 print()
 
-                dispatch_script(replay_script)
-                dispatch_script(database_script)
-                dispatch_script(simulation_script)
-
                 print("Publishing session UUID.")
                 client.publish(uuid_topic, session_id)
-            return
-        if message == "End":
+
+                print("Publishing simulation start.")
+                client.publish(simulation_topic, "StartSimulation")
+        if message == "EndSession":
             print("\nCurrent session ended.")
             in_session = False
-            terminate_scripts()
-            return            
-        return
+            # Publish to simulation to end
+            print("Publishing simulation start.")
+            client.publish(simulation_topic, "EndSimulation")
     if topic == pid_topic:
         shell_pids.append(int(message[3:])) # Removes 'pid:' from msg and uses the sent PID
         return

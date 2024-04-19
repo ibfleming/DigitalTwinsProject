@@ -45,7 +45,9 @@ def message_callback(client, userdata, msg):
     topic = msg.topic
 
     if topic == simulation_topic:
-        global database
+        if message == 'StartSimulation': return
+        if message == 'EndSimulation'  : return
+
         temp = pa.Table.from_pydict({"Time": [int(time.time() * 1000)], "Data": [message]}, schema=schema)
         database = pa.concat_tables([database, temp])
         database.to_pandas().to_parquet(file_path)
@@ -56,6 +58,7 @@ def message_callback(client, userdata, msg):
         timestamp = datetime.fromtimestamp(time.time()).strftime("%m-%d-%Y-%I-%M-%S-%p")
         file_path = os.path.join(sessions_path, f"{timestamp}--{message}.parquet")
         print(f"Created database file: '{timestamp}--{message}.parquet'.")
+        database = pa.Table.from_batches([], schema=schema)
         database.to_pandas().to_parquet(file_path)
         return
 
