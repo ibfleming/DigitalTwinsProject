@@ -1,0 +1,321 @@
+<mxfile host="app.diagrams.net" modified="2024-04-22T19:48:52.647Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:125.0) Gecko/20100101 Firefox/125.0" etag="9DiqNg_tRR-X7Qs1EEbE" version="22.1.21" type="device">
+  <diagram name="Page-1" id="5LKYdsN_tk8PBoyHM30e">
+    <mxGraphModel dx="1434" dy="782" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="14_V7KhapX8ebqAmIDgo-1" value="" style="whiteSpace=wrap;html=1;aspect=fixed;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="10" y="10" width="830" height="830" as="geometry" />
+        </mxCell>
+        <mxCell id="14_V7KhapX8ebqAmIDgo-2" value="&lt;font style=&quot;font-size: 27px;&quot;&gt;Digital Twins Simulation Architectural Diagram&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="20" y="10" width="570" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="14_V7KhapX8ebqAmIDgo-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="14_V7KhapX8ebqAmIDgo-3" target="14_V7KhapX8ebqAmIDgo-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="14_V7KhapX8ebqAmIDgo-3" value="Digital Twin Model (UE)" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="120" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="14_V7KhapX8ebqAmIDgo-46" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="14_V7KhapX8ebqAmIDgo-4" target="14_V7KhapX8ebqAmIDgo-45">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="14_V7KhapX8ebqAmIDgo-4" value="Model Simulation (MQTT)" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="200" y="200" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="14_V7KhapX8ebqAmIDgo-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="14_V7KhapX8ebqAmIDgo-5" target="14_V7KhapX8ebqAmIDgo-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="14_V7KhapX8ebqAmIDgo-49" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="14_V7KhapX8ebqAmIDgo-5" target="14_V7KhapX8ebqAmIDgo-48">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="14_V7KhapX8ebqAmIDgo-5" value="Start the MQTT simulation" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;" vertex="1" parent="1">
+          <mxGeometry x="200" y="120" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="14_V7KhapX8ebqAmIDgo-8" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+          <mxGeometry x="20" y="360" width="630" height="480" as="geometry" />
+        </mxCell>
+        <mxCell id="14_V7KhapX8ebqAmIDgo-10" value="&lt;div style=&quot;font-size: 27px;&quot; align=&quot;left&quot;&gt;Data Generation&lt;br&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="30" y="360" width="570" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="14_V7KhapX8ebqAmIDgo-11" value="SessionManager.py" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="340" y="370" width="140" height="230" as="geometry">
+            <mxRectangle x="190" y="410" width="150" height="30" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="14_V7KhapX8ebqAmIDgo-12" value="Start all of the other scripts that will request/simulate the data" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="14_V7KhapX8ebqAmIDgo-11">
+          <mxGeometry y="30" width="140" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="14_V7KhapX8ebqAmIDgo-13" value="Links to the DatabaseManager.py script" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="14_V7KhapX8ebqAmIDgo-11">
+          <mxGeometry y="90" width="140" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="14_V7KhapX8ebqAmIDgo-14" value="Links to the Simulation.py script" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="14_V7KhapX8ebqAmIDgo-11">
+          <mxGeometry y="140" width="140" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="14_V7KhapX8ebqAmIDgo-15" value="Links to the ReplayManager.py script" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="14_V7KhapX8ebqAmIDgo-11">
+          <mxGeometry y="180" width="140" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="14_V7KhapX8ebqAmIDgo-17" value="DatabaseManager.py" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="190" y="550" width="140" height="240" as="geometry" />
+        </mxCell>
+        <mxCell id="14_V7KhapX8ebqAmIDgo-18" value="Uses PyArrow to store the current session upon end of session" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="14_V7KhapX8ebqAmIDgo-17">
+          <mxGeometry y="30" width="140" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="14_V7KhapX8ebqAmIDgo-19" value="Uses MQTT to receive the data from the simulation script and send it to the UE Digital Twin." style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="14_V7KhapX8ebqAmIDgo-17">
+          <mxGeometry y="80" width="140" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="14_V7KhapX8ebqAmIDgo-20" value="Responsible for storing the .parquet file for later access from the Digital Twin for replay capabilities." style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="14_V7KhapX8ebqAmIDgo-17">
+          <mxGeometry y="160" width="140" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="14_V7KhapX8ebqAmIDgo-21" value="Simulation.py" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="400" width="140" height="240" as="geometry" />
+        </mxCell>
+        <mxCell id="14_V7KhapX8ebqAmIDgo-22" value="Uses MQTT to send simulation data" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="14_V7KhapX8ebqAmIDgo-21">
+          <mxGeometry y="30" width="140" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="14_V7KhapX8ebqAmIDgo-23" value="Generates all of the simulation data and stores it in JSON string" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="14_V7KhapX8ebqAmIDgo-21">
+          <mxGeometry y="70" width="140" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="14_V7KhapX8ebqAmIDgo-24" value="Includes information for:&lt;br&gt;- Antenna&lt;br&gt;- Computer System&lt;br&gt;- Engine&lt;br&gt;- Thruster&lt;br&gt;- Temperature" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="14_V7KhapX8ebqAmIDgo-21">
+          <mxGeometry y="120" width="140" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="14_V7KhapX8ebqAmIDgo-25" value="ReplayManager.py" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="500" y="400" width="140" height="390" as="geometry" />
+        </mxCell>
+        <mxCell id="14_V7KhapX8ebqAmIDgo-30" value="Uses MQTT to send requested data.&lt;br&gt;Uses PyArrow Parquet to access the stored data.&lt;br&gt;Converts stored Parquet data to a Pandas dataframe.&lt;br&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="14_V7KhapX8ebqAmIDgo-25">
+          <mxGeometry y="30" width="140" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="14_V7KhapX8ebqAmIDgo-26" value="Gets a stored session from the Database and allows the user to see the past records of a given simulation." style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="14_V7KhapX8ebqAmIDgo-25">
+          <mxGeometry y="160" width="140" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="14_V7KhapX8ebqAmIDgo-27" value="Allows user to select a past session UUID from database and view the playback of that simulation" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="14_V7KhapX8ebqAmIDgo-25">
+          <mxGeometry y="240" width="140" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="14_V7KhapX8ebqAmIDgo-28" value="User Can then request and view any of the data that has been stored in the file." style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="14_V7KhapX8ebqAmIDgo-25">
+          <mxGeometry y="320" width="140" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="14_V7KhapX8ebqAmIDgo-29" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="14_V7KhapX8ebqAmIDgo-12" target="14_V7KhapX8ebqAmIDgo-22">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="330" y="450" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="14_V7KhapX8ebqAmIDgo-31" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="14_V7KhapX8ebqAmIDgo-12" target="14_V7KhapX8ebqAmIDgo-25">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="490" y="430" />
+              <mxPoint x="490" y="380" />
+              <mxPoint x="570" y="380" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="14_V7KhapX8ebqAmIDgo-32" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="14_V7KhapX8ebqAmIDgo-13" target="14_V7KhapX8ebqAmIDgo-17">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="14_V7KhapX8ebqAmIDgo-35" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="14_V7KhapX8ebqAmIDgo-33" target="14_V7KhapX8ebqAmIDgo-19">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="180" y="720" />
+              <mxPoint x="180" y="670" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="14_V7KhapX8ebqAmIDgo-33" value="Generate Simulation Data" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;" vertex="1" parent="1">
+          <mxGeometry x="50" y="690" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="14_V7KhapX8ebqAmIDgo-34" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="14_V7KhapX8ebqAmIDgo-24" target="14_V7KhapX8ebqAmIDgo-33">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="30" y="580" />
+              <mxPoint x="30" y="720" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="14_V7KhapX8ebqAmIDgo-39" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="14_V7KhapX8ebqAmIDgo-36" target="14_V7KhapX8ebqAmIDgo-38">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="490" y="640" />
+              <mxPoint x="490" y="720" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="14_V7KhapX8ebqAmIDgo-36" value="Stores the .parquet file in the database" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;" vertex="1" parent="1">
+          <mxGeometry x="360" y="610" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="14_V7KhapX8ebqAmIDgo-37" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="14_V7KhapX8ebqAmIDgo-19" target="14_V7KhapX8ebqAmIDgo-36">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="14_V7KhapX8ebqAmIDgo-38" value="Session Database Storage" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="360" y="690" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="14_V7KhapX8ebqAmIDgo-42" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="14_V7KhapX8ebqAmIDgo-40" target="14_V7KhapX8ebqAmIDgo-38">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="14_V7KhapX8ebqAmIDgo-40" value="Request Stored Session Replay File" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;" vertex="1" parent="1">
+          <mxGeometry x="360" y="760" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="14_V7KhapX8ebqAmIDgo-44" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="14_V7KhapX8ebqAmIDgo-28" target="14_V7KhapX8ebqAmIDgo-40">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="490" y="755" />
+              <mxPoint x="490" y="790" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="14_V7KhapX8ebqAmIDgo-47" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="14_V7KhapX8ebqAmIDgo-45" target="14_V7KhapX8ebqAmIDgo-11">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="14_V7KhapX8ebqAmIDgo-45" value="Start Session Simulation Scripts" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;" vertex="1" parent="1">
+          <mxGeometry x="200" y="280" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="14_V7KhapX8ebqAmIDgo-54" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="14_V7KhapX8ebqAmIDgo-48" target="14_V7KhapX8ebqAmIDgo-51">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="14_V7KhapX8ebqAmIDgo-63" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.75;exitDx=0;exitDy=0;entryX=0.75;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="14_V7KhapX8ebqAmIDgo-48" target="14_V7KhapX8ebqAmIDgo-59">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="14_V7KhapX8ebqAmIDgo-48" value="Unreal Engine Visualization" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="365" y="60" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="14_V7KhapX8ebqAmIDgo-50" value="3D Visualization" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="590" y="30" width="140" height="190" as="geometry" />
+        </mxCell>
+        <mxCell id="14_V7KhapX8ebqAmIDgo-51" value="The user can view the active data that is being generated via the holoprojector in the ship." style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="14_V7KhapX8ebqAmIDgo-50">
+          <mxGeometry y="30" width="140" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="14_V7KhapX8ebqAmIDgo-53" value="Items such as temperature increase and decrease are able to be seen with the HVAC systems" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="14_V7KhapX8ebqAmIDgo-50">
+          <mxGeometry y="110" width="140" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="14_V7KhapX8ebqAmIDgo-55" value="HVAC Control" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="750" y="20" width="80" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="14_V7KhapX8ebqAmIDgo-56" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="14_V7KhapX8ebqAmIDgo-51" target="14_V7KhapX8ebqAmIDgo-55">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="740" y="100" />
+              <mxPoint x="740" y="50" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="14_V7KhapX8ebqAmIDgo-57" value="Light System Control" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="760" y="95" width="80" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="14_V7KhapX8ebqAmIDgo-58" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="14_V7KhapX8ebqAmIDgo-53" target="14_V7KhapX8ebqAmIDgo-57">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="740" y="180" />
+              <mxPoint x="740" y="125" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="14_V7KhapX8ebqAmIDgo-59" value="2D Visualization" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="390" y="130" width="180" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="14_V7KhapX8ebqAmIDgo-60" value="All of the data will be able to be seen from the computer terminals that are located within the ship" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="14_V7KhapX8ebqAmIDgo-59">
+          <mxGeometry y="30" width="180" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="14_V7KhapX8ebqAmIDgo-61" value="The computer terminal will show real time simulation data" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="14_V7KhapX8ebqAmIDgo-59">
+          <mxGeometry y="90" width="180" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="14_V7KhapX8ebqAmIDgo-62" value="The replay terminal will show requested historical replay data sessions" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="14_V7KhapX8ebqAmIDgo-59">
+          <mxGeometry y="120" width="180" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="14_V7KhapX8ebqAmIDgo-72" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="14_V7KhapX8ebqAmIDgo-64" target="14_V7KhapX8ebqAmIDgo-71">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="830" y="270" />
+              <mxPoint x="830" y="460" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="14_V7KhapX8ebqAmIDgo-64" value="Computer Terminal Real Time Data" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="610" y="240" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="14_V7KhapX8ebqAmIDgo-67" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;" edge="1" parent="1" source="14_V7KhapX8ebqAmIDgo-62" target="14_V7KhapX8ebqAmIDgo-64">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="570" y="260" />
+              <mxPoint x="600" y="260" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="14_V7KhapX8ebqAmIDgo-75" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="14_V7KhapX8ebqAmIDgo-69" target="14_V7KhapX8ebqAmIDgo-74">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="14_V7KhapX8ebqAmIDgo-69" value="Replay Terminal Historical Stored Data" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="670" y="310" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="14_V7KhapX8ebqAmIDgo-70" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="14_V7KhapX8ebqAmIDgo-62" target="14_V7KhapX8ebqAmIDgo-69">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="590" y="275" />
+              <mxPoint x="590" y="340" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="14_V7KhapX8ebqAmIDgo-73" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.75;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="14_V7KhapX8ebqAmIDgo-71" target="14_V7KhapX8ebqAmIDgo-17">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="660" y="460" />
+              <mxPoint x="660" y="830" />
+              <mxPoint x="295" y="830" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="14_V7KhapX8ebqAmIDgo-71" value="Current Session Request" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;" vertex="1" parent="1">
+          <mxGeometry x="670" y="430" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="14_V7KhapX8ebqAmIDgo-76" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="14_V7KhapX8ebqAmIDgo-74" target="14_V7KhapX8ebqAmIDgo-28">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="670" y="755" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="14_V7KhapX8ebqAmIDgo-74" value="Historical Session Request" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;" vertex="1" parent="1">
+          <mxGeometry x="670" y="510" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="14_V7KhapX8ebqAmIDgo-79" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0.25;entryDx=0;entryDy=0;" edge="1" parent="1" source="14_V7KhapX8ebqAmIDgo-77" target="14_V7KhapX8ebqAmIDgo-71">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="820" y="240" />
+              <mxPoint x="820" y="445" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="14_V7KhapX8ebqAmIDgo-77" value="Real Time Holoprojection" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="750" y="180" width="90" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="14_V7KhapX8ebqAmIDgo-78" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="14_V7KhapX8ebqAmIDgo-53" target="14_V7KhapX8ebqAmIDgo-77">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="740" y="180" />
+              <mxPoint x="740" y="210" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="14_V7KhapX8ebqAmIDgo-83" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="14_V7KhapX8ebqAmIDgo-80" target="14_V7KhapX8ebqAmIDgo-3">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="170" y="270" />
+              <mxPoint x="170" y="210" />
+              <mxPoint x="100" y="210" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="14_V7KhapX8ebqAmIDgo-80" value="Relay Requested Data" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="240" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="14_V7KhapX8ebqAmIDgo-82" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="14_V7KhapX8ebqAmIDgo-20" target="14_V7KhapX8ebqAmIDgo-80">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="190" y="770" />
+              <mxPoint x="20" y="770" />
+              <mxPoint x="20" y="270" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
