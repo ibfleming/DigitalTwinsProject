@@ -1,3 +1,5 @@
+<img src="https://github.com/ibfleming/digital-twins/blob/main/ExternalApps/Media/spaceship.png" alt="spaceship"/>
+
 # Skeletor in Space - Digital Twins Project
 
 **Authors:** Ian Fleming and Lucien Lee
@@ -6,6 +8,7 @@ Welcome to the Skeletor in Space project repository! This is where we've central
 
 ## Table of Contents
 - [Overview](#overview)
+- [Video Demonstration](#video-demonstration)
 - [Usage](#usage)
   - [Cloning the Repository](#cloning-the-repository)
   - [Opening the Project](#opening-the-project)
@@ -28,6 +31,10 @@ To simulate realistic scenarios and generate mock data, we integrate Python scri
 Furthermore, to manage and store historical data efficiently, we utilize PyArrow parquet to store older data into a database. This ensures that past data remains accessible for analysis and comparison, contributing to the ongoing refinement and improvement of our digital twin model.
 
 In summary, these are our primary components and resources we utilized in order to achieve a minimal viable product.
+
+## Video Demonstration
+
+[Demo](https://github.com/ibfleming/digital-twins/blob/main/ExternalApps/Media/FinalDemoVideo.mkv)
 
 ## Usage
 
